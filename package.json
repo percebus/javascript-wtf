@@ -11,7 +11,7 @@
     "yarn:licenses:generate-disclaimer:prod": "yarn licenses generate-disclaimer --prod > LICENSES.md",
     "yarn:licenses:prod": "npm run yarn:licenses:list:prod && npm run yarn:licenses:generate-disclaimer:prod",
     "LICENSES": "npm run yarn:licenses:prod",
-    "standard": "standard --verbose --fix *.js __tests__/**/*.js",
+    "standard": "standard --verbose --fix *.js __tests__/**/*/*.js",
     "lint": "npm run standard",
     "prejest:ci": "npm run lint",
     "jest:ci": "jest --ci",
@@ -28,6 +28,9 @@
   "standard": {
     "env": [
       "jest"
+    ],
+    "globals": [
+      "_"
     ]
   },
   "repository": {

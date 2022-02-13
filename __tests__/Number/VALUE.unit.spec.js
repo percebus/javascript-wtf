@@ -7,7 +7,7 @@ describe('Number', () => {
   })
 
   describe('MIN_VALUE', () => {
-    it('is close to 0', () => {
+    it('is close to 0', () => {// https://www.youtube.com/watch?v=2pL28CcEijU&t=383s
       expect(Number.MIN_VALUE < 0).toBe(false) // MIN -POSITIVE- VALUE
       expect(Number.MIN_VALUE).not.toBe(0) // "Closest to 0" (but not 0)
       expect(Number.MIN_VALUE > 0).toBe(true)
