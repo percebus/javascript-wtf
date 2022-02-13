@@ -11,7 +11,7 @@ describe('Number', () => {
     describe(name, () => {
       let bananas, type
       beforeEach(() => {
-        bananas = fn('bananas')
+        bananas = fn('bananas') // This should blow up!
         type = typeof (bananas)
       })
 

@@ -1,25 +1,25 @@
 ok 1 Chrome 98.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
 ok 2 Chrome 98.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-ok 3 Chrome 98.0 - [undefined ms] - Number parse whitespace 0 Number('0') returns 0
-ok 4 Chrome 98.0 - [undefined ms] - Number parse whitespace 0 Number('') returns 0
-ok 5 Chrome 98.0 - [undefined ms] - Number parse whitespace 0 Number(' ') returns 0
-ok 6 Chrome 98.0 - [undefined ms] - Number parse whitespace 0 Number('
+ok 3 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
+ok 4 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') typeof is 'number'
+ok 5 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN is true
+ok 6 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 7 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 8 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
+ok 9 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') typeof is 'number'
+ok 10 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
+ok 11 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 12 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 13 Chrome 98.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
+ok 14 Chrome 98.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
+ok 15 Chrome 98.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
+ok 16 Chrome 98.0 - [undefined ms] - Number parse from string -0 - 0 is -0
+ok 17 Chrome 98.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
+ok 18 Chrome 98.0 - [undefined ms] - Number parse from string whitespace 0 Number('0') returns 0
+ok 19 Chrome 98.0 - [undefined ms] - Number parse from string whitespace 0 Number('') returns 0
+ok 20 Chrome 98.0 - [undefined ms] - Number parse from string whitespace 0 Number(' ') returns 0
+ok 21 Chrome 98.0 - [undefined ms] - Number parse from string whitespace 0 Number('
 	') returns 0
-ok 7 Chrome 98.0 - [undefined ms] - Number parse whitespace -0 Number('-0') is -0
-ok 8 Chrome 98.0 - [undefined ms] - Number parse whitespace -0 Number('-0') does not equal 0
-ok 9 Chrome 98.0 - [undefined ms] - Number parse whitespace -0 JSON.parse('-0) is -0
-ok 10 Chrome 98.0 - [undefined ms] - Number parse whitespace -0 - 0 is -0
-ok 11 Chrome 98.0 - [undefined ms] - Number parse whitespace -0 - 0 Number('- 0') returns NaN
-ok 12 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 13 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') typeof is 'number'
-ok 14 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 15 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 16 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
-ok 17 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 18 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') typeof is 'number'
-ok 19 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 20 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 21 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
 ok 22 Chrome 98.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
 ok 23 Chrome 98.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
 ok 24 Chrome 98.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
@@ -35,26 +35,26 @@ ok 33 Chrome 98.0 - [undefined ms] - Object coercion {} + [] is 0
 ok 34 Chrome 98.0 - [undefined ms] - Object coercion {} + [] is '[object Object]'
 ok 35 Firefox 96.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
 ok 36 Firefox 96.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-ok 37 Firefox 96.0 - [undefined ms] - Number parse whitespace 0 Number('0') returns 0
-ok 38 Firefox 96.0 - [undefined ms] - Number parse whitespace 0 Number('') returns 0
-ok 39 Firefox 96.0 - [undefined ms] - Number parse whitespace 0 Number(' ') returns 0
-ok 40 Firefox 96.0 - [undefined ms] - Number parse whitespace 0 Number('
+ok 37 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
+ok 38 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') typeof is 'number'
+ok 39 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN is true
+ok 40 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 41 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 42 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
+ok 43 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') typeof is 'number'
+ok 44 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
+ok 45 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 46 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 47 Firefox 96.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
+ok 48 Firefox 96.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
+ok 49 Firefox 96.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
+ok 50 Firefox 96.0 - [undefined ms] - Number parse from string -0 - 0 is -0
+ok 51 Firefox 96.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
+ok 52 Firefox 96.0 - [undefined ms] - Number parse from string whitespace 0 Number('0') returns 0
+ok 53 Firefox 96.0 - [undefined ms] - Number parse from string whitespace 0 Number('') returns 0
+ok 54 Firefox 96.0 - [undefined ms] - Number parse from string whitespace 0 Number(' ') returns 0
+ok 55 Firefox 96.0 - [undefined ms] - Number parse from string whitespace 0 Number('
 	') returns 0
-ok 41 Firefox 96.0 - [undefined ms] - Number parse whitespace -0 Number('-0') is -0
-ok 42 Firefox 96.0 - [undefined ms] - Number parse whitespace -0 Number('-0') does not equal 0
-ok 43 Firefox 96.0 - [undefined ms] - Number parse whitespace -0 JSON.parse('-0) is -0
-ok 44 Firefox 96.0 - [undefined ms] - Number parse whitespace -0 - 0 is -0
-ok 45 Firefox 96.0 - [undefined ms] - Number parse whitespace -0 - 0 Number('- 0') returns NaN
-ok 46 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 47 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') typeof is 'number'
-ok 48 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 49 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 50 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
-ok 51 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 52 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') typeof is 'number'
-ok 53 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 54 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 55 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
 ok 56 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
 ok 57 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
 ok 58 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
@@ -70,26 +70,26 @@ ok 67 Firefox 96.0 - [undefined ms] - Object coercion {} + [] is 0
 ok 68 Firefox 96.0 - [undefined ms] - Object coercion {} + [] is '[object Object]'
 ok 69 Safari 13.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
 ok 70 Safari 13.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-ok 71 Safari 13.0 - [undefined ms] - Number parse whitespace 0 Number('0') returns 0
-ok 72 Safari 13.0 - [undefined ms] - Number parse whitespace 0 Number('') returns 0
-ok 73 Safari 13.0 - [undefined ms] - Number parse whitespace 0 Number(' ') returns 0
-ok 74 Safari 13.0 - [undefined ms] - Number parse whitespace 0 Number('
+ok 71 Safari 13.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
+ok 72 Safari 13.0 - [undefined ms] - Number parseInt('bananas') typeof is 'number'
+ok 73 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN is true
+ok 74 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 75 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 76 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
+ok 77 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') typeof is 'number'
+ok 78 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
+ok 79 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 80 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 81 Safari 13.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
+ok 82 Safari 13.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
+ok 83 Safari 13.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
+ok 84 Safari 13.0 - [undefined ms] - Number parse from string -0 - 0 is -0
+ok 85 Safari 13.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
+ok 86 Safari 13.0 - [undefined ms] - Number parse from string whitespace 0 Number('0') returns 0
+ok 87 Safari 13.0 - [undefined ms] - Number parse from string whitespace 0 Number('') returns 0
+ok 88 Safari 13.0 - [undefined ms] - Number parse from string whitespace 0 Number(' ') returns 0
+ok 89 Safari 13.0 - [undefined ms] - Number parse from string whitespace 0 Number('
 	') returns 0
-ok 75 Safari 13.0 - [undefined ms] - Number parse whitespace -0 Number('-0') is -0
-ok 76 Safari 13.0 - [undefined ms] - Number parse whitespace -0 Number('-0') does not equal 0
-ok 77 Safari 13.0 - [undefined ms] - Number parse whitespace -0 JSON.parse('-0) is -0
-ok 78 Safari 13.0 - [undefined ms] - Number parse whitespace -0 - 0 is -0
-ok 79 Safari 13.0 - [undefined ms] - Number parse whitespace -0 - 0 Number('- 0') returns NaN
-ok 80 Safari 13.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 81 Safari 13.0 - [undefined ms] - Number parseInt('bananas') typeof is 'number'
-ok 82 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 83 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 84 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
-ok 85 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 86 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') typeof is 'number'
-ok 87 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 88 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 89 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
 ok 90 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
 ok 91 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
 ok 92 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
