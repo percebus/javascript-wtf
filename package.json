@@ -11,11 +11,19 @@
     "yarn:licenses:generate-disclaimer:prod": "yarn licenses generate-disclaimer --prod > LICENSES.md",
     "yarn:licenses:prod": "npm run yarn:licenses:list:prod && npm run yarn:licenses:generate-disclaimer:prod",
     "LICENSES": "npm run yarn:licenses:prod",
-    "standard": "standard --verbose --fix __tests__/**/*.js",
+    "standard": "standard --verbose --fix *.js __tests__/**/*.js",
     "lint": "npm run standard",
     "prejest:ci": "npm run lint",
     "jest:ci": "jest --ci",
-    "test": "npm run jest:ci"
+    "pretestem": "npm run lint",
+    "testem": "testem",
+    "pretestem:ci": "npm run lint",
+    "testem:ci": "testem ci",
+    "testem:ci:dot": "npm run testem:ci -- --reporter dot",
+    "testem:ci:tap": "testem ci --reporter tap > test/browsers/testem.tap",
+    "testem:ci:xunit": "testem ci --reporter xunit > test/browsers/testem.xunit.xml",
+    "testem:ci:all": "npm run testem:ci:tap && npm run testem:ci:xunit",
+    "test": "npm run jest:ci && npm run testem:ci:all"
   },
   "standard": {
     "env": [
@@ -42,6 +50,7 @@
   "devDependencies": {
     "jest": "^27.5.1",
     "jest-junit": "^13.0.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "testem": "^3.6.0"
   }
 }

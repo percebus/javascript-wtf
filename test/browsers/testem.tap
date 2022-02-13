@@ -1,0 +1,33 @@
+ok 1 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
+ok 2 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') typeof is 'number'
+ok 3 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN is true
+ok 4 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 5 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 6 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
+ok 7 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') typeof is 'number'
+ok 8 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
+ok 9 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 10 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 11 Chrome 98.0 - [undefined ms] - Number MAX_VALUE is > 0
+ok 12 Chrome 98.0 - [undefined ms] - Number MIN_VALUE is close to 0
+ok 13 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
+ok 14 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') typeof is 'number'
+ok 15 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN is true
+ok 16 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 17 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 18 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
+ok 19 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') typeof is 'number'
+ok 20 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
+ok 21 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 22 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 23 Firefox 96.0 - [undefined ms] - Number MAX_VALUE is > 0
+ok 24 Firefox 96.0 - [undefined ms] - Number MIN_VALUE is close to 0
+
+1..24
+# tests 24
+# pass  24
+# skip  0
+# todo  0
+# fail  0
+
+# ok

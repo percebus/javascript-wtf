@@ -1,7 +1,7 @@
 describe('Number', () => {
   'use strict'
 
-  const _ = require('lodash')
+  // const _ = require('lodash') // injected to test browsers
   const functions = {
     "parseInt('bananas')": parseInt,
     "_.parseInt('bananas')": _.parseInt
