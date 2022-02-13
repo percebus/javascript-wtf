@@ -21,12 +21,11 @@ describe('Number', () => {
         })
       })
 
-      describe('typeof', () => {
-        it("is 'number'", () => {
-          expect(type).toEqual('number')
-          expect(type).not.toEqual('NaN')
-        })
+      it("is typeof 'number'", () => {
+        expect(type).toEqual('number')
+        expect(type).not.toEqual('NaN')
       })
+
 
       describe('NaN', () => {
         it('is true', () => {
@@ -36,12 +35,6 @@ describe('Number', () => {
 
         /* eslint-disable no-self-compare */
         describe('reflectiveness', () => { // NaN are not reflective
-          describe('bananas === bananas', () => { // so they cannot compare with themselves
-            it('is false', () => {
-              expect(bananas === bananas).toBe(false)
-            })
-          })
-
           /* eslint-disable eqeqeq */
           describe('bananas == bananas', () => {
             it('is false', () => {
@@ -49,6 +42,16 @@ describe('Number', () => {
             })
           })
           /* eslint-enable eqeqeq */
+
+          describe('bananas === bananas', () => { // so they cannot compare with themselves
+            it('is false', () => {
+
+              /* This horrible result could be avoided, i
+               * if JS simply threw an error
+               */
+              expect(bananas === bananas).toBe(false)
+            })
+          })
         })
         /* eslint-enable no-self-compare */
       })

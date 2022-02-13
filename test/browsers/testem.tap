@@ -7,15 +7,15 @@ ok 6 Chrome 98.0 - [undefined ms] - undefined equals null
 ok 7 Chrome 98.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
 ok 8 Chrome 98.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
 ok 9 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 10 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') typeof is 'number'
+ok 10 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
 ok 11 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 12 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 13 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 12 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 13 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
 ok 14 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 15 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') typeof is 'number'
+ok 15 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
 ok 16 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 17 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 18 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 17 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 18 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
 ok 19 Chrome 98.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
 ok 20 Chrome 98.0 - [undefined ms] - Number parse null-sy Number(undefined) returns NaN
 ok 21 Chrome 98.0 - [undefined ms] - Number parse from string whitespace 0 Number('0') returns 0
@@ -58,15 +58,15 @@ ok 56 Firefox 96.0 - [undefined ms] - undefined equals null
 ok 57 Firefox 96.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
 ok 58 Firefox 96.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
 ok 59 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 60 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') typeof is 'number'
+ok 60 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
 ok 61 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 62 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 63 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 62 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 63 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
 ok 64 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 65 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') typeof is 'number'
+ok 65 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
 ok 66 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 67 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 68 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 67 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 68 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
 ok 69 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
 ok 70 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(undefined) returns NaN
 ok 71 Firefox 96.0 - [undefined ms] - Number parse from string whitespace 0 Number('0') returns 0
@@ -109,15 +109,15 @@ ok 106 Safari 13.0 - [undefined ms] - undefined equals null
 ok 107 Safari 13.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
 ok 108 Safari 13.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
 ok 109 Safari 13.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 110 Safari 13.0 - [undefined ms] - Number parseInt('bananas') typeof is 'number'
+ok 110 Safari 13.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
 ok 111 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 112 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 113 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 112 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 113 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
 ok 114 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 115 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') typeof is 'number'
+ok 115 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
 ok 116 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 117 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 118 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 117 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 118 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
 ok 119 Safari 13.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
 ok 120 Safari 13.0 - [undefined ms] - Number parse null-sy Number(undefined) returns NaN
 ok 121 Safari 13.0 - [undefined ms] - Number parse from string whitespace 0 Number('0') returns 0
