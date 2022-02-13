@@ -16,28 +16,36 @@ ok 15 Chrome 98.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFix
 ok 16 Chrome 98.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
 ok 17 Chrome 98.0 - [undefined ms] - Number MAX_VALUE is > 0
 ok 18 Chrome 98.0 - [undefined ms] - Number MIN_VALUE is close to 0
-ok 19 Firefox 96.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
-ok 20 Firefox 96.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-ok 21 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 22 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') typeof is 'number'
-ok 23 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 24 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 25 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
-ok 26 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 27 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') typeof is 'number'
-ok 28 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 29 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 30 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
-ok 31 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
-ok 32 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
-ok 33 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
-ok 34 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
-ok 35 Firefox 96.0 - [undefined ms] - Number MAX_VALUE is > 0
-ok 36 Firefox 96.0 - [undefined ms] - Number MIN_VALUE is close to 0
+ok 19 Chrome 98.0 - [undefined ms] - Object coercion [] !== [] is true
+ok 20 Chrome 98.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
+ok 21 Chrome 98.0 - [undefined ms] - Object coercion {} + [] is 0
+ok 22 Chrome 98.0 - [undefined ms] - Object coercion {} + [] is '[object Object]'
+ok 23 Firefox 96.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
+ok 24 Firefox 96.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
+ok 25 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
+ok 26 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') typeof is 'number'
+ok 27 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN is true
+ok 28 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 29 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 30 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
+ok 31 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') typeof is 'number'
+ok 32 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
+ok 33 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 34 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 35 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
+ok 36 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
+ok 37 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
+ok 38 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
+ok 39 Firefox 96.0 - [undefined ms] - Number MAX_VALUE is > 0
+ok 40 Firefox 96.0 - [undefined ms] - Number MIN_VALUE is close to 0
+ok 41 Firefox 96.0 - [undefined ms] - Object coercion [] !== [] is true
+ok 42 Firefox 96.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
+ok 43 Firefox 96.0 - [undefined ms] - Object coercion {} + [] is 0
+ok 44 Firefox 96.0 - [undefined ms] - Object coercion {} + [] is '[object Object]'
 
-1..36
-# tests 36
-# pass  36
+1..44
+# tests 44
+# pass  44
 # skip  0
 # todo  0
 # fail  0
