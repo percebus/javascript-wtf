@@ -1,0 +1,2 @@
+# javascript-wtf
+JavaScript WTFs
