@@ -24,12 +24,14 @@ describe('Number', () => {
       describe('JSON.stringify(-0)', () => {
         it("returns '0'", () => {
           expect(JSON.stringify(-0)).toEqual('0')
+          expect(JSON.stringify(0)).toEqual('0')
         })
       })
 
       describe('String(-0)', () => {
         it("returns '0'", () => {
           expect(String(-0)).toEqual('0')
+          expect(String(0)).toEqual('0')
         })
       })
 

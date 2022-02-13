@@ -23,7 +23,7 @@
     "testem:ci:tap": "testem ci --reporter tap > test/browsers/testem.tap",
     "testem:ci:xunit": "testem ci --reporter xunit > test/browsers/testem.xunit.xml",
     "testem:ci:all": "npm run testem:ci:tap && npm run testem:ci:xunit",
-    "test": "npm run jest:ci && npm run testem:ci:all"
+    "test": "npm run jest:ci && npm run testem:ci:tap"
   },
   "standard": {
     "env": [
