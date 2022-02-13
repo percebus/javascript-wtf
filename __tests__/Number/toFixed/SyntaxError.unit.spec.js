@@ -1,4 +1,5 @@
 describe('Number', () => {
+  'use strict'
   describe('.toFixed(x)', () => {
     describe('42.toFixed(2)', () => { // SRC: https://www.youtube.com/watch?v=2pL28CcEijU&t=383s
       const expected = '42.00'

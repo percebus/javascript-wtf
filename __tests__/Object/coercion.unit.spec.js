@@ -1,4 +1,5 @@
 describe('Object', () => {
+  'use strict'
   describe('coercion', () => { // SRC: https://www.youtube.com/watch?v=2pL28CcEijU&t=383s
     let result
     describe('[] !== []', () => {

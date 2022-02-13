@@ -1,4 +1,5 @@
 describe('Number', () => {
+  'use strict'
   describe('left associativity', () => { // SRC: https://www.youtube.com/watch?v=2pL28CcEijU&t=383s
     describe('1 < 2 < 3', () => {
       it('is true', () => {

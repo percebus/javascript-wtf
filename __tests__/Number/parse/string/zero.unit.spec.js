@@ -1,7 +1,45 @@
-describe('Number', () => {
+describe('Number', () => {'use strict' // SRC: https://www.youtube.com/watch?v=2pL28CcEijU
+
   let result
+
   describe('parse from string', () => {
-    describe('-0', () => { // SRC: https://www.youtube.com/watch?v=2pL28CcEijU
+    describe('0', () => {
+      describe('.', () => {
+        describe("Number('0.')", () => { // JS fixes missing decimals
+          it('returns 0', () => {
+            expect(Number('0.')).toBe(0)
+          })
+        })
+
+        describe("Number('.0')", () => { // JS fixes missing digits
+          it('returns 0', () => {
+            expect(Number('.0')).toBe(0)
+          })
+        })
+
+        describe("Number('.')", () => {
+          it('returns NaN', () => {
+            expect(isNaN(Number('.'))).toBe(true)
+          })
+        })
+      })
+
+      describe('XO', () => { // what?!
+        describe("Number('0O0')", () => {
+          it('returns 0', () => {
+            expect(Number('0O0')).toBe(0)
+          })
+        })
+
+        describe("Number('0X0')", () => {
+          it('returns 0', () => {
+            expect(Number('0X0')).toBe(0)
+          })
+        })
+      })
+    })
+
+    describe('-0', () => {
       describe("Number('-0')", () => {
         beforeEach(() => {
           result = Number('-0')

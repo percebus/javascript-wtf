@@ -1,4 +1,5 @@
 describe('Number', () => {
+  'use strict'
   describe('MAX_VALUE', () => {
     it('is > 0', () => {
       expect(Number.MAX_VALUE > 0).toBe(true)
