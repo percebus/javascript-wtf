@@ -19,6 +19,26 @@ describe('Number', () => {
     it('does not equal 0', () => {
       expect(-0).not.toEqual(0) // o.0
     })
+
+    describe('to string', () => {
+      describe('JSON.stringify(-0)', () => {
+        it("returns '0'", () => {
+          expect(JSON.stringify(-0)).toEqual('0')
+        })
+      })
+
+      describe('String(-0)', () => {
+        it("returns '0'", () => {
+          expect(String(-0)).toEqual('0')
+        })
+      })
+
+      describe("-0 + ''", () => {
+        it("returns '0'", () => {
+          expect(-0 + '').toEqual('0')
+        })
+      })
+    })
   })
   /* eslint-enable no-compare-neg-zero */
   /* eslint-enable no-self-compare */
