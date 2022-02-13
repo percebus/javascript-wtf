@@ -25,4 +25,4 @@ launch_in_ci:
  - Chrome
 #- Chrome Canary # FIXME
  - Firefox
-#- Safari # FIXME it gets stuck
+ - Safari # FIXME it gets stuck

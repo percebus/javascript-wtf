@@ -54,6 +54,28 @@ describe('Number', () => {
             /* eslint-enable eqeqeq */
           })
         })
+
+        describe("JSON.parse('-0)", () => {
+          it('is -0', () => {
+            expect(JSON.parse('-0')).toBe(-0)
+          })
+        })
+
+        describe('- 0', () => {
+          it('is -0', () => {
+            /* FIXME find eslint rule that changes
+             * from: - 0
+             * to  : -0
+             */
+            expect(-0).toBe(-0)
+          })
+
+          describe("Number('- 0')", () => {
+            it('returns NaN', () => {
+              expect(isNaN(Number('- 0'))).toBe(true)
+            })
+          })
+        })
       })
     })
   })
