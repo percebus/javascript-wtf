@@ -1,0 +1,44 @@
+{
+  "name": "javascript-wtf",
+  "version": "0.1.0",
+  "description": "JavaScript WTFs",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "npm:install:global:ci": "npm install -g standard",
+    "npm:install:global:all": "npm install -g standard yarn",
+    "setup": "npm run npm:install:global:all",
+    "setup:ci": "npm run npm:install:global:ci",
+    "yarn:licenses:list:prod": "yarn licenses list --prod > LICENSES.txt",
+    "yarn:licenses:generate-disclaimer:prod": "yarn licenses generate-disclaimer --prod > LICENSES.md",
+    "yarn:licenses:prod": "npm run yarn:licenses:list:prod && npm run yarn:licenses:generate-disclaimer:prod",
+    "LICENSES": "npm run yarn:licenses:prod",
+    "jest:ci": "jest --ci",
+    "test": "npm run jest:ci"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/percebus/javascript-wtf.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "gotchas",
+    "bugs",
+    "issues",
+    "tests"
+  ],
+  "author": "percebus",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/percebus/javascript-wtf/issues"
+  },
+  "homepage": "https://github.com/percebus/javascript-wtf#readme",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "jest-junit": "^13.0.0"
+  }
+}
