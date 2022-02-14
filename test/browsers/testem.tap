@@ -2,159 +2,204 @@ ok 1 Chrome 98.0 - [undefined ms] - Number NaN isNaN
 ok 2 Chrome 98.0 - [undefined ms] - Number NaN is typeof 'number
 ok 3 Chrome 98.0 - [undefined ms] - null Object is typeof 'object'
 ok 4 Chrome 98.0 - [undefined ms] - null Object is NOT instanceof Object
-ok 5 Chrome 98.0 - [undefined ms] - undefined is typeof 'undefined
-ok 6 Chrome 98.0 - [undefined ms] - undefined equals null
-ok 7 Chrome 98.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
-ok 8 Chrome 98.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-ok 9 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 10 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
-ok 11 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 12 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
-ok 13 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 14 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 15 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
-ok 16 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 17 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
-ok 18 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 19 Chrome 98.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
-ok 20 Chrome 98.0 - [undefined ms] - Number parse null-sy Number(undefined) returns NaN
-ok 21 Chrome 98.0 - [undefined ms] - Number parse from string whitespace 0 Number('0') returns 0
-ok 22 Chrome 98.0 - [undefined ms] - Number parse from string whitespace 0 Number('') returns 0
-ok 23 Chrome 98.0 - [undefined ms] - Number parse from string whitespace 0 Number(' ') returns 0
-ok 24 Chrome 98.0 - [undefined ms] - Number parse from string whitespace 0 Number('
+ok 5 Chrome 98.0 - [undefined ms] - null Number is NOT NaN
+ok 6 Chrome 98.0 - [undefined ms] - null lodash isNull
+ok 7 Chrome 98.0 - [undefined ms] - null jasmine .toBeNull() is
+ok 8 Chrome 98.0 - [undefined ms] - null jasmine .toBeFalsy() is
+ok 9 Chrome 98.0 - [undefined ms] - undefined is typeof 'undefined
+ok 10 Chrome 98.0 - [undefined ms] - undefined Number isNaN
+ok 11 Chrome 98.0 - [undefined ms] - undefined null is not identical to null
+ok 12 Chrome 98.0 - [undefined ms] - undefined null equals null
+ok 13 Chrome 98.0 - [undefined ms] - undefined lodash isUndefined
+ok 14 Chrome 98.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
+ok 15 Chrome 98.0 - [undefined ms] - undefined jasmine .toEqual(null) is not
+ok 16 Chrome 98.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
+ok 17 Chrome 98.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
+ok 18 Chrome 98.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
+ok 19 Chrome 98.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
+ok 20 Chrome 98.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
+ok 21 Chrome 98.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
+ok 22 Chrome 98.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
+ok 23 Chrome 98.0 - [undefined ms] - Number parse objects Number({}) is NaN
+ok 24 Chrome 98.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
+ok 25 Chrome 98.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
+ok 26 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
+ok 27 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
+ok 28 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN is true
+ok 29 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 30 Chrome 98.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 31 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
+ok 32 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
+ok 33 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
+ok 34 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 35 Chrome 98.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 36 Chrome 98.0 - [undefined ms] - Number parse from string whitespace 0 Number('0') returns 0
+ok 37 Chrome 98.0 - [undefined ms] - Number parse from string whitespace 0 Number('') returns 0
+ok 38 Chrome 98.0 - [undefined ms] - Number parse from string whitespace 0 Number(' ') returns 0
+ok 39 Chrome 98.0 - [undefined ms] - Number parse from string whitespace 0 Number('
 	') returns 0
-ok 25 Chrome 98.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
-ok 26 Chrome 98.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
-ok 27 Chrome 98.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
-ok 28 Chrome 98.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
-ok 29 Chrome 98.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
-ok 30 Chrome 98.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
-ok 31 Chrome 98.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
-ok 32 Chrome 98.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
-ok 33 Chrome 98.0 - [undefined ms] - Number parse from string -0 - 0 is -0
-ok 34 Chrome 98.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
-ok 35 Chrome 98.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
-ok 36 Chrome 98.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
-ok 37 Chrome 98.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
-ok 38 Chrome 98.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
-ok 39 Chrome 98.0 - [undefined ms] - Number MAX_VALUE is > 0
-ok 40 Chrome 98.0 - [undefined ms] - Number MIN_VALUE is close to 0
-ok 41 Chrome 98.0 - [undefined ms] - Number -0 is -0
-ok 42 Chrome 98.0 - [undefined ms] - Number -0 equals -0
-ok 43 Chrome 98.0 - [undefined ms] - Number -0 does not equal 0
-ok 44 Chrome 98.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
-ok 45 Chrome 98.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
-ok 46 Chrome 98.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
-ok 47 Chrome 98.0 - [undefined ms] - Object coercion [] !== [] is true
-ok 48 Chrome 98.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
-ok 49 Chrome 98.0 - [undefined ms] - Object coercion {} + [] is 0
-ok 50 Chrome 98.0 - [undefined ms] - Object coercion {} + [] is '[object Object]'
-ok 51 Firefox 96.0 - [undefined ms] - Number NaN isNaN
-ok 52 Firefox 96.0 - [undefined ms] - Number NaN is typeof 'number
-ok 53 Firefox 96.0 - [undefined ms] - null Object is typeof 'object'
-ok 54 Firefox 96.0 - [undefined ms] - null Object is NOT instanceof Object
-ok 55 Firefox 96.0 - [undefined ms] - undefined is typeof 'undefined
-ok 56 Firefox 96.0 - [undefined ms] - undefined equals null
-ok 57 Firefox 96.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
-ok 58 Firefox 96.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-ok 59 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 60 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
-ok 61 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 62 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
-ok 63 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 64 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 65 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
-ok 66 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 67 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
-ok 68 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 69 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
-ok 70 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(undefined) returns NaN
-ok 71 Firefox 96.0 - [undefined ms] - Number parse from string whitespace 0 Number('0') returns 0
-ok 72 Firefox 96.0 - [undefined ms] - Number parse from string whitespace 0 Number('') returns 0
-ok 73 Firefox 96.0 - [undefined ms] - Number parse from string whitespace 0 Number(' ') returns 0
-ok 74 Firefox 96.0 - [undefined ms] - Number parse from string whitespace 0 Number('
+ok 40 Chrome 98.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
+ok 41 Chrome 98.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
+ok 42 Chrome 98.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
+ok 43 Chrome 98.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
+ok 44 Chrome 98.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
+ok 45 Chrome 98.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
+ok 46 Chrome 98.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
+ok 47 Chrome 98.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
+ok 48 Chrome 98.0 - [undefined ms] - Number parse from string -0 - 0 is -0
+ok 49 Chrome 98.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
+ok 50 Chrome 98.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
+ok 51 Chrome 98.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
+ok 52 Chrome 98.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
+ok 53 Chrome 98.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
+ok 54 Chrome 98.0 - [undefined ms] - Number MAX_VALUE is > 0
+ok 55 Chrome 98.0 - [undefined ms] - Number MIN_VALUE is close to 0
+ok 56 Chrome 98.0 - [undefined ms] - Number -0 is -0
+ok 57 Chrome 98.0 - [undefined ms] - Number -0 equals -0
+ok 58 Chrome 98.0 - [undefined ms] - Number -0 does not equal 0
+ok 59 Chrome 98.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
+ok 60 Chrome 98.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
+ok 61 Chrome 98.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
+ok 62 Chrome 98.0 - [undefined ms] - Object coercion [] !== [] is true
+ok 63 Chrome 98.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
+ok 64 Chrome 98.0 - [undefined ms] - Object coercion {} + [] is 0
+ok 65 Chrome 98.0 - [undefined ms] - Object coercion {} + [] is '[object Object]'
+ok 66 Firefox 96.0 - [undefined ms] - Number NaN isNaN
+ok 67 Firefox 96.0 - [undefined ms] - Number NaN is typeof 'number
+ok 68 Firefox 96.0 - [undefined ms] - null Object is typeof 'object'
+ok 69 Firefox 96.0 - [undefined ms] - null Object is NOT instanceof Object
+ok 70 Firefox 96.0 - [undefined ms] - null Number is NOT NaN
+ok 71 Firefox 96.0 - [undefined ms] - null lodash isNull
+ok 72 Firefox 96.0 - [undefined ms] - null jasmine .toBeNull() is
+ok 73 Firefox 96.0 - [undefined ms] - null jasmine .toBeFalsy() is
+ok 74 Firefox 96.0 - [undefined ms] - undefined is typeof 'undefined
+ok 75 Firefox 96.0 - [undefined ms] - undefined Number isNaN
+ok 76 Firefox 96.0 - [undefined ms] - undefined null is not identical to null
+ok 77 Firefox 96.0 - [undefined ms] - undefined null equals null
+ok 78 Firefox 96.0 - [undefined ms] - undefined lodash isUndefined
+ok 79 Firefox 96.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
+ok 80 Firefox 96.0 - [undefined ms] - undefined jasmine .toEqual(null) is not
+ok 81 Firefox 96.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
+ok 82 Firefox 96.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
+ok 83 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
+ok 84 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
+ok 85 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
+ok 86 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
+ok 87 Firefox 96.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
+ok 88 Firefox 96.0 - [undefined ms] - Number parse objects Number({}) is NaN
+ok 89 Firefox 96.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
+ok 90 Firefox 96.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
+ok 91 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
+ok 92 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
+ok 93 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN is true
+ok 94 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 95 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 96 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
+ok 97 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
+ok 98 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
+ok 99 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 100 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 101 Firefox 96.0 - [undefined ms] - Number parse from string whitespace 0 Number('0') returns 0
+ok 102 Firefox 96.0 - [undefined ms] - Number parse from string whitespace 0 Number('') returns 0
+ok 103 Firefox 96.0 - [undefined ms] - Number parse from string whitespace 0 Number(' ') returns 0
+ok 104 Firefox 96.0 - [undefined ms] - Number parse from string whitespace 0 Number('
 	') returns 0
-ok 75 Firefox 96.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
-ok 76 Firefox 96.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
-ok 77 Firefox 96.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
-ok 78 Firefox 96.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
-ok 79 Firefox 96.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
-ok 80 Firefox 96.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
-ok 81 Firefox 96.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
-ok 82 Firefox 96.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
-ok 83 Firefox 96.0 - [undefined ms] - Number parse from string -0 - 0 is -0
-ok 84 Firefox 96.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
-ok 85 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
-ok 86 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
-ok 87 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
-ok 88 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
-ok 89 Firefox 96.0 - [undefined ms] - Number MAX_VALUE is > 0
-ok 90 Firefox 96.0 - [undefined ms] - Number MIN_VALUE is close to 0
-ok 91 Firefox 96.0 - [undefined ms] - Number -0 is -0
-ok 92 Firefox 96.0 - [undefined ms] - Number -0 equals -0
-ok 93 Firefox 96.0 - [undefined ms] - Number -0 does not equal 0
-ok 94 Firefox 96.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
-ok 95 Firefox 96.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
-ok 96 Firefox 96.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
-ok 97 Firefox 96.0 - [undefined ms] - Object coercion [] !== [] is true
-ok 98 Firefox 96.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
-ok 99 Firefox 96.0 - [undefined ms] - Object coercion {} + [] is 0
-ok 100 Firefox 96.0 - [undefined ms] - Object coercion {} + [] is '[object Object]'
-ok 101 Safari 13.0 - [undefined ms] - Number NaN isNaN
-ok 102 Safari 13.0 - [undefined ms] - Number NaN is typeof 'number
-ok 103 Safari 13.0 - [undefined ms] - null Object is typeof 'object'
-ok 104 Safari 13.0 - [undefined ms] - null Object is NOT instanceof Object
-ok 105 Safari 13.0 - [undefined ms] - undefined is typeof 'undefined
-ok 106 Safari 13.0 - [undefined ms] - undefined equals null
-ok 107 Safari 13.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
-ok 108 Safari 13.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-ok 109 Safari 13.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 110 Safari 13.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
-ok 111 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 112 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
-ok 113 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 114 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 115 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
-ok 116 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 117 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
-ok 118 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
-ok 119 Safari 13.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
-ok 120 Safari 13.0 - [undefined ms] - Number parse null-sy Number(undefined) returns NaN
-ok 121 Safari 13.0 - [undefined ms] - Number parse from string whitespace 0 Number('0') returns 0
-ok 122 Safari 13.0 - [undefined ms] - Number parse from string whitespace 0 Number('') returns 0
-ok 123 Safari 13.0 - [undefined ms] - Number parse from string whitespace 0 Number(' ') returns 0
-ok 124 Safari 13.0 - [undefined ms] - Number parse from string whitespace 0 Number('
+ok 105 Firefox 96.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
+ok 106 Firefox 96.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
+ok 107 Firefox 96.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
+ok 108 Firefox 96.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
+ok 109 Firefox 96.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
+ok 110 Firefox 96.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
+ok 111 Firefox 96.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
+ok 112 Firefox 96.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
+ok 113 Firefox 96.0 - [undefined ms] - Number parse from string -0 - 0 is -0
+ok 114 Firefox 96.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
+ok 115 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
+ok 116 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
+ok 117 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
+ok 118 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
+ok 119 Firefox 96.0 - [undefined ms] - Number MAX_VALUE is > 0
+ok 120 Firefox 96.0 - [undefined ms] - Number MIN_VALUE is close to 0
+ok 121 Firefox 96.0 - [undefined ms] - Number -0 is -0
+ok 122 Firefox 96.0 - [undefined ms] - Number -0 equals -0
+ok 123 Firefox 96.0 - [undefined ms] - Number -0 does not equal 0
+ok 124 Firefox 96.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
+ok 125 Firefox 96.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
+ok 126 Firefox 96.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
+ok 127 Firefox 96.0 - [undefined ms] - Object coercion [] !== [] is true
+ok 128 Firefox 96.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
+ok 129 Firefox 96.0 - [undefined ms] - Object coercion {} + [] is 0
+ok 130 Firefox 96.0 - [undefined ms] - Object coercion {} + [] is '[object Object]'
+ok 131 Safari 13.0 - [undefined ms] - Number NaN isNaN
+ok 132 Safari 13.0 - [undefined ms] - Number NaN is typeof 'number
+ok 133 Safari 13.0 - [undefined ms] - null Object is typeof 'object'
+ok 134 Safari 13.0 - [undefined ms] - null Object is NOT instanceof Object
+ok 135 Safari 13.0 - [undefined ms] - null Number is NOT NaN
+ok 136 Safari 13.0 - [undefined ms] - null lodash isNull
+ok 137 Safari 13.0 - [undefined ms] - null jasmine .toBeNull() is
+ok 138 Safari 13.0 - [undefined ms] - null jasmine .toBeFalsy() is
+ok 139 Safari 13.0 - [undefined ms] - undefined is typeof 'undefined
+ok 140 Safari 13.0 - [undefined ms] - undefined Number isNaN
+ok 141 Safari 13.0 - [undefined ms] - undefined null is not identical to null
+ok 142 Safari 13.0 - [undefined ms] - undefined null equals null
+ok 143 Safari 13.0 - [undefined ms] - undefined lodash isUndefined
+ok 144 Safari 13.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
+ok 145 Safari 13.0 - [undefined ms] - undefined jasmine .toEqual(null) is not
+ok 146 Safari 13.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
+ok 147 Safari 13.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
+ok 148 Safari 13.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
+ok 149 Safari 13.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
+ok 150 Safari 13.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
+ok 151 Safari 13.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
+ok 152 Safari 13.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
+ok 153 Safari 13.0 - [undefined ms] - Number parse objects Number({}) is NaN
+ok 154 Safari 13.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
+ok 155 Safari 13.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
+ok 156 Safari 13.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
+ok 157 Safari 13.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
+ok 158 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN is true
+ok 159 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 160 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 161 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
+ok 162 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
+ok 163 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
+ok 164 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas == bananas is false
+ok 165 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN reflectiveness bananas === bananas is false
+ok 166 Safari 13.0 - [undefined ms] - Number parse from string whitespace 0 Number('0') returns 0
+ok 167 Safari 13.0 - [undefined ms] - Number parse from string whitespace 0 Number('') returns 0
+ok 168 Safari 13.0 - [undefined ms] - Number parse from string whitespace 0 Number(' ') returns 0
+ok 169 Safari 13.0 - [undefined ms] - Number parse from string whitespace 0 Number('
 	') returns 0
-ok 125 Safari 13.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
-ok 126 Safari 13.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
-ok 127 Safari 13.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
-ok 128 Safari 13.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
-ok 129 Safari 13.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
-ok 130 Safari 13.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
-ok 131 Safari 13.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
-ok 132 Safari 13.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
-ok 133 Safari 13.0 - [undefined ms] - Number parse from string -0 - 0 is -0
-ok 134 Safari 13.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
-ok 135 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
-ok 136 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
-ok 137 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
-ok 138 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
-ok 139 Safari 13.0 - [undefined ms] - Number MAX_VALUE is > 0
-ok 140 Safari 13.0 - [undefined ms] - Number MIN_VALUE is close to 0
-ok 141 Safari 13.0 - [undefined ms] - Number -0 is -0
-ok 142 Safari 13.0 - [undefined ms] - Number -0 equals -0
-ok 143 Safari 13.0 - [undefined ms] - Number -0 does not equal 0
-ok 144 Safari 13.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
-ok 145 Safari 13.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
-ok 146 Safari 13.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
-ok 147 Safari 13.0 - [undefined ms] - Object coercion [] !== [] is true
-ok 148 Safari 13.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
-ok 149 Safari 13.0 - [undefined ms] - Object coercion {} + [] is 0
-ok 150 Safari 13.0 - [undefined ms] - Object coercion {} + [] is '[object Object]'
+ok 170 Safari 13.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
+ok 171 Safari 13.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
+ok 172 Safari 13.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
+ok 173 Safari 13.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
+ok 174 Safari 13.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
+ok 175 Safari 13.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
+ok 176 Safari 13.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
+ok 177 Safari 13.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
+ok 178 Safari 13.0 - [undefined ms] - Number parse from string -0 - 0 is -0
+ok 179 Safari 13.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
+ok 180 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
+ok 181 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
+ok 182 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
+ok 183 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
+ok 184 Safari 13.0 - [undefined ms] - Number MAX_VALUE is > 0
+ok 185 Safari 13.0 - [undefined ms] - Number MIN_VALUE is close to 0
+ok 186 Safari 13.0 - [undefined ms] - Number -0 is -0
+ok 187 Safari 13.0 - [undefined ms] - Number -0 equals -0
+ok 188 Safari 13.0 - [undefined ms] - Number -0 does not equal 0
+ok 189 Safari 13.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
+ok 190 Safari 13.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
+ok 191 Safari 13.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
+ok 192 Safari 13.0 - [undefined ms] - Object coercion [] !== [] is true
+ok 193 Safari 13.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
+ok 194 Safari 13.0 - [undefined ms] - Object coercion {} + [] is 0
+ok 195 Safari 13.0 - [undefined ms] - Object coercion {} + [] is '[object Object]'
 
-1..150
-# tests 150
-# pass  150
+1..195
+# tests 195
+# pass  195
 # skip  0
 # todo  0
 # fail  0
