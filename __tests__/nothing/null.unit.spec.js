@@ -13,14 +13,18 @@ describe('null', () => {
   })
 
   describe('Number', () => {
-    it('is NOT NaN', () => {
-      expect(isNaN(null)).toBe(false)
+    describe('isNaN(null)', () => {
+      it('is false', () => {
+        expect(isNaN(null)).toBe(false)
+      })
     })
   })
 
   describe('lodash', () => {
-    it('isNull', () => {
-      expect(_.isNull(null)).toBe(true)
+    describe('_.isNull(null)', () => {
+      it('is', () => {
+        expect(_.isNull(null)).toBe(true)
+      })
     })
   })
 

@@ -1,13 +1,29 @@
-describe('Number', () => {
+describe('NaN', () => {
   'use strict'
-  describe('NaN', () => {
+
+  describe('Number', () => {
     it('isNaN', () => {
       expect(isNaN(NaN)).toBe(true) // [N]ot[a][N]umber is NOT a number
     })
 
     it("is typeof 'number", () => {
       expect(typeof (NaN)).toBe('number') // [N]ot[a][N]umber is a number o.0
-      expect(_.isNumber(NaN)).toBe(true)
+    })
+  })
+
+  describe('lodash', () => {
+    describe('_.isNumber(NaN)', () => {
+      it('is', () => {
+        expect(_.isNumber(NaN)).toBe(true)
+      })
+    })
+  })
+
+  describe('jasmine', () => {
+    describe('.toBeFalsy()', () => {
+      it('is', () => {
+        expect(NaN).toBeFalsy()
+      })
     })
   })
 })

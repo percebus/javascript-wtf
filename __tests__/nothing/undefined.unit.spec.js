@@ -23,8 +23,10 @@ describe('undefined', () => {
   })
 
   describe('lodash', () => {
-    it('isUndefined', () => {
-      expect(_.isUndefined(undefined)).toBe(true)
+    describe('_.isUndefined(undefined)', () => {
+      it('is', () => {
+        expect(_.isUndefined(undefined)).toBe(true)
+      })
     })
   })
 
