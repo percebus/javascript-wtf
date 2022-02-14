@@ -65,7 +65,7 @@ ok 63 Chrome 98.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
 ok 64 Chrome 98.0 - [undefined ms] - Object coercion [] !== [] is true
 ok 65 Chrome 98.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
 ok 66 Chrome 98.0 - [undefined ms] - Object coercion {} + [] is 0
-ok 67 Chrome 98.0 - [undefined ms] - Object coercion {} + [] is '[object Object]'
+ok 67 Chrome 98.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
 ok 68 Firefox 96.0 - [undefined ms] - NaN Number isNaN
 ok 69 Firefox 96.0 - [undefined ms] - NaN Number is typeof 'number
 ok 70 Firefox 96.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
@@ -133,7 +133,7 @@ ok 130 Firefox 96.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
 ok 131 Firefox 96.0 - [undefined ms] - Object coercion [] !== [] is true
 ok 132 Firefox 96.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
 ok 133 Firefox 96.0 - [undefined ms] - Object coercion {} + [] is 0
-ok 134 Firefox 96.0 - [undefined ms] - Object coercion {} + [] is '[object Object]'
+ok 134 Firefox 96.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
 ok 135 Safari 13.0 - [undefined ms] - NaN Number isNaN
 ok 136 Safari 13.0 - [undefined ms] - NaN Number is typeof 'number
 ok 137 Safari 13.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
@@ -201,7 +201,7 @@ ok 197 Safari 13.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
 ok 198 Safari 13.0 - [undefined ms] - Object coercion [] !== [] is true
 ok 199 Safari 13.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
 ok 200 Safari 13.0 - [undefined ms] - Object coercion {} + [] is 0
-ok 201 Safari 13.0 - [undefined ms] - Object coercion {} + [] is '[object Object]'
+ok 201 Safari 13.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
 
 1..201
 # tests 201

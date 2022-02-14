@@ -1,5 +1,6 @@
 describe('Object', () => {
   'use strict'
+
   describe('coercion', () => { // SRC: https://www.youtube.com/watch?v=2pL28CcEijU&t=383s
     let result
     describe('[] !== []', () => {
@@ -11,8 +12,11 @@ describe('Object', () => {
     })
 
     describe('[] + {}', () => {
-      it("equals '[object Object]'", () => {
+      beforeEach(() => {
         result = [] + {}
+      })
+
+      it("equals '[object Object]'", () => {
         expect(result).toEqual('[object Object]')
         expect(typeof (result)).toBe('string')
       })
@@ -27,8 +31,7 @@ describe('Object', () => {
         expect(result).toBe(0)
       })
 
-      it("is '[object Object]'", () => {
-        const result = {} + []
+      it("equals '[object Object]'", () => {
         expect(result).not.toBe(0)
         expect(result).toEqual('[object Object]')
         expect(typeof (result)).toBe('string')
