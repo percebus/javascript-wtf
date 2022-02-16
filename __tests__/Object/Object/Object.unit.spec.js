@@ -18,6 +18,21 @@ describe('Object', () => {
         expect(emptyObject instanceof Object).toBe(true)
       })
 
+      describe('String({})', () => {
+        let string
+        beforeEach(() => {
+          string = String(emptyObject)
+        })
+
+        it("returns '[object Object]' string", () => {
+          expect(string).toEqual('[object Object]')
+        })
+
+        it('is typeof string', () => {
+          expect(typeof (string)).toEqual('string')
+        })
+      })
+
       describe('lodash', () => {
         describe('_.isObject', () => {
           it('is', () => {

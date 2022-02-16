@@ -24,6 +24,21 @@ describe('Array', () => {
           expect(emptyArray instanceof Object).toBe(true)
         })
 
+        describe('String([])', () => {
+          let string
+          beforeEach(() => {
+            string = String(emptyArray)
+          })
+
+          it("returns ''", () => {
+            expect(string).toEqual('')
+          })
+
+          it('is typeof string', () => {
+            expect(typeof (string)).toEqual('string')
+          })
+        })
+
         describe('lodash', () => {
           describe('_.isObject', () => {
             it('is', () => {
