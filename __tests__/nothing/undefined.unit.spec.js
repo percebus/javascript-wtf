@@ -18,7 +18,6 @@ describe('undefined', () => {
 
     it('equals null', () => {
       expect(undefined == null).toBe(true) // undefined equals null
-      expect(undefined).not.toEqual(null) // FIXME? but not really o.0
     })
   })
 
@@ -39,7 +38,8 @@ describe('undefined', () => {
 
     describe('.toEqual(null)', () => {
       it('is not', () => {
-        expect(undefined).not.toEqual(null)
+        expect(undefined).not.toEqual(null) // WARNING FIXME?
+        expect(undefined == null).toBe(true) // undefined equals null
       })
     })
   })

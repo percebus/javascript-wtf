@@ -20,7 +20,7 @@ describe('Number', () => {'use strict'
           })
         })
 
-        describe("Number('\r\n\t')", () => {
+        describe("Number('/r/n/t')", () => {
           it('returns 0', () => {
             expect(Number('\r\n\t')).toBe(0)
           })

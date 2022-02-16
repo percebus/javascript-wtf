@@ -12,6 +12,12 @@ describe('NaN', () => {
   })
 
   describe('lodash', () => {
+    describe('_.isNaN(NaN)', () => {
+      it('is', () => {
+        expect(_.isNaN(NaN)).toBe(true)
+      })
+    })
+
     describe('_.isNumber(NaN)', () => {
       it('is', () => {
         expect(_.isNumber(NaN)).toBe(true)
