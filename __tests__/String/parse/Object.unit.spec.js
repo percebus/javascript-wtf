@@ -80,6 +80,39 @@ describe('String', () => {
           })
         })
 
+        describe('new String([])', () => {
+          /* eslint-disable no-new-wrappers */
+          const tests = {
+            'new String([])': new String([]),
+            'new String([undefined])': new String([undefined]),
+            'new String([null])': new String([null])
+          }
+          /* eslint-enable no-new-wrappers */
+
+          _.forEach(tests, (oString, testName) => {
+            describe(testName, () => {
+              it("is typeof 'object', not 'string'", () => {
+                expect(typeof (oString)).not.toEqual('string')
+                expect(typeof (oString)).toEqual('object')
+              })
+
+              it('is instanceof String', () => {
+                expect(oString instanceof String).toBe(true)
+              })
+
+              it('is instanceof Object', () => {
+                expect(oString instanceof Object).toBe(true)
+              })
+
+              describe('.toString()', () => {
+                it("returns ''", () => {
+                  expect(oString.toString()).toEqual('')
+                })
+              })
+            })
+          })
+        })
+
         describe('String([,,])', () => {
           /* eslint-disable comma-spacing */
           /* eslint-disable no-sparse-arrays */

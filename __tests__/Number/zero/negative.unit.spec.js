@@ -1,5 +1,6 @@
 describe('Number', () => {
   'use strict'
+
   /* eslint-disable no-self-compare */
   /* eslint-disable no-compare-neg-zero */
   describe('-0', () => {
