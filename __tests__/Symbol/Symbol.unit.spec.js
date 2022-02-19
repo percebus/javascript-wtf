@@ -26,29 +26,34 @@ describe('Symbol', () => {
       })
 
       describe('cast', () => { // it cannot be casted to String
-        describe("Symbol + ''", () => {
-          function catchError () {
-            return function concatSymbol () {
-              return oSymbol + ''
-            }
+        const tests = {
+          "oSymbol + ''": function catchError () {
+            return () => { return oSymbol + '' }
+          },
+          "'' + oSymbol": function catchError () {
+            return () => { return '' + oSymbol }
           }
+        }
 
-          it('throws a TypeError', () => {
-            expect(catchError()).toThrow()
-          })
-
-          xdescribe('error message', () => {
-            describe('common', () => {
-              it("throws a TypeError: 'Cannot convert a Symbol value to a string'", () => {
-                const oTypeError = new TypeError('Cannot convert a Symbol value to a string')
-                expect(catchError()).toThrow(oTypeError)
-              })
+        _.forEach(tests, (catchError, testName) => {
+          describe(testName, () => {
+            it('throws a TypeError', () => {
+              expect(catchError()).toThrow()
             })
 
-            describe('Safari', () => {
-              it("throws a TypeError: 'Cannot convert a symbol to a string'", () => {
-                const oTypeError = new TypeError('Cannot convert a symbol to a string')
-                expect(catchError()).toThrow(oTypeError)
+            xdescribe('error message', () => {
+              describe('common', () => {
+                it("throws a TypeError: 'Cannot convert a Symbol value to a string'", () => {
+                  const oTypeError = new TypeError('Cannot convert a Symbol value to a string')
+                  expect(catchError()).toThrow(oTypeError)
+                })
+              })
+
+              describe('Safari', () => {
+                it("throws a TypeError: 'Cannot convert a symbol to a string'", () => {
+                  const oTypeError = new TypeError('Cannot convert a symbol to a string')
+                  expect(catchError()).toThrow(oTypeError)
+                })
               })
             })
           })
