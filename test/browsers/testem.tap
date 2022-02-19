@@ -133,11 +133,11 @@ ok 132 Chrome 98.0 - [undefined ms] - String parse Object Array String([,,]) Str
 ok 133 Chrome 98.0 - [undefined ms] - Symbol string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
 ok 134 Chrome 98.0 - [undefined ms] - Symbol string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
 ok 135 Chrome 98.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' throws a TypeError
-ok 136 Chrome 98.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' error message common throws a TypeError: 'Cannot convert a Symbol value to a string'
-ok 137 Chrome 98.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: 'Cannot convert a symbol to a string'
+ok 136 Chrome 98.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
+ok 137 Chrome 98.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
 ok 138 Chrome 98.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol throws a TypeError
-ok 139 Chrome 98.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol error message common throws a TypeError: 'Cannot convert a Symbol value to a string'
-ok 140 Chrome 98.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: 'Cannot convert a symbol to a string'
+ok 139 Chrome 98.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
+ok 140 Chrome 98.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
 ok 141 Firefox 96.0 - [undefined ms] - NaN Number isNaN
 ok 142 Firefox 96.0 - [undefined ms] - NaN Number is typeof 'number
 ok 143 Firefox 96.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
@@ -273,11 +273,11 @@ ok 272 Firefox 96.0 - [undefined ms] - String parse Object Array String([,,]) St
 ok 273 Firefox 96.0 - [undefined ms] - Symbol string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
 ok 274 Firefox 96.0 - [undefined ms] - Symbol string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
 ok 275 Firefox 96.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' throws a TypeError
-ok 276 Firefox 96.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' error message common throws a TypeError: 'Cannot convert a Symbol value to a string'
-ok 277 Firefox 96.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: 'Cannot convert a symbol to a string'
+ok 276 Firefox 96.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
+ok 277 Firefox 96.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
 ok 278 Firefox 96.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol throws a TypeError
-ok 279 Firefox 96.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol error message common throws a TypeError: 'Cannot convert a Symbol value to a string'
-ok 280 Firefox 96.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: 'Cannot convert a symbol to a string'
+ok 279 Firefox 96.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
+ok 280 Firefox 96.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
 ok 281 Safari 13.0 - [undefined ms] - NaN Number isNaN
 ok 282 Safari 13.0 - [undefined ms] - NaN Number is typeof 'number
 ok 283 Safari 13.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
@@ -413,11 +413,11 @@ ok 412 Safari 13.0 - [undefined ms] - String parse Object Array String([,,]) Str
 ok 413 Safari 13.0 - [undefined ms] - Symbol string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
 ok 414 Safari 13.0 - [undefined ms] - Symbol string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
 ok 415 Safari 13.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' throws a TypeError
-ok 416 Safari 13.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' error message common throws a TypeError: 'Cannot convert a Symbol value to a string'
-ok 417 Safari 13.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: 'Cannot convert a symbol to a string'
+ok 416 Safari 13.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
+ok 417 Safari 13.0 - [undefined ms] - Symbol string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
 ok 418 Safari 13.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol throws a TypeError
-ok 419 Safari 13.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol error message common throws a TypeError: 'Cannot convert a Symbol value to a string'
-ok 420 Safari 13.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: 'Cannot convert a symbol to a string'
+ok 419 Safari 13.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
+ok 420 Safari 13.0 - [undefined ms] - Symbol string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
 
 1..420
 # tests 420

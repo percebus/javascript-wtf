@@ -1,5 +1,10 @@
 describe('Symbol', () => {
   'use strict'
+
+  const templates = {
+    TypeError: _.template("throws a TypeError: <%= 'message' %>")
+  }
+
   describe('string', () => {
     let oSymbol
 
@@ -26,12 +31,17 @@ describe('Symbol', () => {
       })
 
       describe('cast', () => { // it cannot be casted to String
+        let oTypeError
         const tests = {
           "oSymbol + ''": function catchError () {
-            return () => { return oSymbol + '' }
+            return () => {
+              return oSymbol + ''
+            }
           },
           "'' + oSymbol": function catchError () {
-            return () => { return '' + oSymbol }
+            return () => {
+              return '' + oSymbol
+            }
           }
         }
 
@@ -42,17 +52,19 @@ describe('Symbol', () => {
             })
 
             xdescribe('error message', () => {
-              describe('common', () => {
-                it("throws a TypeError: 'Cannot convert a Symbol value to a string'", () => {
-                  const oTypeError = new TypeError('Cannot convert a Symbol value to a string')
-                  expect(catchError()).toThrow(oTypeError)
-                })
-              })
+              const messages = {
+                Common: 'Cannot convert a Symbol value to a string',
+                Safari: 'Cannot convert a symbol to a string'
+              }
 
-              describe('Safari', () => {
-                it("throws a TypeError: 'Cannot convert a symbol to a string'", () => {
-                  const oTypeError = new TypeError('Cannot convert a symbol to a string')
-                  expect(catchError()).toThrow(oTypeError)
+              _.forEach(messages, (message, platform) => {
+                // const _describe = (browser === 'foo') ? describe : xdescribe
+                xdescribe(platform, () => {
+                  const testName = templates.TypeError({ message: message })
+                  it(testName, () => {
+                    oTypeError = new TypeError(message)
+                    expect(catchError()).toThrow(oTypeError)
+                  })
                 })
               })
             })
