@@ -8,8 +8,8 @@ describe('Array', () => {
     const list = []
     list.length = 3
 
-    /* eslint-disable no-sparse-arrays */
     /* eslint-disable comma-spacing */
+    /* eslint-disable no-sparse-arrays */
     const tests = {
       '[].length=3': list,
       '[,,,]': [, , ,], // 3 commas? so 4 items? 0-3?

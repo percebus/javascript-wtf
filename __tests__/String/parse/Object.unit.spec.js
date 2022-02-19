@@ -121,8 +121,8 @@ describe('String', () => {
             'String([undefined,undefined,])': String([undefined, undefined]),
             'String([null,null,])': String([null, null])
           }
-          /* eslint-enable comma-spacing */
           /* eslint-enable no-sparse-arrays */
+          /* eslint-enable comma-spacing */
 
           _.forEach(tests, (string, testName) => {
             describe(testName, () => {
