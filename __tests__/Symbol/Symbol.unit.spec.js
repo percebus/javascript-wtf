@@ -5,7 +5,7 @@ describe('Symbol', () => {
     TypeError: _.template("throws a TypeError: <%= 'message' %>")
   }
 
-  describe('string', () => {
+  describe('to string', () => {
     let oSymbol
 
     describe("Symbol('that is cool')", () => { // https://www.youtube.com/watch?v=2pL28CcEijU
