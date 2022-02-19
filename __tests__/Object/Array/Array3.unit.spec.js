@@ -12,7 +12,7 @@ describe('Array', () => {
     /* eslint-disable comma-spacing */
     const tests = {
       '[].length=3': list,
-      '[,,,]': [,,,], // 3 commas? so 4 items? 0-3?
+      '[,,,]': [, , ,], // 3 commas? so 4 items? 0-3?
       '[ undefined x 3 ]': [undefined, undefined, undefined],
       'Array(3)': Array(3), // 0-2 ?
       'new Array(3)': new Array(3) // 0-2?
@@ -58,12 +58,8 @@ describe('Array', () => {
         })
 
         describe(".map(x => 'slot')", () => {
-          function convert () {
-            return 'slot'
-          }
-
           const string = emptySlots
-            .map(convert)
+            .map(x => 'slot')
             .join(';')
 
           if (testName === '[ undefined x 3 ]') {
