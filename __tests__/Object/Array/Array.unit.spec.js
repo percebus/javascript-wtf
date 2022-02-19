@@ -55,4 +55,13 @@ describe('Array', () => {
       })
     })
   })
+
+  describe('[1, 2, 3]', () => {
+    describe('.map(x => x * 2)', () => {
+      it('returns [2, 4, 6]', () => {
+        const doubledNumbers = [1, 2, 3].map((x) => { return x * 2 })
+        expect(doubledNumbers).toEqual([2, 4, 6])
+      })
+    })
+  })
 })
