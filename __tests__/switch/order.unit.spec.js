@@ -77,7 +77,7 @@ describe('switch', () => {
       /*
        * switch (x) {
        *     default:      // default runs last
-       *       result += 1 // * skips *
+       *       result += 1 // * skips? *
        *    // break       // no breaks! falls through
        *
        *     case 10:      // 42? nope
