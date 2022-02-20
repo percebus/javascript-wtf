@@ -34,7 +34,7 @@ describe('Number', () => {
         })
 
         /* eslint-disable no-self-compare */
-        describe('reflectiveness', () => { // NaN are not reflective
+        describe('broken reflectiveness', () => { // NaN are not reflective
           /* eslint-disable eqeqeq */
           describe('bananas == bananas', () => {
             it('is false', () => {
@@ -44,7 +44,7 @@ describe('Number', () => {
           /* eslint-enable eqeqeq */
 
           describe('bananas === bananas', () => { // so they cannot compare with themselves
-            it('is false', () => {
+            it('is false!', () => {
 
               /* This horrible result could be avoided, i
                * if JS simply threw an error

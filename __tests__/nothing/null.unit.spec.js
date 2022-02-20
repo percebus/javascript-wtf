@@ -14,7 +14,7 @@ describe('null', () => {
 
   describe('Number', () => {
     describe('isNaN(null)', () => {
-      it('is false', () => {
+      it('is NOT', () => {
         expect(isNaN(null)).toBe(false)
       })
     })
@@ -38,6 +38,13 @@ describe('null', () => {
     describe('.toBeFalsy()', () => {
       it('is', () => {
         expect(undefined).toBeFalsy()
+      })
+    })
+
+    describe('.toEqual(undefined)', () => {
+      it('is NOT!', () => {
+        expect(null).not.toEqual(undefined) // WARNING FIXME?
+        expect(undefined == null).toBe(true) // undefined equals null
       })
     })
   })

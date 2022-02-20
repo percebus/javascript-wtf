@@ -37,7 +37,7 @@ describe('undefined', () => {
     })
 
     describe('.toEqual(null)', () => {
-      it('is not', () => {
+      it('is NOT!', () => {
         expect(undefined).not.toEqual(null) // WARNING FIXME?
         expect(undefined == null).toBe(true) // undefined equals null
       })
