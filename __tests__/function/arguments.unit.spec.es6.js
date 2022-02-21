@@ -1,28 +1,41 @@
-describe('Object', () => {
+describe('function', () => {
   'use strict'
 
-  describe('newCoordinate(longitude, latitude)', () => { // SRC: https://www.youtube.com/watch?v=2pL28CcEijU
+  describe('newCoordinate(...)', () => { // SRC: https://www.youtube.com/watch?v=2pL28CcEijU
     function newCoordinate1 (x, y) {
       return { longitude: x, latitude: y }
     }
 
-    function newCoordinate2 (longitude, latitude) {
+    function newCoordinate2 (longitude = 0, latitude = 0) { // assigned/default values
       return { longitude, latitude }
     }
 
-    function newCoordinate3 ({ longitude, latitude }) {
+    function newCoordinate3 (coordinate) { // object
+      return {
+        longitude: coordinate.longitude,
+        latitude: coordinate.latitude
+      }
+    }
+
+    function newCoordinate4 ({ longitude, latitude }) { // object, w/ expected properties
       return { longitude, latitude }
     }
 
-    function newCoordinate4 ({ x: longitude, y: latitude }) {
+    function newCoordinate5 (coordinate = { longitude: 0, latitude: 0 }) { // default object, with default properties
+      return coordinate
+    }
+
+    function newCoordinate6 ({ x: longitude, y: latitude }) { // renaming argument-object's properties
       return { longitude, latitude }
     }
 
     const coordinates = {
-      '{longitude:x, latitude:y}': newCoordinate1(180, 90),
-      '{ longitude, latitude }': newCoordinate2(180, 90),
-      '({latitude:180, longitude:90})': newCoordinate3({ latitude: 90, longitude: 180 }),
-      '({x:180, y:180})': newCoordinate4({ x: 180, y: 90 })
+      'return {longitude:x, latitude:y}': newCoordinate1(180, 90),
+      'return { longitude, latitude }': newCoordinate2(180, 90),
+      'newCoordinate(coordinate)': newCoordinate3({ latitude: 90, longitude: 180 }),
+      'newCoordinate({latitude:180, longitude:90})': newCoordinate4({ latitude: 90, longitude: 180 }),
+      'newCoordinate(coordinate = {longitude:0, latitude:0})': newCoordinate5({ latitude: 90, longitude: 180 }),
+      'newCoordinate({x:180, y:180})': newCoordinate6({ x: 180, y: 90 })
     }
 
     _.forEach(coordinates, (coordinate, testName) => {
