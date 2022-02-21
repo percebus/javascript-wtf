@@ -1,4 +1,4 @@
-xdescribe('Object', () => {
+describe('Object', () => {
   'use strict'
 
   describe('unpacking', () => { // SRC: https://www.youtube.com/watch?v=2pL28CcEijU

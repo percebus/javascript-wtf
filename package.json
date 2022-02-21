@@ -15,6 +15,10 @@
     "lint": "npm run standard",
     "prejest:ci": "npm run lint",
     "jest:ci": "jest --ci",
+    "jest:ci:unit:js": "npm run jest:ci -- unit.spec.js",
+    "jest:ci:unit:es6": "npm run jest:ci -- unit.spec.es6.js",
+    "jest:ci:unit:FIXME": "npm run jest:ci -- unit.spec.js unit.spec.es6.js",
+    "jest:ci:unit:all": "npm run jest:ci:unit:js && jest --ci unit.spec.es6.js",
     "pretestem": "npm run lint",
     "testem": "testem",
     "pretestem:ci": "npm run lint",
@@ -23,7 +27,7 @@
     "testem:ci:tap": "testem ci --reporter tap > test/browsers/testem.tap",
     "testem:ci:xunit": "testem ci --reporter xunit > test/browsers/testem.xunit.xml",
     "testem:ci:all": "npm run testem:ci:tap && npm run testem:ci:xunit",
-    "test": "npm run jest:ci && npm run testem:ci:tap"
+    "test": "npm run jest:ci:unit:all && npm run testem:ci:tap"
   },
   "standard": {
     "env": [

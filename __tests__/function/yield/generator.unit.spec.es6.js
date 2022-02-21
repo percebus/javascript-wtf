@@ -3,7 +3,7 @@
  * Breaking a bunch of OTHER 'unit' tests
  * Hence, the '*.js.FIXME' extension
  */
-xdescribe('function', () => {
+describe('function', () => {
   'use strict'
   describe('iterators', () => {
     describe('1, 2, 3', () => {

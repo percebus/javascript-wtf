@@ -3,7 +3,7 @@ parallel: 4
 ignore_missing_launchers: true
 src_files: [
   'node_modules/lodash/lodash.min.js',
-  '__tests__/**/*.unit.spec.js'
+  '__tests__/**/*.unit.spec*.js'
 ]
 
 launchers:
