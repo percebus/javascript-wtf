@@ -8,8 +8,8 @@ xdescribe('Object', () => {
 
     const coordinate = newCoordinate()
 
-    describe('{ longitude, y } = newCoordinate()', () => {
-      const { longitude, y } = coordinate
+    describe('{ longitude, latitude } = newCoordinate()', () => {
+      const { longitude, latitude } = coordinate
 
       describe('longitude', () => {
         it('equals 180, from coordinate.longitude', () => {
@@ -18,10 +18,10 @@ xdescribe('Object', () => {
         })
       })
 
-      describe('y', () => {
-        it('equals 90, from coordinate.y', () => {
-          expect(y).toBe(coordinate.latitude)
-          expect(y).toBe(90)
+      describe('latitude', () => {
+        it('equals 90, from coordinate.latitude', () => {
+          expect(latitude).toBe(coordinate.latitude)
+          expect(latitude).toBe(90)
         })
       })
     })
