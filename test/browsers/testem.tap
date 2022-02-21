@@ -154,475 +154,487 @@ ok 153 Chrome 98.0 - [undefined ms] - Object newCoordinate(longitude, latitude) 
 ok 154 Chrome 98.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking longitude, latitude = coordinate latitude equals 90, from coordinate.latitude
 ok 155 Chrome 98.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking {longitude:x, latitude:y} x equals 180, from coordinate.longitude
 ok 156 Chrome 98.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking {longitude:x, latitude:y} y equals 90, from coordinate.latitude
-ok 157 Chrome 98.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
-ok 158 Chrome 98.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
-ok 159 Chrome 98.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
-ok 160 Chrome 98.0 - [undefined ms] - String parse nothing String(null) is typeof string
-ok 161 Chrome 98.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
-ok 162 Chrome 98.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
-ok 163 Chrome 98.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
-ok 164 Chrome 98.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
-ok 165 Chrome 98.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
-ok 166 Chrome 98.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
-ok 167 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
-ok 168 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
-ok 169 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
-ok 170 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
-ok 171 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
-ok 172 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
-ok 173 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
-ok 174 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
-ok 175 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
-ok 176 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
-ok 177 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
-ok 178 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
-ok 179 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
-ok 180 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
-ok 181 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
-ok 182 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
-ok 183 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
-ok 184 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
-ok 185 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
-ok 186 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
-ok 187 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
-ok 188 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
-ok 189 Chrome 98.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
-ok 190 Chrome 98.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
-ok 191 Chrome 98.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
-ok 192 Chrome 98.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
-ok 193 Chrome 98.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
-ok 194 Chrome 98.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
-ok 195 Chrome 98.0 - [undefined ms] - switch case order magicNumber 10 returns 2
-ok 196 Chrome 98.0 - [undefined ms] - switch case order magicNumber 20 returns 2
-ok 197 Chrome 98.0 - [undefined ms] - switch case order magicNumber 30 returns 4
-ok 198 Chrome 98.0 - [undefined ms] - switch case order magicNumber 42 returns 3
-ok 199 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
-ok 200 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
-ok 201 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
-ok 202 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
-ok 203 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
-ok 204 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
-ok 205 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
-ok 206 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
-ok 207 Chrome 98.0 - [undefined ms] - try { something } finally { return x } always runs last
-ok 208 Firefox 96.0 - [undefined ms] - function iterators 1, 2, 3 iterator.next() returns 1, 2 & 3
-ok 209 Firefox 96.0 - [undefined ms] - NaN Number isNaN
-ok 210 Firefox 96.0 - [undefined ms] - NaN Number is typeof 'number'
-ok 211 Firefox 96.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
-ok 212 Firefox 96.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
-ok 213 Firefox 96.0 - [undefined ms] - NaN jasmine .toBeFalsy() is
-ok 214 Firefox 96.0 - [undefined ms] - null Object is typeof 'object'
-ok 215 Firefox 96.0 - [undefined ms] - null Object is NOT instanceof Object
-ok 216 Firefox 96.0 - [undefined ms] - null Number isNaN(null) is NOT
-ok 217 Firefox 96.0 - [undefined ms] - null lodash _.isNull(null) is
-ok 218 Firefox 96.0 - [undefined ms] - null jasmine .toBeNull() is
-ok 219 Firefox 96.0 - [undefined ms] - null jasmine .toBeFalsy() is
-ok 220 Firefox 96.0 - [undefined ms] - null jasmine .toEqual(undefined) is NOT!
-ok 221 Firefox 96.0 - [undefined ms] - undefined is typeof 'undefined
-ok 222 Firefox 96.0 - [undefined ms] - undefined Number isNaN
-ok 223 Firefox 96.0 - [undefined ms] - undefined null is not identical to null
-ok 224 Firefox 96.0 - [undefined ms] - undefined null equals null
-ok 225 Firefox 96.0 - [undefined ms] - undefined lodash _.isUndefined(undefined) is
-ok 226 Firefox 96.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
-ok 227 Firefox 96.0 - [undefined ms] - undefined jasmine .toEqual(null) is NOT!
-ok 228 Firefox 96.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
-ok 229 Firefox 96.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-ok 230 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
-ok 231 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
-ok 232 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
-ok 233 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
-ok 234 Firefox 96.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
-ok 235 Firefox 96.0 - [undefined ms] - Number parse objects Number({}) is NaN
-ok 236 Firefox 96.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
-ok 237 Firefox 96.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
-ok 238 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 239 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
-ok 240 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 241 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-ok 242 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-ok 243 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 244 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
-ok 245 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 246 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-ok 247 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-ok 248 Firefox 96.0 - [undefined ms] - Number parse from string whitespace to 0 Number('0') returns 0
-ok 249 Firefox 96.0 - [undefined ms] - Number parse from string whitespace to 0 Number('') returns 0
-ok 250 Firefox 96.0 - [undefined ms] - Number parse from string whitespace to 0 Number(' ') returns 0
-ok 251 Firefox 96.0 - [undefined ms] - Number parse from string whitespace to 0 Number('/r/n/t') returns 0
-ok 252 Firefox 96.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
-ok 253 Firefox 96.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
-ok 254 Firefox 96.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
-ok 255 Firefox 96.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
-ok 256 Firefox 96.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
-ok 257 Firefox 96.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
-ok 258 Firefox 96.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
-ok 259 Firefox 96.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
-ok 260 Firefox 96.0 - [undefined ms] - Number parse from string -0 - 0 is -0
-ok 261 Firefox 96.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
-ok 262 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
-ok 263 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
-ok 264 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
-ok 265 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
-ok 266 Firefox 96.0 - [undefined ms] - Number VALUE MAX is > 0
-ok 267 Firefox 96.0 - [undefined ms] - Number VALUE MAX is the biggest possible number
-ok 268 Firefox 96.0 - [undefined ms] - Number VALUE MIN is NOT even a negative number
-ok 269 Firefox 96.0 - [undefined ms] - Number VALUE MIN is NOT even 0 itself
-ok 270 Firefox 96.0 - [undefined ms] - Number VALUE MIN it is actually a positive number
-ok 271 Firefox 96.0 - [undefined ms] - Number VALUE MIN is close to 0
-ok 272 Firefox 96.0 - [undefined ms] - Number -0 is -0
-ok 273 Firefox 96.0 - [undefined ms] - Number -0 equals -0
-ok 274 Firefox 96.0 - [undefined ms] - Number -0 does not equal 0
-ok 275 Firefox 96.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
-ok 276 Firefox 96.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
-ok 277 Firefox 96.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
-ok 278 Firefox 96.0 - [undefined ms] - Number -0 to string '' + -0 returns '0'
-ok 279 Firefox 96.0 - [undefined ms] - Number -0 to string '' - 0 does NOT return '0'
-ok 280 Firefox 96.0 - [undefined ms] - Number -0 to string '' - 0 returns 0, NOT '0'
-ok 281 Firefox 96.0 - [undefined ms] - Array [] brackets is typeof 'object', not 'array'
-ok 282 Firefox 96.0 - [undefined ms] - Array [] brackets is instanceof Array
-ok 283 Firefox 96.0 - [undefined ms] - Array [] brackets is instanceof Object
-ok 284 Firefox 96.0 - [undefined ms] - Array [] brackets String([]) returns ''
-ok 285 Firefox 96.0 - [undefined ms] - Array [] brackets String([]) is typeof string
-ok 286 Firefox 96.0 - [undefined ms] - Array [] brackets lodash _.isObject is
-ok 287 Firefox 96.0 - [undefined ms] - Array [] brackets lodash _.isArray is
-ok 288 Firefox 96.0 - [undefined ms] - Array [] instance is typeof 'object', not 'array'
-ok 289 Firefox 96.0 - [undefined ms] - Array [] instance is instanceof Array
-ok 290 Firefox 96.0 - [undefined ms] - Array [] instance is instanceof Object
-ok 291 Firefox 96.0 - [undefined ms] - Array [] instance String([]) returns ''
-ok 292 Firefox 96.0 - [undefined ms] - Array [] instance String([]) is typeof string
-ok 293 Firefox 96.0 - [undefined ms] - Array [] instance lodash _.isObject is
-ok 294 Firefox 96.0 - [undefined ms] - Array [] instance lodash _.isArray is
-ok 295 Firefox 96.0 - [undefined ms] - Array [1, 2, 3] .map(x => x * 2) returns [2, 4, 6]
-ok 296 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 is instanceof Array
-ok 297 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 is typeof 'object'
-ok 298 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 lodash _.isArray
-ok 299 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 has length 3
-ok 300 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 equals [undefined, undefined, undefined]
-ok 301 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() equals ',,'
-ok 302 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 303 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 304 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots actually equals ';;'
-ok 305 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] is instanceof Array
-ok 306 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] is typeof 'object'
-ok 307 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] lodash _.isArray
-ok 308 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] has length 3
-ok 309 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] equals [undefined, undefined, undefined]
-ok 310 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() equals ',,'
-ok 311 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 312 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 313 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots actually equals ';;'
-ok 314 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is instanceof Array
-ok 315 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is typeof 'object'
-ok 316 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] lodash _.isArray
-ok 317 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] has length 3
-ok 318 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] equals [undefined, undefined, undefined]
-ok 319 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() equals ',,'
-ok 320 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 321 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .map(x => 'slot') [ undefined x 3 ] equals 'slot;slot;slot'
-ok 322 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) is instanceof Array
-ok 323 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) is typeof 'object'
-ok 324 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) lodash _.isArray
-ok 325 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) has length 3
-ok 326 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) equals [undefined, undefined, undefined]
-ok 327 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() equals ',,'
-ok 328 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 329 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 330 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots actually equals ';;'
-ok 331 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) is instanceof Array
-ok 332 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) is typeof 'object'
-ok 333 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) lodash _.isArray
-ok 334 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) has length 3
-ok 335 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) equals [undefined, undefined, undefined]
-ok 336 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() equals ',,'
-ok 337 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 338 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 339 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots actually equals ';;'
-ok 340 Firefox 96.0 - [undefined ms] - Object coercion [] !== [] is true
-ok 341 Firefox 96.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
-ok 342 Firefox 96.0 - [undefined ms] - Object coercion {} + [] is 0
-ok 343 Firefox 96.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
-ok 344 Firefox 96.0 - [undefined ms] - Object {} is typeof object
-ok 345 Firefox 96.0 - [undefined ms] - Object {} is instanceof Object
-ok 346 Firefox 96.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-ok 347 Firefox 96.0 - [undefined ms] - Object {} String({}) is typeof string
-ok 348 Firefox 96.0 - [undefined ms] - Object {} lodash _.isObject is
-ok 349 Firefox 96.0 - [undefined ms] - Object {} lodash _.isArray is not
-ok 350 Firefox 96.0 - [undefined ms] - Object {} is typeof object
-ok 351 Firefox 96.0 - [undefined ms] - Object {} is instanceof Object
-ok 352 Firefox 96.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-ok 353 Firefox 96.0 - [undefined ms] - Object {} String({}) is typeof string
-ok 354 Firefox 96.0 - [undefined ms] - Object {} lodash _.isObject is
-ok 355 Firefox 96.0 - [undefined ms] - Object {} lodash _.isArray is not
-ok 356 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking longitude, latitude = coordinate longitude equals 180, from coordinate.longitude
-ok 357 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking longitude, latitude = coordinate latitude equals 90, from coordinate.latitude
-ok 358 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking {longitude:x, latitude:y} x equals 180, from coordinate.longitude
-ok 359 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking {longitude:x, latitude:y} y equals 90, from coordinate.latitude
-ok 360 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking longitude, latitude = coordinate longitude equals 180, from coordinate.longitude
-ok 361 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking longitude, latitude = coordinate latitude equals 90, from coordinate.latitude
-ok 362 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking {longitude:x, latitude:y} x equals 180, from coordinate.longitude
-ok 363 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking {longitude:x, latitude:y} y equals 90, from coordinate.latitude
-ok 364 Firefox 96.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
-ok 365 Firefox 96.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
-ok 366 Firefox 96.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
-ok 367 Firefox 96.0 - [undefined ms] - String parse nothing String(null) is typeof string
-ok 368 Firefox 96.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
-ok 369 Firefox 96.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
-ok 370 Firefox 96.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
-ok 371 Firefox 96.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
-ok 372 Firefox 96.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
-ok 373 Firefox 96.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
-ok 374 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
-ok 375 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
-ok 376 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
-ok 377 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
-ok 378 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
-ok 379 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
-ok 380 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
-ok 381 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
-ok 382 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
-ok 383 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
-ok 384 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
-ok 385 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
-ok 386 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
-ok 387 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
-ok 388 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
-ok 389 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
-ok 390 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
-ok 391 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
-ok 392 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
-ok 393 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
-ok 394 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
-ok 395 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
-ok 396 Firefox 96.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
-ok 397 Firefox 96.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
-ok 398 Firefox 96.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
-ok 399 Firefox 96.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
-ok 400 Firefox 96.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
-ok 401 Firefox 96.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
-ok 402 Firefox 96.0 - [undefined ms] - switch case order magicNumber 10 returns 2
-ok 403 Firefox 96.0 - [undefined ms] - switch case order magicNumber 20 returns 2
-ok 404 Firefox 96.0 - [undefined ms] - switch case order magicNumber 30 returns 4
-ok 405 Firefox 96.0 - [undefined ms] - switch case order magicNumber 42 returns 3
-ok 406 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
-ok 407 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
-ok 408 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
-ok 409 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
-ok 410 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
-ok 411 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
-ok 412 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
-ok 413 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
-ok 414 Firefox 96.0 - [undefined ms] - try { something } finally { return x } always runs last
-ok 415 Safari 13.0 - [undefined ms] - function iterators 1, 2, 3 iterator.next() returns 1, 2 & 3
-ok 416 Safari 13.0 - [undefined ms] - NaN Number isNaN
-ok 417 Safari 13.0 - [undefined ms] - NaN Number is typeof 'number'
-ok 418 Safari 13.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
-ok 419 Safari 13.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
-ok 420 Safari 13.0 - [undefined ms] - NaN jasmine .toBeFalsy() is
-ok 421 Safari 13.0 - [undefined ms] - null Object is typeof 'object'
-ok 422 Safari 13.0 - [undefined ms] - null Object is NOT instanceof Object
-ok 423 Safari 13.0 - [undefined ms] - null Number isNaN(null) is NOT
-ok 424 Safari 13.0 - [undefined ms] - null lodash _.isNull(null) is
-ok 425 Safari 13.0 - [undefined ms] - null jasmine .toBeNull() is
-ok 426 Safari 13.0 - [undefined ms] - null jasmine .toBeFalsy() is
-ok 427 Safari 13.0 - [undefined ms] - null jasmine .toEqual(undefined) is NOT!
-ok 428 Safari 13.0 - [undefined ms] - undefined is typeof 'undefined
-ok 429 Safari 13.0 - [undefined ms] - undefined Number isNaN
-ok 430 Safari 13.0 - [undefined ms] - undefined null is not identical to null
-ok 431 Safari 13.0 - [undefined ms] - undefined null equals null
-ok 432 Safari 13.0 - [undefined ms] - undefined lodash _.isUndefined(undefined) is
-ok 433 Safari 13.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
-ok 434 Safari 13.0 - [undefined ms] - undefined jasmine .toEqual(null) is NOT!
-ok 435 Safari 13.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
-ok 436 Safari 13.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-ok 437 Safari 13.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
-ok 438 Safari 13.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
-ok 439 Safari 13.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
-ok 440 Safari 13.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
-ok 441 Safari 13.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
-ok 442 Safari 13.0 - [undefined ms] - Number parse objects Number({}) is NaN
-ok 443 Safari 13.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
-ok 444 Safari 13.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
-ok 445 Safari 13.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 446 Safari 13.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
-ok 447 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 448 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-ok 449 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-ok 450 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 451 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
-ok 452 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 453 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-ok 454 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-ok 455 Safari 13.0 - [undefined ms] - Number parse from string whitespace to 0 Number('0') returns 0
-ok 456 Safari 13.0 - [undefined ms] - Number parse from string whitespace to 0 Number('') returns 0
-ok 457 Safari 13.0 - [undefined ms] - Number parse from string whitespace to 0 Number(' ') returns 0
-ok 458 Safari 13.0 - [undefined ms] - Number parse from string whitespace to 0 Number('/r/n/t') returns 0
-ok 459 Safari 13.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
-ok 460 Safari 13.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
-ok 461 Safari 13.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
-ok 462 Safari 13.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
-ok 463 Safari 13.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
-ok 464 Safari 13.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
-ok 465 Safari 13.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
-ok 466 Safari 13.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
-ok 467 Safari 13.0 - [undefined ms] - Number parse from string -0 - 0 is -0
-ok 468 Safari 13.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
-ok 469 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
-ok 470 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
-ok 471 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
-ok 472 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
-ok 473 Safari 13.0 - [undefined ms] - Number VALUE MAX is > 0
-ok 474 Safari 13.0 - [undefined ms] - Number VALUE MAX is the biggest possible number
-ok 475 Safari 13.0 - [undefined ms] - Number VALUE MIN is NOT even a negative number
-ok 476 Safari 13.0 - [undefined ms] - Number VALUE MIN is NOT even 0 itself
-ok 477 Safari 13.0 - [undefined ms] - Number VALUE MIN it is actually a positive number
-ok 478 Safari 13.0 - [undefined ms] - Number VALUE MIN is close to 0
-ok 479 Safari 13.0 - [undefined ms] - Number -0 is -0
-ok 480 Safari 13.0 - [undefined ms] - Number -0 equals -0
-ok 481 Safari 13.0 - [undefined ms] - Number -0 does not equal 0
-ok 482 Safari 13.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
-ok 483 Safari 13.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
-ok 484 Safari 13.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
-ok 485 Safari 13.0 - [undefined ms] - Number -0 to string '' + -0 returns '0'
-ok 486 Safari 13.0 - [undefined ms] - Number -0 to string '' - 0 does NOT return '0'
-ok 487 Safari 13.0 - [undefined ms] - Number -0 to string '' - 0 returns 0, NOT '0'
-ok 488 Safari 13.0 - [undefined ms] - Array [] brackets is typeof 'object', not 'array'
-ok 489 Safari 13.0 - [undefined ms] - Array [] brackets is instanceof Array
-ok 490 Safari 13.0 - [undefined ms] - Array [] brackets is instanceof Object
-ok 491 Safari 13.0 - [undefined ms] - Array [] brackets String([]) returns ''
-ok 492 Safari 13.0 - [undefined ms] - Array [] brackets String([]) is typeof string
-ok 493 Safari 13.0 - [undefined ms] - Array [] brackets lodash _.isObject is
-ok 494 Safari 13.0 - [undefined ms] - Array [] brackets lodash _.isArray is
-ok 495 Safari 13.0 - [undefined ms] - Array [] instance is typeof 'object', not 'array'
-ok 496 Safari 13.0 - [undefined ms] - Array [] instance is instanceof Array
-ok 497 Safari 13.0 - [undefined ms] - Array [] instance is instanceof Object
-ok 498 Safari 13.0 - [undefined ms] - Array [] instance String([]) returns ''
-ok 499 Safari 13.0 - [undefined ms] - Array [] instance String([]) is typeof string
-ok 500 Safari 13.0 - [undefined ms] - Array [] instance lodash _.isObject is
-ok 501 Safari 13.0 - [undefined ms] - Array [] instance lodash _.isArray is
-ok 502 Safari 13.0 - [undefined ms] - Array [1, 2, 3] .map(x => x * 2) returns [2, 4, 6]
-ok 503 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 is instanceof Array
-ok 504 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 is typeof 'object'
-ok 505 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 lodash _.isArray
-ok 506 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 has length 3
-ok 507 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 equals [undefined, undefined, undefined]
-ok 508 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() equals ',,'
-ok 509 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 510 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 511 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots actually equals ';;'
-ok 512 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] is instanceof Array
-ok 513 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] is typeof 'object'
-ok 514 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] lodash _.isArray
-ok 515 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] has length 3
-ok 516 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] equals [undefined, undefined, undefined]
-ok 517 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() equals ',,'
-ok 518 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 519 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 520 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots actually equals ';;'
-ok 521 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is instanceof Array
-ok 522 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is typeof 'object'
-ok 523 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] lodash _.isArray
-ok 524 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] has length 3
-ok 525 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] equals [undefined, undefined, undefined]
-ok 526 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() equals ',,'
-ok 527 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 528 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .map(x => 'slot') [ undefined x 3 ] equals 'slot;slot;slot'
-ok 529 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) is instanceof Array
-ok 530 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) is typeof 'object'
-ok 531 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) lodash _.isArray
-ok 532 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) has length 3
-ok 533 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) equals [undefined, undefined, undefined]
-ok 534 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() equals ',,'
-ok 535 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 536 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 537 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots actually equals ';;'
-ok 538 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) is instanceof Array
-ok 539 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) is typeof 'object'
-ok 540 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) lodash _.isArray
-ok 541 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) has length 3
-ok 542 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) equals [undefined, undefined, undefined]
-ok 543 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() equals ',,'
-ok 544 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 545 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 546 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots actually equals ';;'
-ok 547 Safari 13.0 - [undefined ms] - Object coercion [] !== [] is true
-ok 548 Safari 13.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
-ok 549 Safari 13.0 - [undefined ms] - Object coercion {} + [] is 0
-ok 550 Safari 13.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
-ok 551 Safari 13.0 - [undefined ms] - Object {} is typeof object
-ok 552 Safari 13.0 - [undefined ms] - Object {} is instanceof Object
-ok 553 Safari 13.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-ok 554 Safari 13.0 - [undefined ms] - Object {} String({}) is typeof string
-ok 555 Safari 13.0 - [undefined ms] - Object {} lodash _.isObject is
-ok 556 Safari 13.0 - [undefined ms] - Object {} lodash _.isArray is not
-ok 557 Safari 13.0 - [undefined ms] - Object {} is typeof object
-ok 558 Safari 13.0 - [undefined ms] - Object {} is instanceof Object
-ok 559 Safari 13.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-ok 560 Safari 13.0 - [undefined ms] - Object {} String({}) is typeof string
-ok 561 Safari 13.0 - [undefined ms] - Object {} lodash _.isObject is
-ok 562 Safari 13.0 - [undefined ms] - Object {} lodash _.isArray is not
-ok 563 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking longitude, latitude = coordinate longitude equals 180, from coordinate.longitude
-ok 564 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking longitude, latitude = coordinate latitude equals 90, from coordinate.latitude
-ok 565 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking {longitude:x, latitude:y} x equals 180, from coordinate.longitude
-ok 566 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking {longitude:x, latitude:y} y equals 90, from coordinate.latitude
-ok 567 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking longitude, latitude = coordinate longitude equals 180, from coordinate.longitude
-ok 568 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking longitude, latitude = coordinate latitude equals 90, from coordinate.latitude
-ok 569 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking {longitude:x, latitude:y} x equals 180, from coordinate.longitude
-ok 570 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking {longitude:x, latitude:y} y equals 90, from coordinate.latitude
-ok 571 Safari 13.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
-ok 572 Safari 13.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
-ok 573 Safari 13.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
-ok 574 Safari 13.0 - [undefined ms] - String parse nothing String(null) is typeof string
-ok 575 Safari 13.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
-ok 576 Safari 13.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
-ok 577 Safari 13.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
-ok 578 Safari 13.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
-ok 579 Safari 13.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
-ok 580 Safari 13.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
-ok 581 Safari 13.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
-ok 582 Safari 13.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
-ok 583 Safari 13.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
-ok 584 Safari 13.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
-ok 585 Safari 13.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
-ok 586 Safari 13.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
-ok 587 Safari 13.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
-ok 588 Safari 13.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
-ok 589 Safari 13.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
-ok 590 Safari 13.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
-ok 591 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
-ok 592 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
-ok 593 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
-ok 594 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
-ok 595 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
-ok 596 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
-ok 597 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
-ok 598 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
-ok 599 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
-ok 600 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
-ok 601 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
-ok 602 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
-ok 603 Safari 13.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
-ok 604 Safari 13.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
-ok 605 Safari 13.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
-ok 606 Safari 13.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
-ok 607 Safari 13.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
-ok 608 Safari 13.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
-ok 609 Safari 13.0 - [undefined ms] - switch case order magicNumber 10 returns 2
-ok 610 Safari 13.0 - [undefined ms] - switch case order magicNumber 20 returns 2
-ok 611 Safari 13.0 - [undefined ms] - switch case order magicNumber 30 returns 4
-ok 612 Safari 13.0 - [undefined ms] - switch case order magicNumber 42 returns 3
-ok 613 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
-ok 614 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
-ok 615 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
-ok 616 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
-ok 617 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
-ok 618 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
-ok 619 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
-ok 620 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
-ok 621 Safari 13.0 - [undefined ms] - try { something } finally { return x } always runs last
+ok 157 Chrome 98.0 - [undefined ms] - Object newCoordinate(longitude, latitude) ({latitude:180, longitude:90}) unpacking longitude, latitude = coordinate longitude equals 180, from coordinate.longitude
+ok 158 Chrome 98.0 - [undefined ms] - Object newCoordinate(longitude, latitude) ({latitude:180, longitude:90}) unpacking longitude, latitude = coordinate latitude equals 90, from coordinate.latitude
+ok 159 Chrome 98.0 - [undefined ms] - Object newCoordinate(longitude, latitude) ({latitude:180, longitude:90}) unpacking {longitude:x, latitude:y} x equals 180, from coordinate.longitude
+ok 160 Chrome 98.0 - [undefined ms] - Object newCoordinate(longitude, latitude) ({latitude:180, longitude:90}) unpacking {longitude:x, latitude:y} y equals 90, from coordinate.latitude
+ok 161 Chrome 98.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
+ok 162 Chrome 98.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
+ok 163 Chrome 98.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
+ok 164 Chrome 98.0 - [undefined ms] - String parse nothing String(null) is typeof string
+ok 165 Chrome 98.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
+ok 166 Chrome 98.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
+ok 167 Chrome 98.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
+ok 168 Chrome 98.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
+ok 169 Chrome 98.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
+ok 170 Chrome 98.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
+ok 171 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
+ok 172 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
+ok 173 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
+ok 174 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
+ok 175 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
+ok 176 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
+ok 177 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
+ok 178 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
+ok 179 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
+ok 180 Chrome 98.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
+ok 181 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
+ok 182 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
+ok 183 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
+ok 184 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
+ok 185 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
+ok 186 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
+ok 187 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
+ok 188 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
+ok 189 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
+ok 190 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
+ok 191 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
+ok 192 Chrome 98.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
+ok 193 Chrome 98.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
+ok 194 Chrome 98.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
+ok 195 Chrome 98.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
+ok 196 Chrome 98.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
+ok 197 Chrome 98.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
+ok 198 Chrome 98.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
+ok 199 Chrome 98.0 - [undefined ms] - switch case order magicNumber 10 returns 2
+ok 200 Chrome 98.0 - [undefined ms] - switch case order magicNumber 20 returns 2
+ok 201 Chrome 98.0 - [undefined ms] - switch case order magicNumber 30 returns 4
+ok 202 Chrome 98.0 - [undefined ms] - switch case order magicNumber 42 returns 3
+ok 203 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
+ok 204 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
+ok 205 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
+ok 206 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
+ok 207 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
+ok 208 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
+ok 209 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
+ok 210 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
+ok 211 Chrome 98.0 - [undefined ms] - try { something } finally { return x } always runs last
+ok 212 Firefox 96.0 - [undefined ms] - function iterators 1, 2, 3 iterator.next() returns 1, 2 & 3
+ok 213 Firefox 96.0 - [undefined ms] - NaN Number isNaN
+ok 214 Firefox 96.0 - [undefined ms] - NaN Number is typeof 'number'
+ok 215 Firefox 96.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
+ok 216 Firefox 96.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
+ok 217 Firefox 96.0 - [undefined ms] - NaN jasmine .toBeFalsy() is
+ok 218 Firefox 96.0 - [undefined ms] - null Object is typeof 'object'
+ok 219 Firefox 96.0 - [undefined ms] - null Object is NOT instanceof Object
+ok 220 Firefox 96.0 - [undefined ms] - null Number isNaN(null) is NOT
+ok 221 Firefox 96.0 - [undefined ms] - null lodash _.isNull(null) is
+ok 222 Firefox 96.0 - [undefined ms] - null jasmine .toBeNull() is
+ok 223 Firefox 96.0 - [undefined ms] - null jasmine .toBeFalsy() is
+ok 224 Firefox 96.0 - [undefined ms] - null jasmine .toEqual(undefined) is NOT!
+ok 225 Firefox 96.0 - [undefined ms] - undefined is typeof 'undefined
+ok 226 Firefox 96.0 - [undefined ms] - undefined Number isNaN
+ok 227 Firefox 96.0 - [undefined ms] - undefined null is not identical to null
+ok 228 Firefox 96.0 - [undefined ms] - undefined null equals null
+ok 229 Firefox 96.0 - [undefined ms] - undefined lodash _.isUndefined(undefined) is
+ok 230 Firefox 96.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
+ok 231 Firefox 96.0 - [undefined ms] - undefined jasmine .toEqual(null) is NOT!
+ok 232 Firefox 96.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
+ok 233 Firefox 96.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
+ok 234 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
+ok 235 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
+ok 236 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
+ok 237 Firefox 96.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
+ok 238 Firefox 96.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
+ok 239 Firefox 96.0 - [undefined ms] - Number parse objects Number({}) is NaN
+ok 240 Firefox 96.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
+ok 241 Firefox 96.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
+ok 242 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
+ok 243 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
+ok 244 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN is true
+ok 245 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
+ok 246 Firefox 96.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
+ok 247 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
+ok 248 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
+ok 249 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
+ok 250 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
+ok 251 Firefox 96.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
+ok 252 Firefox 96.0 - [undefined ms] - Number parse from string whitespace to 0 Number('0') returns 0
+ok 253 Firefox 96.0 - [undefined ms] - Number parse from string whitespace to 0 Number('') returns 0
+ok 254 Firefox 96.0 - [undefined ms] - Number parse from string whitespace to 0 Number(' ') returns 0
+ok 255 Firefox 96.0 - [undefined ms] - Number parse from string whitespace to 0 Number('/r/n/t') returns 0
+ok 256 Firefox 96.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
+ok 257 Firefox 96.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
+ok 258 Firefox 96.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
+ok 259 Firefox 96.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
+ok 260 Firefox 96.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
+ok 261 Firefox 96.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
+ok 262 Firefox 96.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
+ok 263 Firefox 96.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
+ok 264 Firefox 96.0 - [undefined ms] - Number parse from string -0 - 0 is -0
+ok 265 Firefox 96.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
+ok 266 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
+ok 267 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
+ok 268 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
+ok 269 Firefox 96.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
+ok 270 Firefox 96.0 - [undefined ms] - Number VALUE MAX is > 0
+ok 271 Firefox 96.0 - [undefined ms] - Number VALUE MAX is the biggest possible number
+ok 272 Firefox 96.0 - [undefined ms] - Number VALUE MIN is NOT even a negative number
+ok 273 Firefox 96.0 - [undefined ms] - Number VALUE MIN is NOT even 0 itself
+ok 274 Firefox 96.0 - [undefined ms] - Number VALUE MIN it is actually a positive number
+ok 275 Firefox 96.0 - [undefined ms] - Number VALUE MIN is close to 0
+ok 276 Firefox 96.0 - [undefined ms] - Number -0 is -0
+ok 277 Firefox 96.0 - [undefined ms] - Number -0 equals -0
+ok 278 Firefox 96.0 - [undefined ms] - Number -0 does not equal 0
+ok 279 Firefox 96.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
+ok 280 Firefox 96.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
+ok 281 Firefox 96.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
+ok 282 Firefox 96.0 - [undefined ms] - Number -0 to string '' + -0 returns '0'
+ok 283 Firefox 96.0 - [undefined ms] - Number -0 to string '' - 0 does NOT return '0'
+ok 284 Firefox 96.0 - [undefined ms] - Number -0 to string '' - 0 returns 0, NOT '0'
+ok 285 Firefox 96.0 - [undefined ms] - Array [] brackets is typeof 'object', not 'array'
+ok 286 Firefox 96.0 - [undefined ms] - Array [] brackets is instanceof Array
+ok 287 Firefox 96.0 - [undefined ms] - Array [] brackets is instanceof Object
+ok 288 Firefox 96.0 - [undefined ms] - Array [] brackets String([]) returns ''
+ok 289 Firefox 96.0 - [undefined ms] - Array [] brackets String([]) is typeof string
+ok 290 Firefox 96.0 - [undefined ms] - Array [] brackets lodash _.isObject is
+ok 291 Firefox 96.0 - [undefined ms] - Array [] brackets lodash _.isArray is
+ok 292 Firefox 96.0 - [undefined ms] - Array [] instance is typeof 'object', not 'array'
+ok 293 Firefox 96.0 - [undefined ms] - Array [] instance is instanceof Array
+ok 294 Firefox 96.0 - [undefined ms] - Array [] instance is instanceof Object
+ok 295 Firefox 96.0 - [undefined ms] - Array [] instance String([]) returns ''
+ok 296 Firefox 96.0 - [undefined ms] - Array [] instance String([]) is typeof string
+ok 297 Firefox 96.0 - [undefined ms] - Array [] instance lodash _.isObject is
+ok 298 Firefox 96.0 - [undefined ms] - Array [] instance lodash _.isArray is
+ok 299 Firefox 96.0 - [undefined ms] - Array [1, 2, 3] .map(x => x * 2) returns [2, 4, 6]
+ok 300 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 is instanceof Array
+ok 301 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 is typeof 'object'
+ok 302 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 lodash _.isArray
+ok 303 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 has length 3
+ok 304 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 equals [undefined, undefined, undefined]
+ok 305 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() equals ',,'
+ok 306 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 307 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 308 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots actually equals ';;'
+ok 309 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] is instanceof Array
+ok 310 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] is typeof 'object'
+ok 311 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] lodash _.isArray
+ok 312 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] has length 3
+ok 313 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] equals [undefined, undefined, undefined]
+ok 314 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() equals ',,'
+ok 315 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 316 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 317 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots actually equals ';;'
+ok 318 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is instanceof Array
+ok 319 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is typeof 'object'
+ok 320 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] lodash _.isArray
+ok 321 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] has length 3
+ok 322 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] equals [undefined, undefined, undefined]
+ok 323 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() equals ',,'
+ok 324 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 325 Firefox 96.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .map(x => 'slot') [ undefined x 3 ] equals 'slot;slot;slot'
+ok 326 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) is instanceof Array
+ok 327 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) is typeof 'object'
+ok 328 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) lodash _.isArray
+ok 329 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) has length 3
+ok 330 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) equals [undefined, undefined, undefined]
+ok 331 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() equals ',,'
+ok 332 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 333 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 334 Firefox 96.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots actually equals ';;'
+ok 335 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) is instanceof Array
+ok 336 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) is typeof 'object'
+ok 337 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) lodash _.isArray
+ok 338 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) has length 3
+ok 339 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) equals [undefined, undefined, undefined]
+ok 340 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() equals ',,'
+ok 341 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 342 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 343 Firefox 96.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots actually equals ';;'
+ok 344 Firefox 96.0 - [undefined ms] - Object coercion [] !== [] is true
+ok 345 Firefox 96.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
+ok 346 Firefox 96.0 - [undefined ms] - Object coercion {} + [] is 0
+ok 347 Firefox 96.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
+ok 348 Firefox 96.0 - [undefined ms] - Object {} is typeof object
+ok 349 Firefox 96.0 - [undefined ms] - Object {} is instanceof Object
+ok 350 Firefox 96.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
+ok 351 Firefox 96.0 - [undefined ms] - Object {} String({}) is typeof string
+ok 352 Firefox 96.0 - [undefined ms] - Object {} lodash _.isObject is
+ok 353 Firefox 96.0 - [undefined ms] - Object {} lodash _.isArray is not
+ok 354 Firefox 96.0 - [undefined ms] - Object {} is typeof object
+ok 355 Firefox 96.0 - [undefined ms] - Object {} is instanceof Object
+ok 356 Firefox 96.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
+ok 357 Firefox 96.0 - [undefined ms] - Object {} String({}) is typeof string
+ok 358 Firefox 96.0 - [undefined ms] - Object {} lodash _.isObject is
+ok 359 Firefox 96.0 - [undefined ms] - Object {} lodash _.isArray is not
+ok 360 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking longitude, latitude = coordinate longitude equals 180, from coordinate.longitude
+ok 361 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking longitude, latitude = coordinate latitude equals 90, from coordinate.latitude
+ok 362 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking {longitude:x, latitude:y} x equals 180, from coordinate.longitude
+ok 363 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking {longitude:x, latitude:y} y equals 90, from coordinate.latitude
+ok 364 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking longitude, latitude = coordinate longitude equals 180, from coordinate.longitude
+ok 365 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking longitude, latitude = coordinate latitude equals 90, from coordinate.latitude
+ok 366 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking {longitude:x, latitude:y} x equals 180, from coordinate.longitude
+ok 367 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking {longitude:x, latitude:y} y equals 90, from coordinate.latitude
+ok 368 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) ({latitude:180, longitude:90}) unpacking longitude, latitude = coordinate longitude equals 180, from coordinate.longitude
+ok 369 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) ({latitude:180, longitude:90}) unpacking longitude, latitude = coordinate latitude equals 90, from coordinate.latitude
+ok 370 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) ({latitude:180, longitude:90}) unpacking {longitude:x, latitude:y} x equals 180, from coordinate.longitude
+ok 371 Firefox 96.0 - [undefined ms] - Object newCoordinate(longitude, latitude) ({latitude:180, longitude:90}) unpacking {longitude:x, latitude:y} y equals 90, from coordinate.latitude
+ok 372 Firefox 96.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
+ok 373 Firefox 96.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
+ok 374 Firefox 96.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
+ok 375 Firefox 96.0 - [undefined ms] - String parse nothing String(null) is typeof string
+ok 376 Firefox 96.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
+ok 377 Firefox 96.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
+ok 378 Firefox 96.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
+ok 379 Firefox 96.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
+ok 380 Firefox 96.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
+ok 381 Firefox 96.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
+ok 382 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
+ok 383 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
+ok 384 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
+ok 385 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
+ok 386 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
+ok 387 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
+ok 388 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
+ok 389 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
+ok 390 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
+ok 391 Firefox 96.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
+ok 392 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
+ok 393 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
+ok 394 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
+ok 395 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
+ok 396 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
+ok 397 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
+ok 398 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
+ok 399 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
+ok 400 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
+ok 401 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
+ok 402 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
+ok 403 Firefox 96.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
+ok 404 Firefox 96.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
+ok 405 Firefox 96.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
+ok 406 Firefox 96.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
+ok 407 Firefox 96.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
+ok 408 Firefox 96.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
+ok 409 Firefox 96.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
+ok 410 Firefox 96.0 - [undefined ms] - switch case order magicNumber 10 returns 2
+ok 411 Firefox 96.0 - [undefined ms] - switch case order magicNumber 20 returns 2
+ok 412 Firefox 96.0 - [undefined ms] - switch case order magicNumber 30 returns 4
+ok 413 Firefox 96.0 - [undefined ms] - switch case order magicNumber 42 returns 3
+ok 414 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
+ok 415 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
+ok 416 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
+ok 417 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
+ok 418 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
+ok 419 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
+ok 420 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
+ok 421 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
+ok 422 Firefox 96.0 - [undefined ms] - try { something } finally { return x } always runs last
+ok 423 Safari 13.0 - [undefined ms] - function iterators 1, 2, 3 iterator.next() returns 1, 2 & 3
+ok 424 Safari 13.0 - [undefined ms] - NaN Number isNaN
+ok 425 Safari 13.0 - [undefined ms] - NaN Number is typeof 'number'
+ok 426 Safari 13.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
+ok 427 Safari 13.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
+ok 428 Safari 13.0 - [undefined ms] - NaN jasmine .toBeFalsy() is
+ok 429 Safari 13.0 - [undefined ms] - null Object is typeof 'object'
+ok 430 Safari 13.0 - [undefined ms] - null Object is NOT instanceof Object
+ok 431 Safari 13.0 - [undefined ms] - null Number isNaN(null) is NOT
+ok 432 Safari 13.0 - [undefined ms] - null lodash _.isNull(null) is
+ok 433 Safari 13.0 - [undefined ms] - null jasmine .toBeNull() is
+ok 434 Safari 13.0 - [undefined ms] - null jasmine .toBeFalsy() is
+ok 435 Safari 13.0 - [undefined ms] - null jasmine .toEqual(undefined) is NOT!
+ok 436 Safari 13.0 - [undefined ms] - undefined is typeof 'undefined
+ok 437 Safari 13.0 - [undefined ms] - undefined Number isNaN
+ok 438 Safari 13.0 - [undefined ms] - undefined null is not identical to null
+ok 439 Safari 13.0 - [undefined ms] - undefined null equals null
+ok 440 Safari 13.0 - [undefined ms] - undefined lodash _.isUndefined(undefined) is
+ok 441 Safari 13.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
+ok 442 Safari 13.0 - [undefined ms] - undefined jasmine .toEqual(null) is NOT!
+ok 443 Safari 13.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
+ok 444 Safari 13.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
+ok 445 Safari 13.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
+ok 446 Safari 13.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
+ok 447 Safari 13.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
+ok 448 Safari 13.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
+ok 449 Safari 13.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
+ok 450 Safari 13.0 - [undefined ms] - Number parse objects Number({}) is NaN
+ok 451 Safari 13.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
+ok 452 Safari 13.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
+ok 453 Safari 13.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
+ok 454 Safari 13.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
+ok 455 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN is true
+ok 456 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
+ok 457 Safari 13.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
+ok 458 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
+ok 459 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
+ok 460 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
+ok 461 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
+ok 462 Safari 13.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
+ok 463 Safari 13.0 - [undefined ms] - Number parse from string whitespace to 0 Number('0') returns 0
+ok 464 Safari 13.0 - [undefined ms] - Number parse from string whitespace to 0 Number('') returns 0
+ok 465 Safari 13.0 - [undefined ms] - Number parse from string whitespace to 0 Number(' ') returns 0
+ok 466 Safari 13.0 - [undefined ms] - Number parse from string whitespace to 0 Number('/r/n/t') returns 0
+ok 467 Safari 13.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
+ok 468 Safari 13.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
+ok 469 Safari 13.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
+ok 470 Safari 13.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
+ok 471 Safari 13.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
+ok 472 Safari 13.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
+ok 473 Safari 13.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
+ok 474 Safari 13.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
+ok 475 Safari 13.0 - [undefined ms] - Number parse from string -0 - 0 is -0
+ok 476 Safari 13.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
+ok 477 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
+ok 478 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
+ok 479 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
+ok 480 Safari 13.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
+ok 481 Safari 13.0 - [undefined ms] - Number VALUE MAX is > 0
+ok 482 Safari 13.0 - [undefined ms] - Number VALUE MAX is the biggest possible number
+ok 483 Safari 13.0 - [undefined ms] - Number VALUE MIN is NOT even a negative number
+ok 484 Safari 13.0 - [undefined ms] - Number VALUE MIN is NOT even 0 itself
+ok 485 Safari 13.0 - [undefined ms] - Number VALUE MIN it is actually a positive number
+ok 486 Safari 13.0 - [undefined ms] - Number VALUE MIN is close to 0
+ok 487 Safari 13.0 - [undefined ms] - Number -0 is -0
+ok 488 Safari 13.0 - [undefined ms] - Number -0 equals -0
+ok 489 Safari 13.0 - [undefined ms] - Number -0 does not equal 0
+ok 490 Safari 13.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
+ok 491 Safari 13.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
+ok 492 Safari 13.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
+ok 493 Safari 13.0 - [undefined ms] - Number -0 to string '' + -0 returns '0'
+ok 494 Safari 13.0 - [undefined ms] - Number -0 to string '' - 0 does NOT return '0'
+ok 495 Safari 13.0 - [undefined ms] - Number -0 to string '' - 0 returns 0, NOT '0'
+ok 496 Safari 13.0 - [undefined ms] - Array [] brackets is typeof 'object', not 'array'
+ok 497 Safari 13.0 - [undefined ms] - Array [] brackets is instanceof Array
+ok 498 Safari 13.0 - [undefined ms] - Array [] brackets is instanceof Object
+ok 499 Safari 13.0 - [undefined ms] - Array [] brackets String([]) returns ''
+ok 500 Safari 13.0 - [undefined ms] - Array [] brackets String([]) is typeof string
+ok 501 Safari 13.0 - [undefined ms] - Array [] brackets lodash _.isObject is
+ok 502 Safari 13.0 - [undefined ms] - Array [] brackets lodash _.isArray is
+ok 503 Safari 13.0 - [undefined ms] - Array [] instance is typeof 'object', not 'array'
+ok 504 Safari 13.0 - [undefined ms] - Array [] instance is instanceof Array
+ok 505 Safari 13.0 - [undefined ms] - Array [] instance is instanceof Object
+ok 506 Safari 13.0 - [undefined ms] - Array [] instance String([]) returns ''
+ok 507 Safari 13.0 - [undefined ms] - Array [] instance String([]) is typeof string
+ok 508 Safari 13.0 - [undefined ms] - Array [] instance lodash _.isObject is
+ok 509 Safari 13.0 - [undefined ms] - Array [] instance lodash _.isArray is
+ok 510 Safari 13.0 - [undefined ms] - Array [1, 2, 3] .map(x => x * 2) returns [2, 4, 6]
+ok 511 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 is instanceof Array
+ok 512 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 is typeof 'object'
+ok 513 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 lodash _.isArray
+ok 514 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 has length 3
+ok 515 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 equals [undefined, undefined, undefined]
+ok 516 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() equals ',,'
+ok 517 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 518 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 519 Safari 13.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots actually equals ';;'
+ok 520 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] is instanceof Array
+ok 521 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] is typeof 'object'
+ok 522 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] lodash _.isArray
+ok 523 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] has length 3
+ok 524 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] equals [undefined, undefined, undefined]
+ok 525 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() equals ',,'
+ok 526 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 527 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 528 Safari 13.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots actually equals ';;'
+ok 529 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is instanceof Array
+ok 530 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is typeof 'object'
+ok 531 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] lodash _.isArray
+ok 532 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] has length 3
+ok 533 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] equals [undefined, undefined, undefined]
+ok 534 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() equals ',,'
+ok 535 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 536 Safari 13.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .map(x => 'slot') [ undefined x 3 ] equals 'slot;slot;slot'
+ok 537 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) is instanceof Array
+ok 538 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) is typeof 'object'
+ok 539 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) lodash _.isArray
+ok 540 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) has length 3
+ok 541 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) equals [undefined, undefined, undefined]
+ok 542 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() equals ',,'
+ok 543 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 544 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 545 Safari 13.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots actually equals ';;'
+ok 546 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) is instanceof Array
+ok 547 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) is typeof 'object'
+ok 548 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) lodash _.isArray
+ok 549 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) has length 3
+ok 550 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) equals [undefined, undefined, undefined]
+ok 551 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() equals ',,'
+ok 552 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 553 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 554 Safari 13.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots actually equals ';;'
+ok 555 Safari 13.0 - [undefined ms] - Object coercion [] !== [] is true
+ok 556 Safari 13.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
+ok 557 Safari 13.0 - [undefined ms] - Object coercion {} + [] is 0
+ok 558 Safari 13.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
+ok 559 Safari 13.0 - [undefined ms] - Object {} is typeof object
+ok 560 Safari 13.0 - [undefined ms] - Object {} is instanceof Object
+ok 561 Safari 13.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
+ok 562 Safari 13.0 - [undefined ms] - Object {} String({}) is typeof string
+ok 563 Safari 13.0 - [undefined ms] - Object {} lodash _.isObject is
+ok 564 Safari 13.0 - [undefined ms] - Object {} lodash _.isArray is not
+ok 565 Safari 13.0 - [undefined ms] - Object {} is typeof object
+ok 566 Safari 13.0 - [undefined ms] - Object {} is instanceof Object
+ok 567 Safari 13.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
+ok 568 Safari 13.0 - [undefined ms] - Object {} String({}) is typeof string
+ok 569 Safari 13.0 - [undefined ms] - Object {} lodash _.isObject is
+ok 570 Safari 13.0 - [undefined ms] - Object {} lodash _.isArray is not
+ok 571 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking longitude, latitude = coordinate longitude equals 180, from coordinate.longitude
+ok 572 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking longitude, latitude = coordinate latitude equals 90, from coordinate.latitude
+ok 573 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking {longitude:x, latitude:y} x equals 180, from coordinate.longitude
+ok 574 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) {longitude:x, latitude:y} unpacking {longitude:x, latitude:y} y equals 90, from coordinate.latitude
+ok 575 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking longitude, latitude = coordinate longitude equals 180, from coordinate.longitude
+ok 576 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking longitude, latitude = coordinate latitude equals 90, from coordinate.latitude
+ok 577 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking {longitude:x, latitude:y} x equals 180, from coordinate.longitude
+ok 578 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) { longitude, latitude } unpacking {longitude:x, latitude:y} y equals 90, from coordinate.latitude
+ok 579 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) ({latitude:180, longitude:90}) unpacking longitude, latitude = coordinate longitude equals 180, from coordinate.longitude
+ok 580 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) ({latitude:180, longitude:90}) unpacking longitude, latitude = coordinate latitude equals 90, from coordinate.latitude
+ok 581 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) ({latitude:180, longitude:90}) unpacking {longitude:x, latitude:y} x equals 180, from coordinate.longitude
+ok 582 Safari 13.0 - [undefined ms] - Object newCoordinate(longitude, latitude) ({latitude:180, longitude:90}) unpacking {longitude:x, latitude:y} y equals 90, from coordinate.latitude
+ok 583 Safari 13.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
+ok 584 Safari 13.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
+ok 585 Safari 13.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
+ok 586 Safari 13.0 - [undefined ms] - String parse nothing String(null) is typeof string
+ok 587 Safari 13.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
+ok 588 Safari 13.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
+ok 589 Safari 13.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
+ok 590 Safari 13.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
+ok 591 Safari 13.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
+ok 592 Safari 13.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
+ok 593 Safari 13.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
+ok 594 Safari 13.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
+ok 595 Safari 13.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
+ok 596 Safari 13.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
+ok 597 Safari 13.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
+ok 598 Safari 13.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
+ok 599 Safari 13.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
+ok 600 Safari 13.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
+ok 601 Safari 13.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
+ok 602 Safari 13.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
+ok 603 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
+ok 604 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
+ok 605 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
+ok 606 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
+ok 607 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
+ok 608 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
+ok 609 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
+ok 610 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
+ok 611 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
+ok 612 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
+ok 613 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
+ok 614 Safari 13.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
+ok 615 Safari 13.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
+ok 616 Safari 13.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
+ok 617 Safari 13.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
+ok 618 Safari 13.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
+ok 619 Safari 13.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
+ok 620 Safari 13.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
+ok 621 Safari 13.0 - [undefined ms] - switch case order magicNumber 10 returns 2
+ok 622 Safari 13.0 - [undefined ms] - switch case order magicNumber 20 returns 2
+ok 623 Safari 13.0 - [undefined ms] - switch case order magicNumber 30 returns 4
+ok 624 Safari 13.0 - [undefined ms] - switch case order magicNumber 42 returns 3
+ok 625 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
+ok 626 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
+ok 627 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
+ok 628 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
+ok 629 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
+ok 630 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
+ok 631 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
+ok 632 Safari 13.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
+ok 633 Safari 13.0 - [undefined ms] - try { something } finally { return x } always runs last
 
-1..621
-# tests 621
-# pass  621
+1..633
+# tests 633
+# pass  633
 # skip  0
 # todo  0
 # fail  0
