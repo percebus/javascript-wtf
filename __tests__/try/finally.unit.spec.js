@@ -1,7 +1,7 @@
 describe('try { something }', () => {
   'use strict'
 
-  describe('finally { return x }', () => { // https://www.youtube.com/watch?v=2pL28CcEijU
+  describe('finally { return x }', () => { // SRC: https://www.youtube.com/watch?v=2pL28CcEijU
     function yoda () { // Do, or Do not. There is no try
       /* eslint-disable no-unreachable */
       /* eslint-disable no-unsafe-finally */

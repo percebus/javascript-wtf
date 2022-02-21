@@ -2,7 +2,7 @@ describe('switch', () => {
   'use strict'
 
   describe('case order', () => {
-    describe('magicNumber', () => { // https://www.youtube.com/watch?v=2pL28CcEijU
+    describe('magicNumber', () => { // SRC: https://www.youtube.com/watch?v=2pL28CcEijU
       function magicNumber (x) {
         let result = 0
 

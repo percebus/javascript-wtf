@@ -42,6 +42,24 @@ describe('Number', () => {
           expect(-0 + '').toEqual('0')
         })
       })
+
+      describe("'' + -0", () => {
+        it("returns '0'", () => {
+          expect('' + -0).toEqual('0')
+        })
+      })
+
+      describe("'' - 0", () => {
+        const result = '' - 0
+
+        it("does NOT return '0'", () => {
+          expect(result).not.toEqual('0')
+        })
+
+        it("returns 0, NOT '0'", () => {
+          expect(result).toEqual(0)
+        })
+      })
     })
   })
   /* eslint-enable no-compare-neg-zero */

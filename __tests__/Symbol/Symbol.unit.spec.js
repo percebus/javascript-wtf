@@ -8,7 +8,7 @@ describe('Symbol', () => {
   describe('to string', () => {
     let oSymbol
 
-    describe("Symbol('that is cool')", () => { // https://www.youtube.com/watch?v=2pL28CcEijU
+    describe("Symbol('that is cool')", () => { // SRC: https://www.youtube.com/watch?v=2pL28CcEijU
       beforeEach(() => {
         oSymbol = Symbol('that is cool')
       })
