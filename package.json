@@ -14,7 +14,7 @@
     "standard": "standard --verbose --fix *.js __tests__/**/*.js __tests__/**/*/*.js",
     "lint": "npm run standard",
     "prejest:ci": "npm run lint",
-    "jest:ci": "jest --ci",
+    "jest:ci": "node --experimental-vm-modules node_modules/.bin/jest --ci",
     "jest:ci:unit:js": "npm run jest:ci -- unit.spec.js",
     "jest:ci:unit:es6": "npm run jest:ci -- unit.spec.es6.js",
     "jest:ci:unit:FIXME": "npm run jest:ci -- unit.spec.js unit.spec.es6.js",

@@ -25,55 +25,62 @@ describe('function', () => {
       return coordinate
     }
 
-    function newCoordinate6 ({ x: longitude, y: latitude }) { // renaming argument-object's properties
+    function newCoordinate6 ({ longitude = 0, latitude = 0 } = {}) { // default object, with default properties
       return { longitude, latitude }
     }
 
-    const coordinates = {
-      '(x, y) => {longitude:x, latitude:y}': newCoordinate1(180, 90),
-      '(longitude, latitude) => { longitude, latitude }': newCoordinate2(180, 90),
-      'newCoordinate(coordinate)': newCoordinate3({ latitude: 90, longitude: 180 }),
-      'newCoordinate({latitude:90, longitude:180})': newCoordinate4({ latitude: 90, longitude: 180 }),
-      'newCoordinate(coordinate = {latitude:90, longitude:180}})': newCoordinate5({ latitude: 90, longitude: 180 }),
-      'newCoordinate({x:180, y:90})': newCoordinate6({ x: 180, y: 90 })
+    function newCoordinate7 ({ x: longitude, y: latitude }) { // renaming argument-object's properties
+      return { longitude, latitude }
     }
 
-    _.forEach(coordinates, (coordinate, testName) => {
-      describe(testName, () => {
-        describe('unpacking', () => {
-          describe('as-is', () => {
-            const { longitude, latitude } = coordinate
+    describe('180,90', () => {
+      const coordinates = {
+        '(x, y) => {longitude:x, latitude:y}': newCoordinate1(180, 90),
+        '(longitude, latitude) => { longitude, latitude }': newCoordinate2(180, 90),
+        'newCoordinate(coordinate)': newCoordinate3({ latitude: 90, longitude: 180 }),
+        'newCoordinate({latitude:90, longitude:180})': newCoordinate4({ latitude: 90, longitude: 180 }),
+        'newCoordinate(coordinate = {latitude:90, longitude:180}})': newCoordinate5({ latitude: 90, longitude: 180 }),
+        'newCoordinate({longitude=0, latitude=0} = {})': newCoordinate6({ latitude: 90, longitude: 180 }),
+        'newCoordinate({x:180, y:90})': newCoordinate7({ x: 180, y: 90 })
+      }
 
-            describe('longitude', () => {
-              it('equals 180, from coordinate.longitude', () => {
-                expect(longitude).toBe(coordinate.longitude)
-                expect(longitude).toBe(180)
+      _.forEach(coordinates, (coordinate, testName) => {
+        describe(testName, () => {
+          describe('unpacking', () => {
+            describe('as-is', () => {
+              const { longitude, latitude } = coordinate
+
+              describe('longitude', () => {
+                it('equals 180, from coordinate.longitude', () => {
+                  expect(longitude).toBe(coordinate.longitude)
+                  expect(longitude).toBe(180)
+                })
+              })
+
+              describe('latitude', () => {
+                it('equals 90, from coordinate.latitude', () => {
+                  expect(latitude).toBe(coordinate.latitude)
+                  expect(latitude).toBe(90)
+                })
               })
             })
 
-            describe('latitude', () => {
-              it('equals 90, from coordinate.latitude', () => {
-                expect(latitude).toBe(coordinate.latitude)
-                expect(latitude).toBe(90)
+            describe('rename', () => {
+              // const { x: longitude, y: latitude } = coordinate // I would expect THIS
+              const { longitude: x, latitude: y } = coordinate // not THIS
+
+              describe('x', () => {
+                it('equals 180, from coordinate.longitude', () => {
+                  expect(x).toBe(coordinate.longitude)
+                  expect(x).toBe(180)
+                })
               })
-            })
-          })
 
-          describe('rename', () => {
-            // const { x: longitude, y: latitude } = coordinate // I would expect THIS
-            const { longitude: x, latitude: y } = coordinate // not THIS
-
-            describe('x', () => {
-              it('equals 180, from coordinate.longitude', () => {
-                expect(x).toBe(coordinate.longitude)
-                expect(x).toBe(180)
-              })
-            })
-
-            describe('y', () => {
-              it('equals 90, from coordinate.latitude', () => {
-                expect(y).toBe(coordinate.latitude)
-                expect(y).toBe(90)
+              describe('y', () => {
+                it('equals 90, from coordinate.latitude', () => {
+                  expect(y).toBe(coordinate.latitude)
+                  expect(y).toBe(90)
+                })
               })
             })
           })
