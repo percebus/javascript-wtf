@@ -55,6 +55,7 @@
   },
   "homepage": "https://github.com/percebus/javascript-wtf#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
     "jest": "^27.5.1",
     "jest-junit": "^13.0.0",
     "lodash": "^4.17.21",
