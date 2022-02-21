@@ -30,12 +30,12 @@ describe('function', () => {
     }
 
     const coordinates = {
-      'return {longitude:x, latitude:y}': newCoordinate1(180, 90),
-      'return { longitude, latitude }': newCoordinate2(180, 90),
+      '(x, y) => {longitude:x, latitude:y}': newCoordinate1(180, 90),
+      '(longitude, latitude) => { longitude, latitude }': newCoordinate2(180, 90),
       'newCoordinate(coordinate)': newCoordinate3({ latitude: 90, longitude: 180 }),
-      'newCoordinate({latitude:180, longitude:90})': newCoordinate4({ latitude: 90, longitude: 180 }),
-      'newCoordinate(coordinate = {longitude:0, latitude:0})': newCoordinate5({ latitude: 90, longitude: 180 }),
-      'newCoordinate({x:180, y:180})': newCoordinate6({ x: 180, y: 90 })
+      'newCoordinate({latitude:90, longitude:180})': newCoordinate4({ latitude: 90, longitude: 180 }),
+      'newCoordinate(coordinate = {latitude:90, longitude:180}})': newCoordinate5({ latitude: 90, longitude: 180 }),
+      'newCoordinate({x:180, y:90})': newCoordinate6({ x: 180, y: 90 })
     }
 
     _.forEach(coordinates, (coordinate, testName) => {

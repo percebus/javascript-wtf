@@ -1,27 +1,27 @@
-ok 1 Chrome 98.0 - [undefined ms] - function newCoordinate(...) return {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
-ok 2 Chrome 98.0 - [undefined ms] - function newCoordinate(...) return {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
-ok 3 Chrome 98.0 - [undefined ms] - function newCoordinate(...) return {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
-ok 4 Chrome 98.0 - [undefined ms] - function newCoordinate(...) return {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
-ok 5 Chrome 98.0 - [undefined ms] - function newCoordinate(...) return { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
-ok 6 Chrome 98.0 - [undefined ms] - function newCoordinate(...) return { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
-ok 7 Chrome 98.0 - [undefined ms] - function newCoordinate(...) return { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
-ok 8 Chrome 98.0 - [undefined ms] - function newCoordinate(...) return { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
+ok 1 Chrome 98.0 - [undefined ms] - function newCoordinate(...) (x, y) => {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
+ok 2 Chrome 98.0 - [undefined ms] - function newCoordinate(...) (x, y) => {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
+ok 3 Chrome 98.0 - [undefined ms] - function newCoordinate(...) (x, y) => {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
+ok 4 Chrome 98.0 - [undefined ms] - function newCoordinate(...) (x, y) => {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
+ok 5 Chrome 98.0 - [undefined ms] - function newCoordinate(...) (longitude, latitude) => { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
+ok 6 Chrome 98.0 - [undefined ms] - function newCoordinate(...) (longitude, latitude) => { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
+ok 7 Chrome 98.0 - [undefined ms] - function newCoordinate(...) (longitude, latitude) => { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
+ok 8 Chrome 98.0 - [undefined ms] - function newCoordinate(...) (longitude, latitude) => { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
 ok 9 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate) unpacking as-is longitude equals 180, from coordinate.longitude
 ok 10 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate) unpacking as-is latitude equals 90, from coordinate.latitude
 ok 11 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate) unpacking rename x equals 180, from coordinate.longitude
 ok 12 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate) unpacking rename y equals 90, from coordinate.latitude
-ok 13 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:180, longitude:90}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 14 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:180, longitude:90}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 15 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:180, longitude:90}) unpacking rename x equals 180, from coordinate.longitude
-ok 16 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:180, longitude:90}) unpacking rename y equals 90, from coordinate.latitude
-ok 17 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {longitude:0, latitude:0}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 18 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {longitude:0, latitude:0}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 19 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {longitude:0, latitude:0}) unpacking rename x equals 180, from coordinate.longitude
-ok 20 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {longitude:0, latitude:0}) unpacking rename y equals 90, from coordinate.latitude
-ok 21 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:180}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 22 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:180}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 23 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:180}) unpacking rename x equals 180, from coordinate.longitude
-ok 24 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:180}) unpacking rename y equals 90, from coordinate.latitude
+ok 13 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:90, longitude:180}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 14 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:90, longitude:180}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 15 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:90, longitude:180}) unpacking rename x equals 180, from coordinate.longitude
+ok 16 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:90, longitude:180}) unpacking rename y equals 90, from coordinate.latitude
+ok 17 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 18 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 19 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename x equals 180, from coordinate.longitude
+ok 20 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename y equals 90, from coordinate.latitude
+ok 21 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:90}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 22 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:90}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 23 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:90}) unpacking rename x equals 180, from coordinate.longitude
+ok 24 Chrome 98.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:90}) unpacking rename y equals 90, from coordinate.latitude
 ok 25 Chrome 98.0 - [undefined ms] - function iterators 1, 2, 3 iterator.next() returns 1, 2 & 3
 ok 26 Chrome 98.0 - [undefined ms] - NaN Number isNaN
 ok 27 Chrome 98.0 - [undefined ms] - NaN Number is typeof 'number'
@@ -221,30 +221,30 @@ ok 220 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') ca
 ok 221 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
 ok 222 Chrome 98.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
 ok 223 Chrome 98.0 - [undefined ms] - try { something } finally { return x } always runs last
-ok 224 Firefox 96.0 - [undefined ms] - function newCoordinate(...) return {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
-ok 225 Firefox 96.0 - [undefined ms] - function newCoordinate(...) return {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
-ok 226 Firefox 96.0 - [undefined ms] - function newCoordinate(...) return {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
-ok 227 Firefox 96.0 - [undefined ms] - function newCoordinate(...) return {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
-ok 228 Firefox 96.0 - [undefined ms] - function newCoordinate(...) return { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
-ok 229 Firefox 96.0 - [undefined ms] - function newCoordinate(...) return { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
-ok 230 Firefox 96.0 - [undefined ms] - function newCoordinate(...) return { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
-ok 231 Firefox 96.0 - [undefined ms] - function newCoordinate(...) return { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
+ok 224 Firefox 96.0 - [undefined ms] - function newCoordinate(...) (x, y) => {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
+ok 225 Firefox 96.0 - [undefined ms] - function newCoordinate(...) (x, y) => {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
+ok 226 Firefox 96.0 - [undefined ms] - function newCoordinate(...) (x, y) => {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
+ok 227 Firefox 96.0 - [undefined ms] - function newCoordinate(...) (x, y) => {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
+ok 228 Firefox 96.0 - [undefined ms] - function newCoordinate(...) (longitude, latitude) => { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
+ok 229 Firefox 96.0 - [undefined ms] - function newCoordinate(...) (longitude, latitude) => { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
+ok 230 Firefox 96.0 - [undefined ms] - function newCoordinate(...) (longitude, latitude) => { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
+ok 231 Firefox 96.0 - [undefined ms] - function newCoordinate(...) (longitude, latitude) => { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
 ok 232 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate) unpacking as-is longitude equals 180, from coordinate.longitude
 ok 233 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate) unpacking as-is latitude equals 90, from coordinate.latitude
 ok 234 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate) unpacking rename x equals 180, from coordinate.longitude
 ok 235 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate) unpacking rename y equals 90, from coordinate.latitude
-ok 236 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:180, longitude:90}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 237 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:180, longitude:90}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 238 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:180, longitude:90}) unpacking rename x equals 180, from coordinate.longitude
-ok 239 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:180, longitude:90}) unpacking rename y equals 90, from coordinate.latitude
-ok 240 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {longitude:0, latitude:0}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 241 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {longitude:0, latitude:0}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 242 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {longitude:0, latitude:0}) unpacking rename x equals 180, from coordinate.longitude
-ok 243 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {longitude:0, latitude:0}) unpacking rename y equals 90, from coordinate.latitude
-ok 244 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:180}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 245 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:180}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 246 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:180}) unpacking rename x equals 180, from coordinate.longitude
-ok 247 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:180}) unpacking rename y equals 90, from coordinate.latitude
+ok 236 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:90, longitude:180}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 237 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:90, longitude:180}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 238 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:90, longitude:180}) unpacking rename x equals 180, from coordinate.longitude
+ok 239 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:90, longitude:180}) unpacking rename y equals 90, from coordinate.latitude
+ok 240 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 241 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 242 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename x equals 180, from coordinate.longitude
+ok 243 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename y equals 90, from coordinate.latitude
+ok 244 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:90}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 245 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:90}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 246 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:90}) unpacking rename x equals 180, from coordinate.longitude
+ok 247 Firefox 96.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:90}) unpacking rename y equals 90, from coordinate.latitude
 ok 248 Firefox 96.0 - [undefined ms] - function iterators 1, 2, 3 iterator.next() returns 1, 2 & 3
 ok 249 Firefox 96.0 - [undefined ms] - NaN Number isNaN
 ok 250 Firefox 96.0 - [undefined ms] - NaN Number is typeof 'number'
@@ -444,30 +444,30 @@ ok 443 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') c
 ok 444 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
 ok 445 Firefox 96.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
 ok 446 Firefox 96.0 - [undefined ms] - try { something } finally { return x } always runs last
-ok 447 Safari 13.0 - [undefined ms] - function newCoordinate(...) return {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
-ok 448 Safari 13.0 - [undefined ms] - function newCoordinate(...) return {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
-ok 449 Safari 13.0 - [undefined ms] - function newCoordinate(...) return {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
-ok 450 Safari 13.0 - [undefined ms] - function newCoordinate(...) return {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
-ok 451 Safari 13.0 - [undefined ms] - function newCoordinate(...) return { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
-ok 452 Safari 13.0 - [undefined ms] - function newCoordinate(...) return { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
-ok 453 Safari 13.0 - [undefined ms] - function newCoordinate(...) return { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
-ok 454 Safari 13.0 - [undefined ms] - function newCoordinate(...) return { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
+ok 447 Safari 13.0 - [undefined ms] - function newCoordinate(...) (x, y) => {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
+ok 448 Safari 13.0 - [undefined ms] - function newCoordinate(...) (x, y) => {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
+ok 449 Safari 13.0 - [undefined ms] - function newCoordinate(...) (x, y) => {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
+ok 450 Safari 13.0 - [undefined ms] - function newCoordinate(...) (x, y) => {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
+ok 451 Safari 13.0 - [undefined ms] - function newCoordinate(...) (longitude, latitude) => { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
+ok 452 Safari 13.0 - [undefined ms] - function newCoordinate(...) (longitude, latitude) => { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
+ok 453 Safari 13.0 - [undefined ms] - function newCoordinate(...) (longitude, latitude) => { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
+ok 454 Safari 13.0 - [undefined ms] - function newCoordinate(...) (longitude, latitude) => { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
 ok 455 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate) unpacking as-is longitude equals 180, from coordinate.longitude
 ok 456 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate) unpacking as-is latitude equals 90, from coordinate.latitude
 ok 457 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate) unpacking rename x equals 180, from coordinate.longitude
 ok 458 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate) unpacking rename y equals 90, from coordinate.latitude
-ok 459 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:180, longitude:90}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 460 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:180, longitude:90}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 461 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:180, longitude:90}) unpacking rename x equals 180, from coordinate.longitude
-ok 462 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:180, longitude:90}) unpacking rename y equals 90, from coordinate.latitude
-ok 463 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {longitude:0, latitude:0}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 464 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {longitude:0, latitude:0}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 465 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {longitude:0, latitude:0}) unpacking rename x equals 180, from coordinate.longitude
-ok 466 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {longitude:0, latitude:0}) unpacking rename y equals 90, from coordinate.latitude
-ok 467 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:180}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 468 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:180}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 469 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:180}) unpacking rename x equals 180, from coordinate.longitude
-ok 470 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:180}) unpacking rename y equals 90, from coordinate.latitude
+ok 459 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:90, longitude:180}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 460 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:90, longitude:180}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 461 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:90, longitude:180}) unpacking rename x equals 180, from coordinate.longitude
+ok 462 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({latitude:90, longitude:180}) unpacking rename y equals 90, from coordinate.latitude
+ok 463 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 464 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 465 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename x equals 180, from coordinate.longitude
+ok 466 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename y equals 90, from coordinate.latitude
+ok 467 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:90}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 468 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:90}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 469 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:90}) unpacking rename x equals 180, from coordinate.longitude
+ok 470 Safari 13.0 - [undefined ms] - function newCoordinate(...) newCoordinate({x:180, y:90}) unpacking rename y equals 90, from coordinate.latitude
 ok 471 Safari 13.0 - [undefined ms] - function iterators 1, 2, 3 iterator.next() returns 1, 2 & 3
 ok 472 Safari 13.0 - [undefined ms] - NaN Number isNaN
 ok 473 Safari 13.0 - [undefined ms] - NaN Number is typeof 'number'
