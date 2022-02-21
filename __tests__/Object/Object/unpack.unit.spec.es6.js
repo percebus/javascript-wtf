@@ -14,16 +14,21 @@ describe('Object', () => {
       return { longitude, latitude }
     }
 
+    function newCoordinate4 ({ x: longitude, y: latitude }) {
+      return { longitude, latitude }
+    }
+
     const coordinates = {
       '{longitude:x, latitude:y}': newCoordinate1(180, 90),
       '{ longitude, latitude }': newCoordinate2(180, 90),
-      '({latitude:180, longitude:90})': newCoordinate3({ latitude: 90, longitude: 180 })
+      '({latitude:180, longitude:90})': newCoordinate3({ latitude: 90, longitude: 180 }),
+      '({x:180, y:180})': newCoordinate4({ x: 180, y: 90 })
     }
 
     _.forEach(coordinates, (coordinate, testName) => {
       describe(testName, () => {
         describe('unpacking', () => {
-          describe('longitude, latitude = coordinate', () => {
+          describe('as-is', () => {
             const { longitude, latitude } = coordinate
 
             describe('longitude', () => {
@@ -41,7 +46,7 @@ describe('Object', () => {
             })
           })
 
-          describe('{longitude:x, latitude:y}', () => {
+          describe('rename', () => {
             // const { x: longitude, y: latitude } = coordinate // I would expect THIS
             const { longitude: x, latitude: y } = coordinate // not THIS
 
