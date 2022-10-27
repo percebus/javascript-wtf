@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "description": "JavaScript WTFs",
   "scripts": {
-    "npm:install:global:ci": "npm install -g standard",
-    "npm:install:global:all": "npm install -g standard yarn",
+    "npm:install:global:all": "npm install --location=global yarn",
     "setup": "npm run npm:install:global:all",
-    "setup:ci": "npm run npm:install:global:ci",
+    "setup:ci": "npm run setup",
     "yarn:licenses:list:prod": "yarn licenses list --prod > LICENSES.txt",
     "yarn:licenses:generate-disclaimer:prod": "yarn licenses generate-disclaimer --prod > LICENSES.md",
     "yarn:licenses:prod": "npm run yarn:licenses:list:prod && npm run yarn:licenses:generate-disclaimer:prod",
@@ -14,7 +13,7 @@
     "standard": "standard --verbose --fix *.js __tests__/**/*.js __tests__/**/*/*.js",
     "lint": "npm run standard",
     "prejest:ci": "npm run lint",
-    "jest:ci": "node --experimental-vm-modules node_modules/.bin/jest --ci",
+    "jest:ci": "jest --ci",
     "jest:ci:unit:js": "npm run jest:ci -- unit.spec.js",
     "jest:ci:unit:es6": "npm run jest:ci -- unit.spec.es6.js",
     "jest:ci:unit:FIXME": "npm run jest:ci -- unit.spec.js unit.spec.es6.js",
@@ -59,6 +58,7 @@
     "jest": "^27.5.1",
     "jest-junit": "^13.0.0",
     "lodash": "^4.17.21",
-    "testem": "^3.6.0"
+    "standard": "latest",
+    "testem": "latest"
   }
 }
