@@ -1,4 +1,5 @@
-describe('Number', () => {'use strict' // SRC: https://www.youtube.com/watch?v=2pL28CcEijU
+describe('Number', () => {
+  'use strict' // SRC: https://www.youtube.com/watch?v=2pL28CcEijU
 
   let result
 

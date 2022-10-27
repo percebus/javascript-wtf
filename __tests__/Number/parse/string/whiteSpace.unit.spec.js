@@ -1,4 +1,5 @@
-describe('Number', () => {'use strict'
+describe('Number', () => {
+  'use strict'
   describe('parse from string', () => {
     describe('whitespace', () => { // SRC: https://www.youtube.com/watch?v=2pL28CcEijU
       describe('to 0', () => {

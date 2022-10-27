@@ -26,7 +26,6 @@ describe('Number', () => {
         expect(type).not.toEqual('NaN')
       })
 
-
       describe('NaN', () => {
         it('is true', () => {
           expect(isNaN(bananas)).toBe(true)
@@ -45,7 +44,6 @@ describe('Number', () => {
 
           describe('bananas === bananas', () => { // so they cannot compare with themselves
             it('is false!', () => {
-
               /* This horrible result could be avoided, i
                * if JS simply threw an error
                */

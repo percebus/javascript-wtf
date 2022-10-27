@@ -60,7 +60,7 @@ describe('Symbol', () => {
               _.forEach(messages, (message, platform) => {
                 // const _describe = (browser === 'foo') ? describe : xdescribe
                 xdescribe(platform, () => {
-                  const testName = templates.TypeError({ message: message })
+                  const testName = templates.TypeError({ message })
                   it(testName, () => {
                     oTypeError = new TypeError(message)
                     expect(catchError()).toThrow(oTypeError)
