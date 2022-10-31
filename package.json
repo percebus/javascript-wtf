@@ -5,7 +5,6 @@
   "scripts": {
     "npm:install:global:all": "npm install --location=global yarn",
     "setup": "npm run npm:install:global:all",
-    "setup:ci": "npm run setup",
     "yarn:licenses:list:prod": "yarn licenses list --prod > LICENSES.txt",
     "yarn:licenses:generate-disclaimer:prod": "yarn licenses generate-disclaimer --prod > LICENSES.md",
     "yarn:licenses:prod": "npm run yarn:licenses:list:prod && npm run yarn:licenses:generate-disclaimer:prod",
@@ -26,7 +25,7 @@
     "testem:ci:tap": "testem ci --reporter tap > test/browsers/testem.tap",
     "testem:ci:xunit": "testem ci --reporter xunit > test/browsers/testem.xunit.xml",
     "testem:ci:all": "npm run testem:ci:tap && npm run testem:ci:xunit",
-    "test": "npm run jest:ci:unit:all && npm run testem:ci:tap"
+    "test": "npm run jest:ci:unit:all"
   },
   "standard": {
     "env": [

@@ -1,5 +1,7 @@
 # JavaScript WTFs
 
+[![Verification](https://github.com/percebus/javascript-wtf/actions/workflows/always.yml/badge.svg)](https://github.com/percebus/javascript-wtf/actions/workflows/always.yml)
+
 A unit-test project to track all the weird JavaScript gotchas and test'em across all current browsers
 
 ## setup (1st time)
