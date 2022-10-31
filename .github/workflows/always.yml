@@ -1,0 +1,67 @@
+name: CI/CD
+on:
+  push:
+  schedule:
+    - cron: '0 0 * * *'
+
+env:
+  NODE_VERSION: '16.X'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: ls
+        run: ls -la
+
+      - name: setup node@${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: setup
+        run: npm run setup:ci --if-present
+      - name: npm install
+        run: npm ci
+      - name: node_modules
+        run: ls -la ./node_modules
+      - name: npm audit
+        run: npm audit
+        continue-on-error: true # XXX?
+
+      - name: lint
+        run: npm run lint
+      - name: test
+        run: npm test
+
+
+  builds:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    strategy:
+      max-parallel: 6
+      matrix:
+        node: [16, 18]
+        os:
+          - ubuntu-latest
+#         - macOS-latest # FIXME
+          - windows-latest
+    runs-on: ${{ matrix.os }}
+    name: Build @ node:${{ matrix.node }}@${{ matrix.os }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: setup
+        run: npm run setup:ci --if-present
+      - name: npm install
+        run: npm ci
+
+      - name: test
+        run: npm test
