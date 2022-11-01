@@ -52,7 +52,7 @@ jobs:
 
 
   tests:
-    # if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     needs: id
     strategy:
       fail-fast: false
@@ -61,7 +61,7 @@ jobs:
         node: [16, 18]
         os:
           - ubuntu-latest
-          - macOS-latest
+#         - macOS-latest # FIXME
           - windows-latest
     runs-on: ${{ matrix.os }}
     name: Build @ node:${{ matrix.node }}@${{ matrix.os }}
