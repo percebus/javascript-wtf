@@ -17,8 +17,8 @@ jobs:
       - name: 'id'
         id: id
         run: echo "::set-output name=id::$(date +%s)"
-    env:
-      BUILD_ID: ${{ steps.id.outputs.id }}
+#   env:
+#     BUILD_ID: ${{ steps.id.outputs.id }}
 
 
   test:
