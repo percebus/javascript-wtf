@@ -19,7 +19,7 @@ jobs:
         # add a step output `steps.build_id.outputs.id` as the unique id
         run: echo "::set-output name=id::$(date +%s)"
     env:
-      BUILD_ID: ${{ steps.tests.outputs.id }}
+      BUILD_ID: ${{ steps.id.outputs.id }}
 
 
   test:
