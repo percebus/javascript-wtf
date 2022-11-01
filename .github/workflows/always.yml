@@ -9,17 +9,20 @@ env:
 
 jobs:
 
-  # TODO
   # SRC https://medium.com/attest-product-and-technology/adding-a-unique-github-build-identifier-7aa2e83cadca
-  # id:
-  #   steps:
-  #     - name: 'id'
-  #       id: id
-  #       # add a step output `steps.build_id.outputs.id` as the unique id
-  #       run: echo "::set-output name=id::$(date +%s)"
+  id:
+    name: Build Id
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'id'
+        id: id
+        run: echo "BUILD_ID=$(date +%s)" >> $GITHUB_ENV
+      - name: echo
+        run: echo ${{ env.BUILD_ID }}
 
 
   test:
+    needs: id
     name: Test
     runs-on: ubuntu-latest
     steps:
@@ -50,14 +53,15 @@ jobs:
 
   tests:
     if: github.ref == 'refs/heads/main'
-    needs: test
+    needs: id
     strategy:
+      fail-fast: false
       max-parallel: 6
       matrix:
         node: [16, 18]
         os:
           - ubuntu-latest
-          - macOS-latest
+#         - macOS-latest # FIXME
           - windows-latest
     runs-on: ${{ matrix.os }}
     name: Build @ node:${{ matrix.node }}@${{ matrix.os }}
