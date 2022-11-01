@@ -16,9 +16,9 @@ jobs:
     steps:
       - name: 'id'
         id: id
-        run: echo "::set-output name=id::$(date +%s)"
-#   env:
-#     BUILD_ID: ${{ steps.id.outputs.id }}
+        run: echo "BUILD_ID=$(date +%s)" >> $GITHUB_ENV
+      - name: echo
+        run: echo ${{ env.BUILD_ID }}
 
 
   test:
