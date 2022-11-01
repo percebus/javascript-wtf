@@ -10,16 +10,15 @@ env:
 jobs:
 
   # SRC https://medium.com/attest-product-and-technology/adding-a-unique-github-build-identifier-7aa2e83cadca
-  id:
+  build_id:
     name: Build Id
     runs-on: ubuntu-latest
     steps:
       - name: 'id'
         id: id
-        # add a step output `steps.build_id.outputs.id` as the unique id
         run: echo "::set-output name=id::$(date +%s)"
     env:
-      BUILD_ID: ${{ steps.id.outputs.id }}
+      BUILD_ID: ${{ steps.build_id.outputs.id }}
 
 
   test:
