@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cp src/globals.js.ci src/globals.js
+cp __tests__/globals.spec.js.ci __tests__/globals.spec.js
