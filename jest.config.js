@@ -4,6 +4,7 @@ module.exports = () => {
     globals: {
       _: require('lodash') // we inject here, so we can use testem to test browsers
     },
+    setupFiles: ['<rootDir>/__tests__/global.js'],
     transform: {
       '^.+\\.es6\\.js$': 'babel-jest'
     },

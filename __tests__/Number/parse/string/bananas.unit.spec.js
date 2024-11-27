@@ -1,7 +1,6 @@
 describe('Number', () => {
   'use strict'
 
-  // const _ = require('lodash') // injected to test browsers
   const functions = {
     "parseInt('bananas')": parseInt,
     "_.parseInt('bananas')": _.parseInt
@@ -44,7 +43,7 @@ describe('Number', () => {
 
           describe('bananas === bananas', () => { // so they cannot compare with themselves
             it('is false!', () => {
-              /* This horrible result could be avoided, i
+              /* This horrible result could be avoided,
                * if JS simply threw an error
                */
               expect(bananas === bananas).toBe(false)
