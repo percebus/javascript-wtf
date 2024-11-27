@@ -2,7 +2,7 @@
 
 set -e
 
-file_path="src/globals.js"
+file_path="__tests__/global.js"
 
 set -x
 cp "${file_path}.ci" "${file_path}"

@@ -1,5 +1,5 @@
 
-src/globals.js
+__tests__/global.js
 
 ######################
 ### Node.gitignore ### SRC: https://github.com/github/gitignore/blob/main/Node.gitignore
