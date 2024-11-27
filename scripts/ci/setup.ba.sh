@@ -1,13 +1,13 @@
 #!/bin/bash
 
-set +e
+set -e
 
-file_path="src/globals.spec.js"
+file_path="src/globals.js"
 
-set +x
+set -x
 cp "${file_path}.ci" "${file_path}"
 
 node src/globals.spec.js
 
-set -x
-set -e
+set +x
+set +e
