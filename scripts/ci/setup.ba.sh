@@ -1,3 +1,13 @@
 #!/bin/bash
 
-cp __tests__/globals.spec.js.ci __tests__/globals.spec.js
+set +e
+
+file_path="src/globals.spec.js"
+
+set +x
+cp "${file_path}.ci" "${file_path}"
+
+node src/globals.spec.js
+
+set -x
+set -e
