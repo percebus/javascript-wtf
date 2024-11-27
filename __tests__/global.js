@@ -1,1 +1,1 @@
-global._ = require('lodash');
+global._ = require('lodash')
