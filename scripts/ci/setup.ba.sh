@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cp src/main.js.ci src/main.js
+cp src/globals.js.ci src/globals.js
