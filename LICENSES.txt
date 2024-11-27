@@ -1,2 +1,2 @@
-yarn licenses v1.22.17
+yarn licenses v1.22.22
 Done in 0.06s.

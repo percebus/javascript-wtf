@@ -1,8 +1,6 @@
 name: Verification
 on:
   push:
-  schedule:
-    - cron: '0 0 * * *'
 
 env:
   NODE_VERSION: '16.X'
