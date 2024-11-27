@@ -2,24 +2,36 @@
 
 [![Verification](https://github.com/percebus/javascript-wtf/actions/workflows/always.yml/badge.svg)](https://github.com/percebus/javascript-wtf/actions/workflows/always.yml)
 
+[`TODO`s](./TODO.md) | [`LICENSE`](./LICENSE.md) | [LICENSES.md](./LICENSES.md)
+
 A unit-test project to track all the weird JavaScript gotchas and test'em across all current browsers
 
-## setup (1st time)
+## Setup
+
+### 1st time
 
 ```bash
 $> npm run setup
 ```
 
-## install
+### BaU
 
 ```bash
 $> npm install
 ```
 
-## test
+## Test
+
+### Jest
 
 ```bash
 $> npm test
+```
+
+### Browsers
+
+```bash
+$> npm run testem:ci
 ```
 
 ## Acknowledgments
