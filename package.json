@@ -16,7 +16,7 @@
     "style": "npm run standard:fix",
     "poststyle": "npm run lint",
     "prejest:ci": "npm run lint",
-    "jest:ci": "jest --ci",
+    "jest:ci": "jest --ci --config=jest.config.json",
     "jest:ci:unit:js": "npm run jest:ci -- unit.spec.js",
     "jest:ci:unit:es6": "npm run jest:ci -- unit.spec.es6.js",
     "jest:ci:unit:FIXME": "npm run jest:ci -- unit.spec.js unit.spec.es6.js",
