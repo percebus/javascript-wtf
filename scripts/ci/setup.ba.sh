@@ -7,7 +7,7 @@ file_path="src/globals.js"
 set -x
 cp "${file_path}.ci" "${file_path}"
 
-node src/globals.spec.js
+node ${file_path}
 
 set +x
 set +e
