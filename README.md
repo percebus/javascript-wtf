@@ -38,4 +38,4 @@ $> npm run testem:ci
 
 ### Kyle Simpsons
 
-See his [What the... JavaScript?](https://www.youtube.com/watch?v=2pL28CcEijU&t=383s) lecture, from [forwardJS.com](http://forwardjs.com/)
+See his [What the... JavaScript?](https://www.youtube.com/watch?v=2pL28CcEijU) lecture, from [forwardJS.com](http://forwardjs.com/)
