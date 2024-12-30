@@ -6,7 +6,6 @@ env:
   NODE_VERSION: '22.x'
 
 jobs:
-
   # SRC https://medium.com/attest-product-and-technology/adding-a-unique-github-build-identifier-7aa2e83cadca
   id:
     name: Build Id
@@ -18,36 +17,13 @@ jobs:
       - name: echo
         run: echo ${{ env.BUILD_ID }}
 
+  audit:
+    needs: id
+    uses: percebus/github-actions-npm/.github/workflows/npm_audit.yml@main
 
   test:
     needs: id
-    name: Test
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: ls
-        run: ls -la
-
-      - name: setup node @ ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-      - name: setup
-        run: npm run setup:ci --if-present
-      - name: npm install
-        run: npm ci
-      - name: node_modules
-        run: ls -la ./node_modules
-      - name: npm audit
-        run: npm audit
-        continue-on-error: true # XXX?
-
-      - name: lint
-        run: npm run lint
-      - name: test
-        run: npm test
-
+    uses: percebus/github-actions-npm/.github/workflows/npm_lint_and_test.yml@main
 
   tests:
     if: github.ref == 'refs/heads/main'
@@ -56,25 +32,30 @@ jobs:
       fail-fast: false
       max-parallel: 6
       matrix:
-        node: [16, 17, 18, 19, 20, 21, 23]
+        node:
+          - '' # default (LTS)
+          - 16
+          - 17
+          - 18
+          - 19
+          - 20
+          - 21
+          - 22
+          - 23
         os:
           - ubuntu-latest
 #         - macOS-latest # FIXME
           - windows-latest
+
     runs-on: ${{ matrix.os }}
-    name: Test @ node:${{ matrix.node }}@${{ matrix.os }}
+    name: npm test @ node:${{ matrix.node }}@${{ matrix.os }}
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: setup node
-        uses: actions/setup-node@v3
+      - uses: percebus/github-actions-common/.github/actions/checkout@main
+      - uses: percebus/github-actions-node/.github/actions/node_setup@main
         with:
           node-version: ${{ matrix.node }}
 
-      - name: setup
-        run: npm run setup:ci --if-present
-      - name: npm install
-        run: npm ci
+      - uses: percebus/github-actions-npm/.github/actions/npm_install@main
 
       - name: test
         run: npm test
