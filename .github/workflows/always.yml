@@ -23,17 +23,7 @@ jobs:
 
   test:
     needs: id
-    name: Test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: percebus/github-actions-common/.github/actions/checkout@main
-      - uses: percebus/github-actions-node/.github/actions/node_setup@main
-      - uses: percebus/github-actions-npm/.github/actions/npm_install@main
-
-      - name: lint
-        run: npm run lint
-      - name: test
-        run: npm test --ignore-scripts
+    uses: percebus/github-actions-npm/.github/workflows/npm_lint_and_test.yml@main
 
   tests:
     if: github.ref == 'refs/heads/main'
