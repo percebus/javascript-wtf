@@ -17,7 +17,7 @@ jobs:
       - name: echo
         run: echo ${{ env.BUILD_ID }}
 
-  npm_audit:
+  audit:
     needs: id
     uses: percebus/github-actions-npm/.github/workflows/npm_audit.yml@main
 
@@ -26,7 +26,7 @@ jobs:
     uses: percebus/github-actions-npm/.github/workflows/npm_lint_and_test.yml@main
 
   tests:
-    # if: github.ref == 'refs/heads/main' # FIXME
+    if: github.ref == 'refs/heads/main'
     needs: id
     strategy:
       fail-fast: false
@@ -48,7 +48,7 @@ jobs:
           - windows-latest
 
     runs-on: ${{ matrix.os }}
-    name: Test @ node:${{ matrix.node }}@${{ matrix.os }}
+    name: npm test @ node:${{ matrix.node }}@${{ matrix.os }}
     steps:
       - uses: percebus/github-actions-common/.github/actions/checkout@main
       - uses: percebus/github-actions-node/.github/actions/node_setup@main
