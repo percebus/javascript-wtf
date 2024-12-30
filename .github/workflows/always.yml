@@ -26,7 +26,7 @@ jobs:
     uses: percebus/github-actions-npm/.github/workflows/npm_lint_and_test.yml@main
 
   tests:
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main' # FIXME
     needs: id
     strategy:
       fail-fast: false
