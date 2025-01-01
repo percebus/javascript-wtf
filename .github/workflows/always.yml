@@ -32,7 +32,7 @@ jobs:
       - uses: percebus/github-actions-npm/.github/actions/npm_install@main
 
       - name: testem:ci
-        run: npm run test:ci
+        run: npm run testem:ci:dot
 
 
   tests:
