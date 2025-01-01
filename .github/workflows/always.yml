@@ -2,9 +2,6 @@ name: Verification
 on:
   push:
 
-env:
-  NODE_VERSION: '22.x'
-
 jobs:
   # SRC https://medium.com/attest-product-and-technology/adding-a-unique-github-build-identifier-7aa2e83cadca
   id:
@@ -24,6 +21,18 @@ jobs:
   test:
     needs: id
     uses: percebus/github-actions-npm/.github/workflows/npm_lint_and_test.yml@main
+
+  testem:
+    needs: test
+    name: "test'em"
+    steps:
+      - uses: percebus/github-actions-common/.github/actions/checkout@main
+      - uses: percebus/github-actions-node/.github/actions/node_setup@main
+      - uses: percebus/github-actions-npm/.github/actions/npm_install@main
+
+      - name: testem:ci
+        run: npm run test:ci
+
 
   tests:
     if: github.ref == 'refs/heads/main'
