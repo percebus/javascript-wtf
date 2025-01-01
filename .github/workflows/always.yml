@@ -25,6 +25,7 @@ jobs:
   testem:
     needs: test
     name: "test'em"
+    runs-on: ubuntu-latest
     steps:
       - uses: percebus/github-actions-common/.github/actions/checkout@main
       - uses: percebus/github-actions-node/.github/actions/node_setup@main
