@@ -1,1363 +1,463 @@
-ok 1 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
-ok 2 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
-ok 3 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
-ok 4 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
-ok 5 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
-ok 6 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
-ok 7 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
-ok 8 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
-ok 9 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 10 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 11 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename x equals 180, from coordinate.longitude
-ok 12 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename y equals 90, from coordinate.latitude
-ok 13 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 14 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 15 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename x equals 180, from coordinate.longitude
-ok 16 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename y equals 90, from coordinate.latitude
-ok 17 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 18 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 19 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename x equals 180, from coordinate.longitude
-ok 20 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename y equals 90, from coordinate.latitude
-ok 21 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 22 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 23 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename x equals 180, from coordinate.longitude
-ok 24 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename y equals 90, from coordinate.latitude
-ok 25 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 26 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 27 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename x equals 180, from coordinate.longitude
-ok 28 Chrome 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename y equals 90, from coordinate.latitude
-ok 29 Chrome 106.0 - [undefined ms] - NaN Number isNaN
-ok 30 Chrome 106.0 - [undefined ms] - NaN Number is typeof 'number'
-ok 31 Chrome 106.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
-ok 32 Chrome 106.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
-ok 33 Chrome 106.0 - [undefined ms] - NaN jasmine .toBeFalsy() is
-ok 34 Chrome 106.0 - [undefined ms] - null Object is typeof 'object'
-ok 35 Chrome 106.0 - [undefined ms] - null Object is NOT instanceof Object
-ok 36 Chrome 106.0 - [undefined ms] - null Number isNaN(null) is NOT
-ok 37 Chrome 106.0 - [undefined ms] - null lodash _.isNull(null) is
-ok 38 Chrome 106.0 - [undefined ms] - null jasmine .toBeNull() is
-ok 39 Chrome 106.0 - [undefined ms] - null jasmine .toBeFalsy() is
-ok 40 Chrome 106.0 - [undefined ms] - null jasmine .toEqual(undefined) is NOT!
-ok 41 Chrome 106.0 - [undefined ms] - undefined is typeof 'undefined
-ok 42 Chrome 106.0 - [undefined ms] - undefined Number isNaN
-ok 43 Chrome 106.0 - [undefined ms] - undefined null is not identical to null
-ok 44 Chrome 106.0 - [undefined ms] - undefined null equals null
-ok 45 Chrome 106.0 - [undefined ms] - undefined lodash _.isUndefined(undefined) is
-ok 46 Chrome 106.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
-ok 47 Chrome 106.0 - [undefined ms] - undefined jasmine .toEqual(null) is NOT!
-ok 48 Chrome 106.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
-ok 49 Chrome 106.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-ok 50 Chrome 106.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
-ok 51 Chrome 106.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
-ok 52 Chrome 106.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
-ok 53 Chrome 106.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
-ok 54 Chrome 106.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
-ok 55 Chrome 106.0 - [undefined ms] - Number parse objects Number({}) is NaN
-ok 56 Chrome 106.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
-ok 57 Chrome 106.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
-ok 58 Chrome 106.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 59 Chrome 106.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
-ok 60 Chrome 106.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 61 Chrome 106.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-ok 62 Chrome 106.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-ok 63 Chrome 106.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 64 Chrome 106.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
-ok 65 Chrome 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 66 Chrome 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-ok 67 Chrome 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-ok 68 Chrome 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('0') returns 0
-ok 69 Chrome 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('') returns 0
-ok 70 Chrome 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number(' ') returns 0
-ok 71 Chrome 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('/r/n/t') returns 0
-ok 72 Chrome 106.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
-ok 73 Chrome 106.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
-ok 74 Chrome 106.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
-ok 75 Chrome 106.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
-ok 76 Chrome 106.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
-ok 77 Chrome 106.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
-ok 78 Chrome 106.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
-ok 79 Chrome 106.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
-ok 80 Chrome 106.0 - [undefined ms] - Number parse from string -0 - 0 is -0
-ok 81 Chrome 106.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
-ok 82 Chrome 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
-ok 83 Chrome 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
-ok 84 Chrome 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
-ok 85 Chrome 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
-ok 86 Chrome 106.0 - [undefined ms] - Number VALUE MAX is > 0
-ok 87 Chrome 106.0 - [undefined ms] - Number VALUE MAX is the biggest possible number
-ok 88 Chrome 106.0 - [undefined ms] - Number VALUE MIN is NOT even a negative number
-ok 89 Chrome 106.0 - [undefined ms] - Number VALUE MIN is NOT even 0 itself
-ok 90 Chrome 106.0 - [undefined ms] - Number VALUE MIN it is actually a positive number
-ok 91 Chrome 106.0 - [undefined ms] - Number VALUE MIN is close to 0
-ok 92 Chrome 106.0 - [undefined ms] - Number -0 is -0
-ok 93 Chrome 106.0 - [undefined ms] - Number -0 equals -0
-ok 94 Chrome 106.0 - [undefined ms] - Number -0 does not equal 0
-ok 95 Chrome 106.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
-ok 96 Chrome 106.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
-ok 97 Chrome 106.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
-ok 98 Chrome 106.0 - [undefined ms] - Number -0 to string '' + -0 returns '0'
-ok 99 Chrome 106.0 - [undefined ms] - Number -0 to string '' - 0 does NOT return '0'
-ok 100 Chrome 106.0 - [undefined ms] - Number -0 to string '' - 0 returns 0, NOT '0'
-ok 101 Chrome 106.0 - [undefined ms] - Array [] brackets is typeof 'object', not 'array'
-ok 102 Chrome 106.0 - [undefined ms] - Array [] brackets is instanceof Array
-ok 103 Chrome 106.0 - [undefined ms] - Array [] brackets is instanceof Object
-ok 104 Chrome 106.0 - [undefined ms] - Array [] brackets String([]) returns ''
-ok 105 Chrome 106.0 - [undefined ms] - Array [] brackets String([]) is typeof string
-ok 106 Chrome 106.0 - [undefined ms] - Array [] brackets lodash _.isObject is
-ok 107 Chrome 106.0 - [undefined ms] - Array [] brackets lodash _.isArray is
-ok 108 Chrome 106.0 - [undefined ms] - Array [] instance is typeof 'object', not 'array'
-ok 109 Chrome 106.0 - [undefined ms] - Array [] instance is instanceof Array
-ok 110 Chrome 106.0 - [undefined ms] - Array [] instance is instanceof Object
-ok 111 Chrome 106.0 - [undefined ms] - Array [] instance String([]) returns ''
-ok 112 Chrome 106.0 - [undefined ms] - Array [] instance String([]) is typeof string
-ok 113 Chrome 106.0 - [undefined ms] - Array [] instance lodash _.isObject is
-ok 114 Chrome 106.0 - [undefined ms] - Array [] instance lodash _.isArray is
-ok 115 Chrome 106.0 - [undefined ms] - Array [1, 2, 3] .map(x => x * 2) returns [2, 4, 6]
-ok 116 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 is instanceof Array
-ok 117 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 is typeof 'object'
-ok 118 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 lodash _.isArray
-ok 119 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 has length 3
-ok 120 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 equals [undefined, undefined, undefined]
-ok 121 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() equals ',,'
-ok 122 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 123 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 124 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots actually equals ';;'
-ok 125 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [,,,] is instanceof Array
-ok 126 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [,,,] is typeof 'object'
-ok 127 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [,,,] lodash _.isArray
-ok 128 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [,,,] has length 3
-ok 129 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [,,,] equals [undefined, undefined, undefined]
-ok 130 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() equals ',,'
-ok 131 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 132 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 133 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots actually equals ';;'
-ok 134 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is instanceof Array
-ok 135 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is typeof 'object'
-ok 136 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] lodash _.isArray
-ok 137 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] has length 3
-ok 138 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] equals [undefined, undefined, undefined]
-ok 139 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() equals ',,'
-ok 140 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 141 Chrome 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .map(x => 'slot') [ undefined x 3 ] equals 'slot;slot;slot'
-ok 142 Chrome 106.0 - [undefined ms] - Array <3 empty slots> Array(3) is instanceof Array
-ok 143 Chrome 106.0 - [undefined ms] - Array <3 empty slots> Array(3) is typeof 'object'
-ok 144 Chrome 106.0 - [undefined ms] - Array <3 empty slots> Array(3) lodash _.isArray
-ok 145 Chrome 106.0 - [undefined ms] - Array <3 empty slots> Array(3) has length 3
-ok 146 Chrome 106.0 - [undefined ms] - Array <3 empty slots> Array(3) equals [undefined, undefined, undefined]
-ok 147 Chrome 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() equals ',,'
-ok 148 Chrome 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 149 Chrome 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 150 Chrome 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots actually equals ';;'
-ok 151 Chrome 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) is instanceof Array
-ok 152 Chrome 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) is typeof 'object'
-ok 153 Chrome 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) lodash _.isArray
-ok 154 Chrome 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) has length 3
-ok 155 Chrome 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) equals [undefined, undefined, undefined]
-ok 156 Chrome 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() equals ',,'
-ok 157 Chrome 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 158 Chrome 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 159 Chrome 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots actually equals ';;'
-ok 160 Chrome 106.0 - [undefined ms] - Object coercion [] !== [] is true
-ok 161 Chrome 106.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
-ok 162 Chrome 106.0 - [undefined ms] - Object coercion {} + [] is 0
-ok 163 Chrome 106.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
-ok 164 Chrome 106.0 - [undefined ms] - Object {} is typeof object
-ok 165 Chrome 106.0 - [undefined ms] - Object {} is instanceof Object
-ok 166 Chrome 106.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-ok 167 Chrome 106.0 - [undefined ms] - Object {} String({}) is typeof string
-ok 168 Chrome 106.0 - [undefined ms] - Object {} lodash _.isObject is
-ok 169 Chrome 106.0 - [undefined ms] - Object {} lodash _.isArray is not
-ok 170 Chrome 106.0 - [undefined ms] - Object {} is typeof object
-ok 171 Chrome 106.0 - [undefined ms] - Object {} is instanceof Object
-ok 172 Chrome 106.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-ok 173 Chrome 106.0 - [undefined ms] - Object {} String({}) is typeof string
-ok 174 Chrome 106.0 - [undefined ms] - Object {} lodash _.isObject is
-ok 175 Chrome 106.0 - [undefined ms] - Object {} lodash _.isArray is not
-ok 176 Chrome 106.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
-ok 177 Chrome 106.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
-ok 178 Chrome 106.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
-ok 179 Chrome 106.0 - [undefined ms] - String parse nothing String(null) is typeof string
-ok 180 Chrome 106.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
-ok 181 Chrome 106.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
-ok 182 Chrome 106.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
-ok 183 Chrome 106.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
-ok 184 Chrome 106.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
-ok 185 Chrome 106.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
-ok 186 Chrome 106.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
-ok 187 Chrome 106.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
-ok 188 Chrome 106.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
-ok 189 Chrome 106.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
-ok 190 Chrome 106.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
-ok 191 Chrome 106.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
-ok 192 Chrome 106.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
-ok 193 Chrome 106.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
-ok 194 Chrome 106.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
-ok 195 Chrome 106.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
-ok 196 Chrome 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
-ok 197 Chrome 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
-ok 198 Chrome 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
-ok 199 Chrome 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
-ok 200 Chrome 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
-ok 201 Chrome 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
-ok 202 Chrome 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
-ok 203 Chrome 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
-ok 204 Chrome 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
-ok 205 Chrome 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
-ok 206 Chrome 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
-ok 207 Chrome 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
-ok 208 Chrome 106.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
-ok 209 Chrome 106.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
-ok 210 Chrome 106.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
-ok 211 Chrome 106.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
-ok 212 Chrome 106.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
-ok 213 Chrome 106.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
-ok 214 Chrome 106.0 - [undefined ms] - switch case order magicNumber 10 returns 2
-ok 215 Chrome 106.0 - [undefined ms] - switch case order magicNumber 20 returns 2
-ok 216 Chrome 106.0 - [undefined ms] - switch case order magicNumber 30 returns 4
-ok 217 Chrome 106.0 - [undefined ms] - switch case order magicNumber 42 returns 3
-ok 218 Chrome 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
-ok 219 Chrome 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
-ok 220 Chrome 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
-ok 221 Chrome 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
-ok 222 Chrome 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
-ok 223 Chrome 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
-ok 224 Chrome 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
-ok 225 Chrome 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
-ok 226 Chrome 106.0 - [undefined ms] - try { something } finally { return x } always runs last
-ok 227 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
-ok 228 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
-ok 229 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
-ok 230 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
-ok 231 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
-ok 232 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
-ok 233 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
-ok 234 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
-ok 235 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 236 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 237 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename x equals 180, from coordinate.longitude
-ok 238 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename y equals 90, from coordinate.latitude
-ok 239 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 240 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 241 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename x equals 180, from coordinate.longitude
-ok 242 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename y equals 90, from coordinate.latitude
-ok 243 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 244 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 245 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename x equals 180, from coordinate.longitude
-ok 246 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename y equals 90, from coordinate.latitude
-ok 247 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 248 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 249 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename x equals 180, from coordinate.longitude
-ok 250 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename y equals 90, from coordinate.latitude
-ok 251 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 252 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 253 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename x equals 180, from coordinate.longitude
-ok 254 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename y equals 90, from coordinate.latitude
-ok 255 Firefox 106.0 - [undefined ms] - NaN Number isNaN
-ok 256 Firefox 106.0 - [undefined ms] - NaN Number is typeof 'number'
-ok 257 Firefox 106.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
-ok 258 Firefox 106.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
-ok 259 Firefox 106.0 - [undefined ms] - NaN jasmine .toBeFalsy() is
-ok 260 Firefox 106.0 - [undefined ms] - null Object is typeof 'object'
-ok 261 Firefox 106.0 - [undefined ms] - null Object is NOT instanceof Object
-ok 262 Firefox 106.0 - [undefined ms] - null Number isNaN(null) is NOT
-ok 263 Firefox 106.0 - [undefined ms] - null lodash _.isNull(null) is
-ok 264 Firefox 106.0 - [undefined ms] - null jasmine .toBeNull() is
-ok 265 Firefox 106.0 - [undefined ms] - null jasmine .toBeFalsy() is
-ok 266 Firefox 106.0 - [undefined ms] - null jasmine .toEqual(undefined) is NOT!
-ok 267 Firefox 106.0 - [undefined ms] - undefined is typeof 'undefined
-ok 268 Firefox 106.0 - [undefined ms] - undefined Number isNaN
-ok 269 Firefox 106.0 - [undefined ms] - undefined null is not identical to null
-ok 270 Firefox 106.0 - [undefined ms] - undefined null equals null
-ok 271 Firefox 106.0 - [undefined ms] - undefined lodash _.isUndefined(undefined) is
-ok 272 Firefox 106.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
-ok 273 Firefox 106.0 - [undefined ms] - undefined jasmine .toEqual(null) is NOT!
-ok 274 Firefox 106.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
-ok 275 Firefox 106.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-ok 276 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
-ok 277 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
-ok 278 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
-ok 279 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
-ok 280 Firefox 106.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
-ok 281 Firefox 106.0 - [undefined ms] - Number parse objects Number({}) is NaN
-ok 282 Firefox 106.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
-ok 283 Firefox 106.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
-ok 284 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 285 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
-ok 286 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 287 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-ok 288 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-ok 289 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 290 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
-ok 291 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 292 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-ok 293 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-ok 294 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('0') returns 0
-ok 295 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('') returns 0
-ok 296 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number(' ') returns 0
-ok 297 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('/r/n/t') returns 0
-ok 298 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
-ok 299 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
-ok 300 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
-ok 301 Firefox 106.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
-ok 302 Firefox 106.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
-ok 303 Firefox 106.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
-ok 304 Firefox 106.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
-ok 305 Firefox 106.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
-ok 306 Firefox 106.0 - [undefined ms] - Number parse from string -0 - 0 is -0
-ok 307 Firefox 106.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
-ok 308 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
-ok 309 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
-ok 310 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
-ok 311 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
-ok 312 Firefox 106.0 - [undefined ms] - Number VALUE MAX is > 0
-ok 313 Firefox 106.0 - [undefined ms] - Number VALUE MAX is the biggest possible number
-ok 314 Firefox 106.0 - [undefined ms] - Number VALUE MIN is NOT even a negative number
-ok 315 Firefox 106.0 - [undefined ms] - Number VALUE MIN is NOT even 0 itself
-ok 316 Firefox 106.0 - [undefined ms] - Number VALUE MIN it is actually a positive number
-ok 317 Firefox 106.0 - [undefined ms] - Number VALUE MIN is close to 0
-ok 318 Firefox 106.0 - [undefined ms] - Number -0 is -0
-ok 319 Firefox 106.0 - [undefined ms] - Number -0 equals -0
-ok 320 Firefox 106.0 - [undefined ms] - Number -0 does not equal 0
-ok 321 Firefox 106.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
-ok 322 Firefox 106.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
-ok 323 Firefox 106.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
-ok 324 Firefox 106.0 - [undefined ms] - Number -0 to string '' + -0 returns '0'
-ok 325 Firefox 106.0 - [undefined ms] - Number -0 to string '' - 0 does NOT return '0'
-ok 326 Firefox 106.0 - [undefined ms] - Number -0 to string '' - 0 returns 0, NOT '0'
-ok 327 Firefox 106.0 - [undefined ms] - Array [] brackets is typeof 'object', not 'array'
-ok 328 Firefox 106.0 - [undefined ms] - Array [] brackets is instanceof Array
-ok 329 Firefox 106.0 - [undefined ms] - Array [] brackets is instanceof Object
-ok 330 Firefox 106.0 - [undefined ms] - Array [] brackets String([]) returns ''
-ok 331 Firefox 106.0 - [undefined ms] - Array [] brackets String([]) is typeof string
-ok 332 Firefox 106.0 - [undefined ms] - Array [] brackets lodash _.isObject is
-ok 333 Firefox 106.0 - [undefined ms] - Array [] brackets lodash _.isArray is
-ok 334 Firefox 106.0 - [undefined ms] - Array [] instance is typeof 'object', not 'array'
-ok 335 Firefox 106.0 - [undefined ms] - Array [] instance is instanceof Array
-ok 336 Firefox 106.0 - [undefined ms] - Array [] instance is instanceof Object
-ok 337 Firefox 106.0 - [undefined ms] - Array [] instance String([]) returns ''
-ok 338 Firefox 106.0 - [undefined ms] - Array [] instance String([]) is typeof string
-ok 339 Firefox 106.0 - [undefined ms] - Array [] instance lodash _.isObject is
-ok 340 Firefox 106.0 - [undefined ms] - Array [] instance lodash _.isArray is
-ok 341 Firefox 106.0 - [undefined ms] - Array [1, 2, 3] .map(x => x * 2) returns [2, 4, 6]
-ok 342 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 is instanceof Array
-ok 343 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 is typeof 'object'
-ok 344 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 lodash _.isArray
-ok 345 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 has length 3
-ok 346 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 equals [undefined, undefined, undefined]
-ok 347 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() equals ',,'
-ok 348 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 349 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 350 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots actually equals ';;'
-ok 351 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] is instanceof Array
-ok 352 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] is typeof 'object'
-ok 353 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] lodash _.isArray
-ok 354 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] has length 3
-ok 355 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] equals [undefined, undefined, undefined]
-ok 356 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() equals ',,'
-ok 357 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 358 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 359 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots actually equals ';;'
-ok 360 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is instanceof Array
-ok 361 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is typeof 'object'
-ok 362 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] lodash _.isArray
-ok 363 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] has length 3
-ok 364 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] equals [undefined, undefined, undefined]
-ok 365 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() equals ',,'
-ok 366 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 367 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .map(x => 'slot') [ undefined x 3 ] equals 'slot;slot;slot'
-ok 368 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) is instanceof Array
-ok 369 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) is typeof 'object'
-ok 370 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) lodash _.isArray
-ok 371 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) has length 3
-ok 372 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) equals [undefined, undefined, undefined]
-ok 373 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() equals ',,'
-ok 374 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 375 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 376 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots actually equals ';;'
-ok 377 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) is instanceof Array
-ok 378 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) is typeof 'object'
-ok 379 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) lodash _.isArray
-ok 380 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) has length 3
-ok 381 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) equals [undefined, undefined, undefined]
-ok 382 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() equals ',,'
-ok 383 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 384 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 385 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots actually equals ';;'
-ok 386 Firefox 106.0 - [undefined ms] - Object coercion [] !== [] is true
-ok 387 Firefox 106.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
-ok 388 Firefox 106.0 - [undefined ms] - Object coercion {} + [] is 0
-ok 389 Firefox 106.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
-ok 390 Firefox 106.0 - [undefined ms] - Object {} is typeof object
-ok 391 Firefox 106.0 - [undefined ms] - Object {} is instanceof Object
-ok 392 Firefox 106.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-ok 393 Firefox 106.0 - [undefined ms] - Object {} String({}) is typeof string
-ok 394 Firefox 106.0 - [undefined ms] - Object {} lodash _.isObject is
-ok 395 Firefox 106.0 - [undefined ms] - Object {} lodash _.isArray is not
-ok 396 Firefox 106.0 - [undefined ms] - Object {} is typeof object
-ok 397 Firefox 106.0 - [undefined ms] - Object {} is instanceof Object
-ok 398 Firefox 106.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-ok 399 Firefox 106.0 - [undefined ms] - Object {} String({}) is typeof string
-ok 400 Firefox 106.0 - [undefined ms] - Object {} lodash _.isObject is
-ok 401 Firefox 106.0 - [undefined ms] - Object {} lodash _.isArray is not
-ok 402 Firefox 106.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
-ok 403 Firefox 106.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
-ok 404 Firefox 106.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
-ok 405 Firefox 106.0 - [undefined ms] - String parse nothing String(null) is typeof string
-ok 406 Firefox 106.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
-ok 407 Firefox 106.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
-ok 408 Firefox 106.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
-ok 409 Firefox 106.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
-ok 410 Firefox 106.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
-ok 411 Firefox 106.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
-ok 412 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
-ok 413 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
-ok 414 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
-ok 415 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
-ok 416 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
-ok 417 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
-ok 418 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
-ok 419 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
-ok 420 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
-ok 421 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
-ok 422 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
-ok 423 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
-ok 424 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
-ok 425 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
-ok 426 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
-ok 427 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
-ok 428 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
-ok 429 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
-ok 430 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
-ok 431 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
-ok 432 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
-ok 433 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
-ok 434 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
-ok 435 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
-ok 436 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
-ok 437 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
-ok 438 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
-ok 439 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
-ok 440 Firefox 106.0 - [undefined ms] - switch case order magicNumber 10 returns 2
-ok 441 Firefox 106.0 - [undefined ms] - switch case order magicNumber 20 returns 2
-ok 442 Firefox 106.0 - [undefined ms] - switch case order magicNumber 30 returns 4
-ok 443 Firefox 106.0 - [undefined ms] - switch case order magicNumber 42 returns 3
-ok 444 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
-ok 445 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
-ok 446 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
-ok 447 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
-ok 448 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
-ok 449 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
-ok 450 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
-ok 451 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
-ok 452 Firefox 106.0 - [undefined ms] - try { something } finally { return x } always runs last
-not ok 453 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 454 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 455 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
-not ok 456 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
-not ok 457 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 458 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 459 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
-not ok 460 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
-not ok 461 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 462 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 463 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename x equals 180, from coordinate.longitude
-not ok 464 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename y equals 90, from coordinate.latitude
-not ok 465 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 466 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 467 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename x equals 180, from coordinate.longitude
-not ok 468 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename y equals 90, from coordinate.latitude
-not ok 469 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 470 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 471 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename x equals 180, from coordinate.longitude
-not ok 472 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename y equals 90, from coordinate.latitude
-not ok 473 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 474 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 475 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename x equals 180, from coordinate.longitude
-not ok 476 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename y equals 90, from coordinate.latitude
-not ok 477 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 478 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 479 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename x equals 180, from coordinate.longitude
-not ok 480 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename y equals 90, from coordinate.latitude
-not ok 481 Firefox 106.0 - [undefined ms] - NaN Number isNaN
-not ok 482 Firefox 106.0 - [undefined ms] - NaN Number is typeof 'number'
-not ok 483 Firefox 106.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
-not ok 484 Firefox 106.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
-not ok 485 Firefox 106.0 - [undefined ms] - NaN jasmine .toBeFalsy() is
-not ok 486 Firefox 106.0 - [undefined ms] - null Object is typeof 'object'
-not ok 487 Firefox 106.0 - [undefined ms] - null Object is NOT instanceof Object
-not ok 488 Firefox 106.0 - [undefined ms] - null Number isNaN(null) is NOT
-not ok 489 Firefox 106.0 - [undefined ms] - null lodash _.isNull(null) is
-not ok 490 Firefox 106.0 - [undefined ms] - null jasmine .toBeNull() is
-not ok 491 Firefox 106.0 - [undefined ms] - null jasmine .toBeFalsy() is
-not ok 492 Firefox 106.0 - [undefined ms] - null jasmine .toEqual(undefined) is NOT!
-not ok 493 Firefox 106.0 - [undefined ms] - undefined is typeof 'undefined
-not ok 494 Firefox 106.0 - [undefined ms] - undefined Number isNaN
-not ok 495 Firefox 106.0 - [undefined ms] - undefined null is not identical to null
-not ok 496 Firefox 106.0 - [undefined ms] - undefined null equals null
-not ok 497 Firefox 106.0 - [undefined ms] - undefined lodash _.isUndefined(undefined) is
-not ok 498 Firefox 106.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
-not ok 499 Firefox 106.0 - [undefined ms] - undefined jasmine .toEqual(null) is NOT!
-not ok 500 Firefox 106.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
-ok 501 Firefox 106.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-not ok 502 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
-not ok 503 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
-not ok 504 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
-not ok 505 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
-not ok 506 Firefox 106.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
-not ok 507 Firefox 106.0 - [undefined ms] - Number parse objects Number({}) is NaN
-not ok 508 Firefox 106.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
-not ok 509 Firefox 106.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
-not ok 510 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-not ok 511 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
-not ok 512 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-not ok 513 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-not ok 514 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-not ok 515 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-not ok 516 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
-not ok 517 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-not ok 518 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-not ok 519 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-not ok 520 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('0') returns 0
-not ok 521 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('') returns 0
-not ok 522 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number(' ') returns 0
-not ok 523 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('/r/n/t') returns 0
-not ok 524 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
-not ok 525 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
-not ok 526 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
-not ok 527 Firefox 106.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
-not ok 528 Firefox 106.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
-not ok 529 Firefox 106.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
-not ok 530 Firefox 106.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
-not ok 531 Firefox 106.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
-not ok 532 Firefox 106.0 - [undefined ms] - Number parse from string -0 - 0 is -0
-not ok 533 Firefox 106.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
-not ok 534 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
-not ok 535 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
-not ok 536 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
-not ok 537 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
-not ok 538 Firefox 106.0 - [undefined ms] - Number VALUE MAX is > 0
-not ok 539 Firefox 106.0 - [undefined ms] - Number VALUE MAX is the biggest possible number
-not ok 540 Firefox 106.0 - [undefined ms] - Number VALUE MIN is NOT even a negative number
-not ok 541 Firefox 106.0 - [undefined ms] - Number VALUE MIN is NOT even 0 itself
-not ok 542 Firefox 106.0 - [undefined ms] - Number VALUE MIN it is actually a positive number
-not ok 543 Firefox 106.0 - [undefined ms] - Number VALUE MIN is close to 0
-not ok 544 Firefox 106.0 - [undefined ms] - Number -0 is -0
-not ok 545 Firefox 106.0 - [undefined ms] - Number -0 equals -0
-not ok 546 Firefox 106.0 - [undefined ms] - Number -0 does not equal 0
-not ok 547 Firefox 106.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
-not ok 548 Firefox 106.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
-not ok 549 Firefox 106.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
-not ok 550 Firefox 106.0 - [undefined ms] - Number -0 to string '' + -0 returns '0'
-not ok 551 Firefox 106.0 - [undefined ms] - Number -0 to string '' - 0 does NOT return '0'
-not ok 552 Firefox 106.0 - [undefined ms] - Number -0 to string '' - 0 returns 0, NOT '0'
-not ok 553 Firefox 106.0 - [undefined ms] - Array [] brackets is typeof 'object', not 'array'
-not ok 554 Firefox 106.0 - [undefined ms] - Array [] brackets is instanceof Array
-not ok 555 Firefox 106.0 - [undefined ms] - Array [] brackets is instanceof Object
-not ok 556 Firefox 106.0 - [undefined ms] - Array [] brackets String([]) returns ''
-not ok 557 Firefox 106.0 - [undefined ms] - Array [] brackets String([]) is typeof string
-not ok 558 Firefox 106.0 - [undefined ms] - Array [] brackets lodash _.isObject is
-not ok 559 Firefox 106.0 - [undefined ms] - Array [] brackets lodash _.isArray is
-not ok 560 Firefox 106.0 - [undefined ms] - Array [] instance is typeof 'object', not 'array'
-not ok 561 Firefox 106.0 - [undefined ms] - Array [] instance is instanceof Array
-not ok 562 Firefox 106.0 - [undefined ms] - Array [] instance is instanceof Object
-not ok 563 Firefox 106.0 - [undefined ms] - Array [] instance String([]) returns ''
-not ok 564 Firefox 106.0 - [undefined ms] - Array [] instance String([]) is typeof string
-not ok 565 Firefox 106.0 - [undefined ms] - Array [] instance lodash _.isObject is
-not ok 566 Firefox 106.0 - [undefined ms] - Array [] instance lodash _.isArray is
-not ok 567 Firefox 106.0 - [undefined ms] - Array [1, 2, 3] .map(x => x * 2) returns [2, 4, 6]
-not ok 568 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 is instanceof Array
-not ok 569 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 is typeof 'object'
-not ok 570 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 lodash _.isArray
-not ok 571 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 has length 3
-not ok 572 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 equals [undefined, undefined, undefined]
-not ok 573 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() equals ',,'
-not ok 574 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() does NOT equal '[undefined, undefined, undefined]'
-not ok 575 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-not ok 576 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots actually equals ';;'
-not ok 577 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] is instanceof Array
-not ok 578 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] is typeof 'object'
-not ok 579 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] lodash _.isArray
-not ok 580 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] has length 3
-not ok 581 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] equals [undefined, undefined, undefined]
-not ok 582 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() equals ',,'
-not ok 583 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() does NOT equal '[undefined, undefined, undefined]'
-not ok 584 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-not ok 585 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots actually equals ';;'
-not ok 586 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is instanceof Array
-not ok 587 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is typeof 'object'
-not ok 588 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] lodash _.isArray
-not ok 589 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] has length 3
-not ok 590 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] equals [undefined, undefined, undefined]
-not ok 591 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() equals ',,'
-not ok 592 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() does NOT equal '[undefined, undefined, undefined]'
-not ok 593 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .map(x => 'slot') [ undefined x 3 ] equals 'slot;slot;slot'
-not ok 594 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) is instanceof Array
-not ok 595 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) is typeof 'object'
-not ok 596 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) lodash _.isArray
-not ok 597 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) has length 3
-not ok 598 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) equals [undefined, undefined, undefined]
-not ok 599 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() equals ',,'
-not ok 600 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-not ok 601 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-not ok 602 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots actually equals ';;'
-not ok 603 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) is instanceof Array
-not ok 604 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) is typeof 'object'
-not ok 605 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) lodash _.isArray
-not ok 606 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) has length 3
-not ok 607 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) equals [undefined, undefined, undefined]
-not ok 608 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() equals ',,'
-not ok 609 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-not ok 610 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-not ok 611 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots actually equals ';;'
-not ok 612 Firefox 106.0 - [undefined ms] - Object coercion [] !== [] is true
-not ok 613 Firefox 106.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
-not ok 614 Firefox 106.0 - [undefined ms] - Object coercion {} + [] is 0
-not ok 615 Firefox 106.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
-not ok 616 Firefox 106.0 - [undefined ms] - Object {} is typeof object
-not ok 617 Firefox 106.0 - [undefined ms] - Object {} is instanceof Object
-not ok 618 Firefox 106.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-not ok 619 Firefox 106.0 - [undefined ms] - Object {} String({}) is typeof string
-not ok 620 Firefox 106.0 - [undefined ms] - Object {} lodash _.isObject is
-not ok 621 Firefox 106.0 - [undefined ms] - Object {} lodash _.isArray is not
-not ok 622 Firefox 106.0 - [undefined ms] - Object {} is typeof object
-not ok 623 Firefox 106.0 - [undefined ms] - Object {} is instanceof Object
-not ok 624 Firefox 106.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-not ok 625 Firefox 106.0 - [undefined ms] - Object {} String({}) is typeof string
-not ok 626 Firefox 106.0 - [undefined ms] - Object {} lodash _.isObject is
-not ok 627 Firefox 106.0 - [undefined ms] - Object {} lodash _.isArray is not
-not ok 628 Firefox 106.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
-not ok 629 Firefox 106.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
-not ok 630 Firefox 106.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
-not ok 631 Firefox 106.0 - [undefined ms] - String parse nothing String(null) is typeof string
-not ok 632 Firefox 106.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
-not ok 633 Firefox 106.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
-not ok 634 Firefox 106.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
-not ok 635 Firefox 106.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
-not ok 636 Firefox 106.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
-not ok 637 Firefox 106.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
-not ok 638 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
-not ok 639 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
-not ok 640 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
-not ok 641 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
-not ok 642 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
-not ok 643 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
-not ok 644 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
-not ok 645 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
-not ok 646 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
-not ok 647 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
-not ok 648 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
-not ok 649 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
-not ok 650 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
-not ok 651 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
-not ok 652 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
-not ok 653 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
-not ok 654 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
-not ok 655 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
-not ok 656 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
-not ok 657 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
-not ok 658 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
-not ok 659 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
-not ok 660 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
-not ok 661 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
-not ok 662 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
-not ok 663 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
-not ok 664 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
-not ok 665 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
-not ok 666 Firefox 106.0 - [undefined ms] - switch case order magicNumber 10 returns 2
-not ok 667 Firefox 106.0 - [undefined ms] - switch case order magicNumber 20 returns 2
-not ok 668 Firefox 106.0 - [undefined ms] - switch case order magicNumber 30 returns 4
-not ok 669 Firefox 106.0 - [undefined ms] - switch case order magicNumber 42 returns 3
-not ok 670 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
-not ok 671 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
-not ok 672 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
-not ok 673 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
-not ok 674 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
-not ok 675 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
-not ok 676 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
-not ok 677 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
-not ok 678 Firefox 106.0 - [undefined ms] - try { something } finally { return x } always runs last
-ok 679 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
-ok 680 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
-ok 681 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
-ok 682 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
-ok 683 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
-ok 684 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
-ok 685 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
-ok 686 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
-ok 687 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 688 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 689 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename x equals 180, from coordinate.longitude
-ok 690 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename y equals 90, from coordinate.latitude
-ok 691 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 692 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 693 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename x equals 180, from coordinate.longitude
-ok 694 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename y equals 90, from coordinate.latitude
-ok 695 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 696 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 697 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename x equals 180, from coordinate.longitude
-ok 698 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename y equals 90, from coordinate.latitude
-ok 699 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 700 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 701 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename x equals 180, from coordinate.longitude
-ok 702 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename y equals 90, from coordinate.latitude
-ok 703 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 704 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 705 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename x equals 180, from coordinate.longitude
-ok 706 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename y equals 90, from coordinate.latitude
-ok 707 Firefox 106.0 - [undefined ms] - NaN Number isNaN
-ok 708 Firefox 106.0 - [undefined ms] - NaN Number is typeof 'number'
-ok 709 Firefox 106.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
-ok 710 Firefox 106.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
-ok 711 Firefox 106.0 - [undefined ms] - NaN jasmine .toBeFalsy() is
-ok 712 Firefox 106.0 - [undefined ms] - null Object is typeof 'object'
-ok 713 Firefox 106.0 - [undefined ms] - null Object is NOT instanceof Object
-ok 714 Firefox 106.0 - [undefined ms] - null Number isNaN(null) is NOT
-ok 715 Firefox 106.0 - [undefined ms] - null lodash _.isNull(null) is
-ok 716 Firefox 106.0 - [undefined ms] - null jasmine .toBeNull() is
-ok 717 Firefox 106.0 - [undefined ms] - null jasmine .toBeFalsy() is
-ok 718 Firefox 106.0 - [undefined ms] - null jasmine .toEqual(undefined) is NOT!
-ok 719 Firefox 106.0 - [undefined ms] - undefined is typeof 'undefined
-ok 720 Firefox 106.0 - [undefined ms] - undefined Number isNaN
-ok 721 Firefox 106.0 - [undefined ms] - undefined null is not identical to null
-ok 722 Firefox 106.0 - [undefined ms] - undefined null equals null
-ok 723 Firefox 106.0 - [undefined ms] - undefined lodash _.isUndefined(undefined) is
-ok 724 Firefox 106.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
-ok 725 Firefox 106.0 - [undefined ms] - undefined jasmine .toEqual(null) is NOT!
-ok 726 Firefox 106.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
-ok 727 Firefox 106.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-ok 728 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
-ok 729 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
-ok 730 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
-ok 731 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
-ok 732 Firefox 106.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
-ok 733 Firefox 106.0 - [undefined ms] - Number parse objects Number({}) is NaN
-ok 734 Firefox 106.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
-ok 735 Firefox 106.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
-ok 736 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 737 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
-ok 738 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 739 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-ok 740 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-ok 741 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 742 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
-ok 743 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 744 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-ok 745 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-ok 746 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('0') returns 0
-ok 747 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('') returns 0
-ok 748 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number(' ') returns 0
-ok 749 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('/r/n/t') returns 0
-ok 750 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
-ok 751 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
-ok 752 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
-ok 753 Firefox 106.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
-ok 754 Firefox 106.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
-ok 755 Firefox 106.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
-ok 756 Firefox 106.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
-ok 757 Firefox 106.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
-ok 758 Firefox 106.0 - [undefined ms] - Number parse from string -0 - 0 is -0
-ok 759 Firefox 106.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
-ok 760 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
-ok 761 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
-ok 762 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
-ok 763 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
-ok 764 Firefox 106.0 - [undefined ms] - Number VALUE MAX is > 0
-ok 765 Firefox 106.0 - [undefined ms] - Number VALUE MAX is the biggest possible number
-ok 766 Firefox 106.0 - [undefined ms] - Number VALUE MIN is NOT even a negative number
-ok 767 Firefox 106.0 - [undefined ms] - Number VALUE MIN is NOT even 0 itself
-ok 768 Firefox 106.0 - [undefined ms] - Number VALUE MIN it is actually a positive number
-ok 769 Firefox 106.0 - [undefined ms] - Number VALUE MIN is close to 0
-ok 770 Firefox 106.0 - [undefined ms] - Number -0 is -0
-ok 771 Firefox 106.0 - [undefined ms] - Number -0 equals -0
-ok 772 Firefox 106.0 - [undefined ms] - Number -0 does not equal 0
-ok 773 Firefox 106.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
-ok 774 Firefox 106.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
-ok 775 Firefox 106.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
-ok 776 Firefox 106.0 - [undefined ms] - Number -0 to string '' + -0 returns '0'
-ok 777 Firefox 106.0 - [undefined ms] - Number -0 to string '' - 0 does NOT return '0'
-ok 778 Firefox 106.0 - [undefined ms] - Number -0 to string '' - 0 returns 0, NOT '0'
-ok 779 Firefox 106.0 - [undefined ms] - Array [] brackets is typeof 'object', not 'array'
-ok 780 Firefox 106.0 - [undefined ms] - Array [] brackets is instanceof Array
-ok 781 Firefox 106.0 - [undefined ms] - Array [] brackets is instanceof Object
-ok 782 Firefox 106.0 - [undefined ms] - Array [] brackets String([]) returns ''
-ok 783 Firefox 106.0 - [undefined ms] - Array [] brackets String([]) is typeof string
-ok 784 Firefox 106.0 - [undefined ms] - Array [] brackets lodash _.isObject is
-ok 785 Firefox 106.0 - [undefined ms] - Array [] brackets lodash _.isArray is
-ok 786 Firefox 106.0 - [undefined ms] - Array [] instance is typeof 'object', not 'array'
-ok 787 Firefox 106.0 - [undefined ms] - Array [] instance is instanceof Array
-ok 788 Firefox 106.0 - [undefined ms] - Array [] instance is instanceof Object
-ok 789 Firefox 106.0 - [undefined ms] - Array [] instance String([]) returns ''
-ok 790 Firefox 106.0 - [undefined ms] - Array [] instance String([]) is typeof string
-ok 791 Firefox 106.0 - [undefined ms] - Array [] instance lodash _.isObject is
-ok 792 Firefox 106.0 - [undefined ms] - Array [] instance lodash _.isArray is
-ok 793 Firefox 106.0 - [undefined ms] - Array [1, 2, 3] .map(x => x * 2) returns [2, 4, 6]
-ok 794 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 is instanceof Array
-ok 795 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 is typeof 'object'
-ok 796 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 lodash _.isArray
-ok 797 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 has length 3
-ok 798 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 equals [undefined, undefined, undefined]
-ok 799 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() equals ',,'
-ok 800 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 801 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 802 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots actually equals ';;'
-ok 803 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] is instanceof Array
-ok 804 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] is typeof 'object'
-ok 805 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] lodash _.isArray
-ok 806 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] has length 3
-ok 807 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] equals [undefined, undefined, undefined]
-ok 808 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() equals ',,'
-ok 809 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 810 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 811 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots actually equals ';;'
-ok 812 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is instanceof Array
-ok 813 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is typeof 'object'
-ok 814 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] lodash _.isArray
-ok 815 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] has length 3
-ok 816 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] equals [undefined, undefined, undefined]
-ok 817 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() equals ',,'
-ok 818 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 819 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .map(x => 'slot') [ undefined x 3 ] equals 'slot;slot;slot'
-ok 820 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) is instanceof Array
-ok 821 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) is typeof 'object'
-ok 822 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) lodash _.isArray
-ok 823 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) has length 3
-ok 824 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) equals [undefined, undefined, undefined]
-ok 825 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() equals ',,'
-ok 826 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 827 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 828 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots actually equals ';;'
-ok 829 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) is instanceof Array
-ok 830 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) is typeof 'object'
-ok 831 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) lodash _.isArray
-ok 832 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) has length 3
-ok 833 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) equals [undefined, undefined, undefined]
-ok 834 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() equals ',,'
-ok 835 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 836 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 837 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots actually equals ';;'
-ok 838 Firefox 106.0 - [undefined ms] - Object coercion [] !== [] is true
-ok 839 Firefox 106.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
-ok 840 Firefox 106.0 - [undefined ms] - Object coercion {} + [] is 0
-ok 841 Firefox 106.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
-ok 842 Firefox 106.0 - [undefined ms] - Object {} is typeof object
-ok 843 Firefox 106.0 - [undefined ms] - Object {} is instanceof Object
-ok 844 Firefox 106.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-ok 845 Firefox 106.0 - [undefined ms] - Object {} String({}) is typeof string
-ok 846 Firefox 106.0 - [undefined ms] - Object {} lodash _.isObject is
-ok 847 Firefox 106.0 - [undefined ms] - Object {} lodash _.isArray is not
-ok 848 Firefox 106.0 - [undefined ms] - Object {} is typeof object
-ok 849 Firefox 106.0 - [undefined ms] - Object {} is instanceof Object
-ok 850 Firefox 106.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-ok 851 Firefox 106.0 - [undefined ms] - Object {} String({}) is typeof string
-ok 852 Firefox 106.0 - [undefined ms] - Object {} lodash _.isObject is
-ok 853 Firefox 106.0 - [undefined ms] - Object {} lodash _.isArray is not
-ok 854 Firefox 106.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
-ok 855 Firefox 106.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
-ok 856 Firefox 106.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
-ok 857 Firefox 106.0 - [undefined ms] - String parse nothing String(null) is typeof string
-ok 858 Firefox 106.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
-ok 859 Firefox 106.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
-ok 860 Firefox 106.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
-ok 861 Firefox 106.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
-ok 862 Firefox 106.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
-ok 863 Firefox 106.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
-ok 864 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
-ok 865 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
-ok 866 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
-ok 867 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
-ok 868 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
-ok 869 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
-ok 870 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
-ok 871 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
-ok 872 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
-ok 873 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
-ok 874 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
-ok 875 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
-ok 876 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
-ok 877 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
-ok 878 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
-ok 879 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
-ok 880 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
-ok 881 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
-ok 882 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
-ok 883 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
-ok 884 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
-ok 885 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
-ok 886 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
-ok 887 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
-ok 888 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
-ok 889 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
-ok 890 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
-ok 891 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
-ok 892 Firefox 106.0 - [undefined ms] - switch case order magicNumber 10 returns 2
-ok 893 Firefox 106.0 - [undefined ms] - switch case order magicNumber 20 returns 2
-ok 894 Firefox 106.0 - [undefined ms] - switch case order magicNumber 30 returns 4
-ok 895 Firefox 106.0 - [undefined ms] - switch case order magicNumber 42 returns 3
-ok 896 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
-ok 897 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
-ok 898 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
-ok 899 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
-ok 900 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
-ok 901 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
-ok 902 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
-ok 903 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
-ok 904 Firefox 106.0 - [undefined ms] - try { something } finally { return x } always runs last
-not ok 905 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 906 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 907 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
-not ok 908 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
-ok 909 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 910 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 911 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
-not ok 912 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
-not ok 913 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 914 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 915 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename x equals 180, from coordinate.longitude
-not ok 916 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename y equals 90, from coordinate.latitude
-not ok 917 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 918 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 919 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename x equals 180, from coordinate.longitude
-not ok 920 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename y equals 90, from coordinate.latitude
-not ok 921 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 922 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 923 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename x equals 180, from coordinate.longitude
-not ok 924 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename y equals 90, from coordinate.latitude
-not ok 925 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 926 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 927 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename x equals 180, from coordinate.longitude
-not ok 928 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename y equals 90, from coordinate.latitude
-not ok 929 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is longitude equals 180, from coordinate.longitude
-not ok 930 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is latitude equals 90, from coordinate.latitude
-not ok 931 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename x equals 180, from coordinate.longitude
-not ok 932 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename y equals 90, from coordinate.latitude
-not ok 933 Firefox 106.0 - [undefined ms] - NaN Number isNaN
-not ok 934 Firefox 106.0 - [undefined ms] - NaN Number is typeof 'number'
-not ok 935 Firefox 106.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
-not ok 936 Firefox 106.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
-not ok 937 Firefox 106.0 - [undefined ms] - NaN jasmine .toBeFalsy() is
-not ok 938 Firefox 106.0 - [undefined ms] - null Object is typeof 'object'
-not ok 939 Firefox 106.0 - [undefined ms] - null Object is NOT instanceof Object
-not ok 940 Firefox 106.0 - [undefined ms] - null Number isNaN(null) is NOT
-not ok 941 Firefox 106.0 - [undefined ms] - null lodash _.isNull(null) is
-not ok 942 Firefox 106.0 - [undefined ms] - null jasmine .toBeNull() is
-not ok 943 Firefox 106.0 - [undefined ms] - null jasmine .toBeFalsy() is
-not ok 944 Firefox 106.0 - [undefined ms] - null jasmine .toEqual(undefined) is NOT!
-not ok 945 Firefox 106.0 - [undefined ms] - undefined is typeof 'undefined
-not ok 946 Firefox 106.0 - [undefined ms] - undefined Number isNaN
-not ok 947 Firefox 106.0 - [undefined ms] - undefined null is not identical to null
-not ok 948 Firefox 106.0 - [undefined ms] - undefined null equals null
-not ok 949 Firefox 106.0 - [undefined ms] - undefined lodash _.isUndefined(undefined) is
-not ok 950 Firefox 106.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
-not ok 951 Firefox 106.0 - [undefined ms] - undefined jasmine .toEqual(null) is NOT!
-not ok 952 Firefox 106.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
-not ok 953 Firefox 106.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-not ok 954 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
-not ok 955 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
-not ok 956 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
-not ok 957 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
-not ok 958 Firefox 106.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
-not ok 959 Firefox 106.0 - [undefined ms] - Number parse objects Number({}) is NaN
-not ok 960 Firefox 106.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
-not ok 961 Firefox 106.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
-not ok 962 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-not ok 963 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
-not ok 964 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-not ok 965 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-not ok 966 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-not ok 967 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-not ok 968 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
-not ok 969 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-not ok 970 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-not ok 971 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-not ok 972 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('0') returns 0
-not ok 973 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('') returns 0
-not ok 974 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number(' ') returns 0
-not ok 975 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('/r/n/t') returns 0
-not ok 976 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
-not ok 977 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
-not ok 978 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
-not ok 979 Firefox 106.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
-not ok 980 Firefox 106.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
-not ok 981 Firefox 106.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
-not ok 982 Firefox 106.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
-not ok 983 Firefox 106.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
-not ok 984 Firefox 106.0 - [undefined ms] - Number parse from string -0 - 0 is -0
-not ok 985 Firefox 106.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
-not ok 986 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
-not ok 987 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
-not ok 988 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
-not ok 989 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
-not ok 990 Firefox 106.0 - [undefined ms] - Number VALUE MAX is > 0
-not ok 991 Firefox 106.0 - [undefined ms] - Number VALUE MAX is the biggest possible number
-not ok 992 Firefox 106.0 - [undefined ms] - Number VALUE MIN is NOT even a negative number
-not ok 993 Firefox 106.0 - [undefined ms] - Number VALUE MIN is NOT even 0 itself
-not ok 994 Firefox 106.0 - [undefined ms] - Number VALUE MIN it is actually a positive number
-not ok 995 Firefox 106.0 - [undefined ms] - Number VALUE MIN is close to 0
-not ok 996 Firefox 106.0 - [undefined ms] - Number -0 is -0
-not ok 997 Firefox 106.0 - [undefined ms] - Number -0 equals -0
-not ok 998 Firefox 106.0 - [undefined ms] - Number -0 does not equal 0
-not ok 999 Firefox 106.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
-not ok 1000 Firefox 106.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
-not ok 1001 Firefox 106.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
-not ok 1002 Firefox 106.0 - [undefined ms] - Number -0 to string '' + -0 returns '0'
-not ok 1003 Firefox 106.0 - [undefined ms] - Number -0 to string '' - 0 does NOT return '0'
-not ok 1004 Firefox 106.0 - [undefined ms] - Number -0 to string '' - 0 returns 0, NOT '0'
-not ok 1005 Firefox 106.0 - [undefined ms] - Array [] brackets is typeof 'object', not 'array'
-not ok 1006 Firefox 106.0 - [undefined ms] - Array [] brackets is instanceof Array
-not ok 1007 Firefox 106.0 - [undefined ms] - Array [] brackets is instanceof Object
-not ok 1008 Firefox 106.0 - [undefined ms] - Array [] brackets String([]) returns ''
-not ok 1009 Firefox 106.0 - [undefined ms] - Array [] brackets String([]) is typeof string
-not ok 1010 Firefox 106.0 - [undefined ms] - Array [] brackets lodash _.isObject is
-not ok 1011 Firefox 106.0 - [undefined ms] - Array [] brackets lodash _.isArray is
-not ok 1012 Firefox 106.0 - [undefined ms] - Array [] instance is typeof 'object', not 'array'
-not ok 1013 Firefox 106.0 - [undefined ms] - Array [] instance is instanceof Array
-not ok 1014 Firefox 106.0 - [undefined ms] - Array [] instance is instanceof Object
-not ok 1015 Firefox 106.0 - [undefined ms] - Array [] instance String([]) returns ''
-not ok 1016 Firefox 106.0 - [undefined ms] - Array [] instance String([]) is typeof string
-not ok 1017 Firefox 106.0 - [undefined ms] - Array [] instance lodash _.isObject is
-not ok 1018 Firefox 106.0 - [undefined ms] - Array [] instance lodash _.isArray is
-not ok 1019 Firefox 106.0 - [undefined ms] - Array [1, 2, 3] .map(x => x * 2) returns [2, 4, 6]
-not ok 1020 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 is instanceof Array
-not ok 1021 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 is typeof 'object'
-not ok 1022 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 lodash _.isArray
-not ok 1023 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 has length 3
-not ok 1024 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 equals [undefined, undefined, undefined]
-not ok 1025 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() equals ',,'
-not ok 1026 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() does NOT equal '[undefined, undefined, undefined]'
-not ok 1027 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-not ok 1028 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots actually equals ';;'
-not ok 1029 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] is instanceof Array
-not ok 1030 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] is typeof 'object'
-not ok 1031 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] lodash _.isArray
-not ok 1032 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] has length 3
-not ok 1033 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] equals [undefined, undefined, undefined]
-not ok 1034 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() equals ',,'
-not ok 1035 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() does NOT equal '[undefined, undefined, undefined]'
-not ok 1036 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-not ok 1037 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots actually equals ';;'
-not ok 1038 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is instanceof Array
-not ok 1039 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is typeof 'object'
-not ok 1040 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] lodash _.isArray
-not ok 1041 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] has length 3
-not ok 1042 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] equals [undefined, undefined, undefined]
-not ok 1043 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() equals ',,'
-not ok 1044 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() does NOT equal '[undefined, undefined, undefined]'
-not ok 1045 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .map(x => 'slot') [ undefined x 3 ] equals 'slot;slot;slot'
-not ok 1046 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) is instanceof Array
-not ok 1047 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) is typeof 'object'
-not ok 1048 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) lodash _.isArray
-not ok 1049 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) has length 3
-not ok 1050 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) equals [undefined, undefined, undefined]
-not ok 1051 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() equals ',,'
-not ok 1052 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-not ok 1053 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-not ok 1054 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots actually equals ';;'
-not ok 1055 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) is instanceof Array
-not ok 1056 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) is typeof 'object'
-not ok 1057 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) lodash _.isArray
-not ok 1058 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) has length 3
-not ok 1059 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) equals [undefined, undefined, undefined]
-not ok 1060 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() equals ',,'
-not ok 1061 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-not ok 1062 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-not ok 1063 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots actually equals ';;'
-not ok 1064 Firefox 106.0 - [undefined ms] - Object coercion [] !== [] is true
-not ok 1065 Firefox 106.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
-not ok 1066 Firefox 106.0 - [undefined ms] - Object coercion {} + [] is 0
-not ok 1067 Firefox 106.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
-not ok 1068 Firefox 106.0 - [undefined ms] - Object {} is typeof object
-not ok 1069 Firefox 106.0 - [undefined ms] - Object {} is instanceof Object
-not ok 1070 Firefox 106.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-not ok 1071 Firefox 106.0 - [undefined ms] - Object {} String({}) is typeof string
-not ok 1072 Firefox 106.0 - [undefined ms] - Object {} lodash _.isObject is
-not ok 1073 Firefox 106.0 - [undefined ms] - Object {} lodash _.isArray is not
-not ok 1074 Firefox 106.0 - [undefined ms] - Object {} is typeof object
-not ok 1075 Firefox 106.0 - [undefined ms] - Object {} is instanceof Object
-not ok 1076 Firefox 106.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-not ok 1077 Firefox 106.0 - [undefined ms] - Object {} String({}) is typeof string
-not ok 1078 Firefox 106.0 - [undefined ms] - Object {} lodash _.isObject is
-not ok 1079 Firefox 106.0 - [undefined ms] - Object {} lodash _.isArray is not
-not ok 1080 Firefox 106.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
-not ok 1081 Firefox 106.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
-not ok 1082 Firefox 106.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
-not ok 1083 Firefox 106.0 - [undefined ms] - String parse nothing String(null) is typeof string
-not ok 1084 Firefox 106.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
-not ok 1085 Firefox 106.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
-not ok 1086 Firefox 106.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
-not ok 1087 Firefox 106.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
-not ok 1088 Firefox 106.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
-not ok 1089 Firefox 106.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
-not ok 1090 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
-not ok 1091 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
-not ok 1092 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
-not ok 1093 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
-not ok 1094 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
-not ok 1095 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
-not ok 1096 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
-not ok 1097 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
-not ok 1098 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
-not ok 1099 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
-not ok 1100 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
-not ok 1101 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
-not ok 1102 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
-not ok 1103 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
-not ok 1104 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
-not ok 1105 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
-not ok 1106 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
-not ok 1107 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
-not ok 1108 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
-not ok 1109 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
-not ok 1110 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
-not ok 1111 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
-not ok 1112 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
-not ok 1113 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
-not ok 1114 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
-not ok 1115 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
-not ok 1116 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
-not ok 1117 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
-not ok 1118 Firefox 106.0 - [undefined ms] - switch case order magicNumber 10 returns 2
-not ok 1119 Firefox 106.0 - [undefined ms] - switch case order magicNumber 20 returns 2
-not ok 1120 Firefox 106.0 - [undefined ms] - switch case order magicNumber 30 returns 4
-not ok 1121 Firefox 106.0 - [undefined ms] - switch case order magicNumber 42 returns 3
-not ok 1122 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
-not ok 1123 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
-not ok 1124 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
-not ok 1125 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
-not ok 1126 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
-not ok 1127 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
-not ok 1128 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
-not ok 1129 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
-not ok 1130 Firefox 106.0 - [undefined ms] - try { something } finally { return x } always runs last
-ok 1131 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
-ok 1132 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
-ok 1133 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
-ok 1134 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
-ok 1135 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
-ok 1136 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
-ok 1137 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
-ok 1138 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
-ok 1139 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 1140 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 1141 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename x equals 180, from coordinate.longitude
-ok 1142 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename y equals 90, from coordinate.latitude
-ok 1143 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 1144 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 1145 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename x equals 180, from coordinate.longitude
-ok 1146 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename y equals 90, from coordinate.latitude
-ok 1147 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 1148 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 1149 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename x equals 180, from coordinate.longitude
-ok 1150 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename y equals 90, from coordinate.latitude
-ok 1151 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 1152 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 1153 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename x equals 180, from coordinate.longitude
-ok 1154 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename y equals 90, from coordinate.latitude
-ok 1155 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is longitude equals 180, from coordinate.longitude
-ok 1156 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is latitude equals 90, from coordinate.latitude
-ok 1157 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename x equals 180, from coordinate.longitude
-ok 1158 Firefox 106.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename y equals 90, from coordinate.latitude
-ok 1159 Firefox 106.0 - [undefined ms] - NaN Number isNaN
-ok 1160 Firefox 106.0 - [undefined ms] - NaN Number is typeof 'number'
-ok 1161 Firefox 106.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
-ok 1162 Firefox 106.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
-ok 1163 Firefox 106.0 - [undefined ms] - NaN jasmine .toBeFalsy() is
-ok 1164 Firefox 106.0 - [undefined ms] - null Object is typeof 'object'
-ok 1165 Firefox 106.0 - [undefined ms] - null Object is NOT instanceof Object
-ok 1166 Firefox 106.0 - [undefined ms] - null Number isNaN(null) is NOT
-ok 1167 Firefox 106.0 - [undefined ms] - null lodash _.isNull(null) is
-ok 1168 Firefox 106.0 - [undefined ms] - null jasmine .toBeNull() is
-ok 1169 Firefox 106.0 - [undefined ms] - null jasmine .toBeFalsy() is
-ok 1170 Firefox 106.0 - [undefined ms] - null jasmine .toEqual(undefined) is NOT!
-ok 1171 Firefox 106.0 - [undefined ms] - undefined is typeof 'undefined
-ok 1172 Firefox 106.0 - [undefined ms] - undefined Number isNaN
-ok 1173 Firefox 106.0 - [undefined ms] - undefined null is not identical to null
-ok 1174 Firefox 106.0 - [undefined ms] - undefined null equals null
-ok 1175 Firefox 106.0 - [undefined ms] - undefined lodash _.isUndefined(undefined) is
-ok 1176 Firefox 106.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
-ok 1177 Firefox 106.0 - [undefined ms] - undefined jasmine .toEqual(null) is NOT!
-ok 1178 Firefox 106.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
-ok 1179 Firefox 106.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
-ok 1180 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
-ok 1181 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
-ok 1182 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
-ok 1183 Firefox 106.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
-ok 1184 Firefox 106.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
-ok 1185 Firefox 106.0 - [undefined ms] - Number parse objects Number({}) is NaN
-ok 1186 Firefox 106.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
-ok 1187 Firefox 106.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
-ok 1188 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
-ok 1189 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
-ok 1190 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN is true
-ok 1191 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-ok 1192 Firefox 106.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-ok 1193 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
-ok 1194 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
-ok 1195 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
-ok 1196 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
-ok 1197 Firefox 106.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
-ok 1198 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('0') returns 0
-ok 1199 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('') returns 0
-ok 1200 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number(' ') returns 0
-ok 1201 Firefox 106.0 - [undefined ms] - Number parse from string whitespace to 0 Number('/r/n/t') returns 0
-ok 1202 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
-ok 1203 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
-ok 1204 Firefox 106.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
-ok 1205 Firefox 106.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
-ok 1206 Firefox 106.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
-ok 1207 Firefox 106.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
-ok 1208 Firefox 106.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
-ok 1209 Firefox 106.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
-ok 1210 Firefox 106.0 - [undefined ms] - Number parse from string -0 - 0 is -0
-ok 1211 Firefox 106.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
-ok 1212 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
-ok 1213 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
-ok 1214 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
-ok 1215 Firefox 106.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
-ok 1216 Firefox 106.0 - [undefined ms] - Number VALUE MAX is > 0
-ok 1217 Firefox 106.0 - [undefined ms] - Number VALUE MAX is the biggest possible number
-ok 1218 Firefox 106.0 - [undefined ms] - Number VALUE MIN is NOT even a negative number
-ok 1219 Firefox 106.0 - [undefined ms] - Number VALUE MIN is NOT even 0 itself
-ok 1220 Firefox 106.0 - [undefined ms] - Number VALUE MIN it is actually a positive number
-ok 1221 Firefox 106.0 - [undefined ms] - Number VALUE MIN is close to 0
-ok 1222 Firefox 106.0 - [undefined ms] - Number -0 is -0
-ok 1223 Firefox 106.0 - [undefined ms] - Number -0 equals -0
-ok 1224 Firefox 106.0 - [undefined ms] - Number -0 does not equal 0
-ok 1225 Firefox 106.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
-ok 1226 Firefox 106.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
-ok 1227 Firefox 106.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
-ok 1228 Firefox 106.0 - [undefined ms] - Number -0 to string '' + -0 returns '0'
-ok 1229 Firefox 106.0 - [undefined ms] - Number -0 to string '' - 0 does NOT return '0'
-ok 1230 Firefox 106.0 - [undefined ms] - Number -0 to string '' - 0 returns 0, NOT '0'
-ok 1231 Firefox 106.0 - [undefined ms] - Array [] brackets is typeof 'object', not 'array'
-ok 1232 Firefox 106.0 - [undefined ms] - Array [] brackets is instanceof Array
-ok 1233 Firefox 106.0 - [undefined ms] - Array [] brackets is instanceof Object
-ok 1234 Firefox 106.0 - [undefined ms] - Array [] brackets String([]) returns ''
-ok 1235 Firefox 106.0 - [undefined ms] - Array [] brackets String([]) is typeof string
-ok 1236 Firefox 106.0 - [undefined ms] - Array [] brackets lodash _.isObject is
-ok 1237 Firefox 106.0 - [undefined ms] - Array [] brackets lodash _.isArray is
-ok 1238 Firefox 106.0 - [undefined ms] - Array [] instance is typeof 'object', not 'array'
-ok 1239 Firefox 106.0 - [undefined ms] - Array [] instance is instanceof Array
-ok 1240 Firefox 106.0 - [undefined ms] - Array [] instance is instanceof Object
-ok 1241 Firefox 106.0 - [undefined ms] - Array [] instance String([]) returns ''
-ok 1242 Firefox 106.0 - [undefined ms] - Array [] instance String([]) is typeof string
-ok 1243 Firefox 106.0 - [undefined ms] - Array [] instance lodash _.isObject is
-ok 1244 Firefox 106.0 - [undefined ms] - Array [] instance lodash _.isArray is
-ok 1245 Firefox 106.0 - [undefined ms] - Array [1, 2, 3] .map(x => x * 2) returns [2, 4, 6]
-ok 1246 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 is instanceof Array
-ok 1247 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 is typeof 'object'
-ok 1248 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 lodash _.isArray
-ok 1249 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 has length 3
-ok 1250 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 equals [undefined, undefined, undefined]
-ok 1251 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() equals ',,'
-ok 1252 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 1253 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 1254 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots actually equals ';;'
-ok 1255 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] is instanceof Array
-ok 1256 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] is typeof 'object'
-ok 1257 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] lodash _.isArray
-ok 1258 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] has length 3
-ok 1259 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] equals [undefined, undefined, undefined]
-ok 1260 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() equals ',,'
-ok 1261 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 1262 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 1263 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots actually equals ';;'
-ok 1264 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is instanceof Array
-ok 1265 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is typeof 'object'
-ok 1266 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] lodash _.isArray
-ok 1267 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] has length 3
-ok 1268 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] equals [undefined, undefined, undefined]
-ok 1269 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() equals ',,'
-ok 1270 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 1271 Firefox 106.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .map(x => 'slot') [ undefined x 3 ] equals 'slot;slot;slot'
-ok 1272 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) is instanceof Array
-ok 1273 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) is typeof 'object'
-ok 1274 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) lodash _.isArray
-ok 1275 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) has length 3
-ok 1276 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) equals [undefined, undefined, undefined]
-ok 1277 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() equals ',,'
-ok 1278 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 1279 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 1280 Firefox 106.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots actually equals ';;'
-ok 1281 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) is instanceof Array
-ok 1282 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) is typeof 'object'
-ok 1283 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) lodash _.isArray
-ok 1284 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) has length 3
-ok 1285 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) equals [undefined, undefined, undefined]
-ok 1286 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() equals ',,'
-ok 1287 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
-ok 1288 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
-ok 1289 Firefox 106.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots actually equals ';;'
-ok 1290 Firefox 106.0 - [undefined ms] - Object coercion [] !== [] is true
-ok 1291 Firefox 106.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
-ok 1292 Firefox 106.0 - [undefined ms] - Object coercion {} + [] is 0
-ok 1293 Firefox 106.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
-ok 1294 Firefox 106.0 - [undefined ms] - Object {} is typeof object
-ok 1295 Firefox 106.0 - [undefined ms] - Object {} is instanceof Object
-ok 1296 Firefox 106.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-ok 1297 Firefox 106.0 - [undefined ms] - Object {} String({}) is typeof string
-ok 1298 Firefox 106.0 - [undefined ms] - Object {} lodash _.isObject is
-ok 1299 Firefox 106.0 - [undefined ms] - Object {} lodash _.isArray is not
-ok 1300 Firefox 106.0 - [undefined ms] - Object {} is typeof object
-ok 1301 Firefox 106.0 - [undefined ms] - Object {} is instanceof Object
-ok 1302 Firefox 106.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
-ok 1303 Firefox 106.0 - [undefined ms] - Object {} String({}) is typeof string
-ok 1304 Firefox 106.0 - [undefined ms] - Object {} lodash _.isObject is
-ok 1305 Firefox 106.0 - [undefined ms] - Object {} lodash _.isArray is not
-ok 1306 Firefox 106.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
-ok 1307 Firefox 106.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
-ok 1308 Firefox 106.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
-ok 1309 Firefox 106.0 - [undefined ms] - String parse nothing String(null) is typeof string
-ok 1310 Firefox 106.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
-ok 1311 Firefox 106.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
-ok 1312 Firefox 106.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
-ok 1313 Firefox 106.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
-ok 1314 Firefox 106.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
-ok 1315 Firefox 106.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
-ok 1316 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
-ok 1317 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
-ok 1318 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
-ok 1319 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
-ok 1320 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
-ok 1321 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
-ok 1322 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
-ok 1323 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
-ok 1324 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
-ok 1325 Firefox 106.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
-ok 1326 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
-ok 1327 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
-ok 1328 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
-ok 1329 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
-ok 1330 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
-ok 1331 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
-ok 1332 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
-ok 1333 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
-ok 1334 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
-ok 1335 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
-ok 1336 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
-ok 1337 Firefox 106.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
-ok 1338 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
-ok 1339 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
-ok 1340 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
-ok 1341 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
-ok 1342 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
-ok 1343 Firefox 106.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
-ok 1344 Firefox 106.0 - [undefined ms] - switch case order magicNumber 10 returns 2
-ok 1345 Firefox 106.0 - [undefined ms] - switch case order magicNumber 20 returns 2
-ok 1346 Firefox 106.0 - [undefined ms] - switch case order magicNumber 30 returns 4
-ok 1347 Firefox 106.0 - [undefined ms] - switch case order magicNumber 42 returns 3
-ok 1348 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
-ok 1349 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
-ok 1350 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
-ok 1351 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
-ok 1352 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
-ok 1353 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
-ok 1354 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
-ok 1355 Firefox 106.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
-ok 1356 Firefox 106.0 - [undefined ms] - try { something } finally { return x } always runs last
+ok 1 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
+ok 2 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
+ok 3 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
+ok 4 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
+ok 5 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
+ok 6 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
+ok 7 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
+ok 8 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
+ok 9 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 10 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 11 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename x equals 180, from coordinate.longitude
+ok 12 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename y equals 90, from coordinate.latitude
+ok 13 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 14 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 15 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename x equals 180, from coordinate.longitude
+ok 16 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename y equals 90, from coordinate.latitude
+ok 17 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 18 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 19 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename x equals 180, from coordinate.longitude
+ok 20 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename y equals 90, from coordinate.latitude
+ok 21 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 22 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 23 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename x equals 180, from coordinate.longitude
+ok 24 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename y equals 90, from coordinate.latitude
+ok 25 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 26 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 27 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename x equals 180, from coordinate.longitude
+ok 28 Chrome 131.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename y equals 90, from coordinate.latitude
+ok 29 Chrome 131.0 - [undefined ms] - NaN Number isNaN
+ok 30 Chrome 131.0 - [undefined ms] - NaN Number is typeof 'number'
+ok 31 Chrome 131.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
+ok 32 Chrome 131.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
+ok 33 Chrome 131.0 - [undefined ms] - NaN jasmine .toBeFalsy() is
+ok 34 Chrome 131.0 - [undefined ms] - null Object is typeof 'object'
+ok 35 Chrome 131.0 - [undefined ms] - null Object is NOT instanceof Object
+ok 36 Chrome 131.0 - [undefined ms] - null Number isNaN(null) is NOT
+ok 37 Chrome 131.0 - [undefined ms] - null lodash _.isNull(null) is
+ok 38 Chrome 131.0 - [undefined ms] - null jasmine .toBeNull() is
+ok 39 Chrome 131.0 - [undefined ms] - null jasmine .toBeFalsy() is
+ok 40 Chrome 131.0 - [undefined ms] - null jasmine .toEqual(undefined) is NOT!
+ok 41 Chrome 131.0 - [undefined ms] - undefined is typeof 'undefined
+ok 42 Chrome 131.0 - [undefined ms] - undefined Number isNaN
+ok 43 Chrome 131.0 - [undefined ms] - undefined null is not identical to null
+ok 44 Chrome 131.0 - [undefined ms] - undefined null equals null
+ok 45 Chrome 131.0 - [undefined ms] - undefined lodash _.isUndefined(undefined) is
+ok 46 Chrome 131.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
+ok 47 Chrome 131.0 - [undefined ms] - undefined jasmine .toEqual(null) is NOT!
+ok 48 Chrome 131.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
+ok 49 Chrome 131.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
+ok 50 Chrome 131.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
+ok 51 Chrome 131.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
+ok 52 Chrome 131.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
+ok 53 Chrome 131.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
+ok 54 Chrome 131.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
+ok 55 Chrome 131.0 - [undefined ms] - Number parse objects Number({}) is NaN
+ok 56 Chrome 131.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
+ok 57 Chrome 131.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
+ok 58 Chrome 131.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
+ok 59 Chrome 131.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
+ok 60 Chrome 131.0 - [undefined ms] - Number parseInt('bananas') NaN is true
+ok 61 Chrome 131.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
+ok 62 Chrome 131.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
+ok 63 Chrome 131.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
+ok 64 Chrome 131.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
+ok 65 Chrome 131.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
+ok 66 Chrome 131.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
+ok 67 Chrome 131.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
+ok 68 Chrome 131.0 - [undefined ms] - Number parse from string whitespace to 0 Number('0') returns 0
+ok 69 Chrome 131.0 - [undefined ms] - Number parse from string whitespace to 0 Number('') returns 0
+ok 70 Chrome 131.0 - [undefined ms] - Number parse from string whitespace to 0 Number(' ') returns 0
+ok 71 Chrome 131.0 - [undefined ms] - Number parse from string whitespace to 0 Number('/r/n/t') returns 0
+ok 72 Chrome 131.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
+ok 73 Chrome 131.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
+ok 74 Chrome 131.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
+ok 75 Chrome 131.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
+ok 76 Chrome 131.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
+ok 77 Chrome 131.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
+ok 78 Chrome 131.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
+ok 79 Chrome 131.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
+ok 80 Chrome 131.0 - [undefined ms] - Number parse from string -0 - 0 is -0
+ok 81 Chrome 131.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
+ok 82 Chrome 131.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
+ok 83 Chrome 131.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
+ok 84 Chrome 131.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
+ok 85 Chrome 131.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
+ok 86 Chrome 131.0 - [undefined ms] - Number VALUE MAX is > 0
+ok 87 Chrome 131.0 - [undefined ms] - Number VALUE MAX is the biggest possible number
+ok 88 Chrome 131.0 - [undefined ms] - Number VALUE MIN is NOT even a negative number
+ok 89 Chrome 131.0 - [undefined ms] - Number VALUE MIN is NOT even 0 itself
+ok 90 Chrome 131.0 - [undefined ms] - Number VALUE MIN it is actually a positive number
+ok 91 Chrome 131.0 - [undefined ms] - Number VALUE MIN is close to 0
+ok 92 Chrome 131.0 - [undefined ms] - Number -0 is -0
+ok 93 Chrome 131.0 - [undefined ms] - Number -0 equals -0
+ok 94 Chrome 131.0 - [undefined ms] - Number -0 does not equal 0
+ok 95 Chrome 131.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
+ok 96 Chrome 131.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
+ok 97 Chrome 131.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
+ok 98 Chrome 131.0 - [undefined ms] - Number -0 to string '' + -0 returns '0'
+ok 99 Chrome 131.0 - [undefined ms] - Number -0 to string '' - 0 does NOT return '0'
+ok 100 Chrome 131.0 - [undefined ms] - Number -0 to string '' - 0 returns 0, NOT '0'
+ok 101 Chrome 131.0 - [undefined ms] - Array [] brackets is typeof 'object', not 'array'
+ok 102 Chrome 131.0 - [undefined ms] - Array [] brackets is instanceof Array
+ok 103 Chrome 131.0 - [undefined ms] - Array [] brackets is instanceof Object
+ok 104 Chrome 131.0 - [undefined ms] - Array [] brackets String([]) returns ''
+ok 105 Chrome 131.0 - [undefined ms] - Array [] brackets String([]) is typeof string
+ok 106 Chrome 131.0 - [undefined ms] - Array [] brackets lodash _.isObject is
+ok 107 Chrome 131.0 - [undefined ms] - Array [] brackets lodash _.isArray is
+ok 108 Chrome 131.0 - [undefined ms] - Array [] instance is typeof 'object', not 'array'
+ok 109 Chrome 131.0 - [undefined ms] - Array [] instance is instanceof Array
+ok 110 Chrome 131.0 - [undefined ms] - Array [] instance is instanceof Object
+ok 111 Chrome 131.0 - [undefined ms] - Array [] instance String([]) returns ''
+ok 112 Chrome 131.0 - [undefined ms] - Array [] instance String([]) is typeof string
+ok 113 Chrome 131.0 - [undefined ms] - Array [] instance lodash _.isObject is
+ok 114 Chrome 131.0 - [undefined ms] - Array [] instance lodash _.isArray is
+ok 115 Chrome 131.0 - [undefined ms] - Array [1, 2, 3] .map(x => x * 2) returns [2, 4, 6]
+ok 116 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [].length=3 is instanceof Array
+ok 117 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [].length=3 is typeof 'object'
+ok 118 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [].length=3 lodash _.isArray
+ok 119 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [].length=3 has length 3
+ok 120 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [].length=3 equals [undefined, undefined, undefined]
+ok 121 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() equals ',,'
+ok 122 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 123 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 124 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots actually equals ';;'
+ok 125 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [,,,] is instanceof Array
+ok 126 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [,,,] is typeof 'object'
+ok 127 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [,,,] lodash _.isArray
+ok 128 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [,,,] has length 3
+ok 129 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [,,,] equals [undefined, undefined, undefined]
+ok 130 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() equals ',,'
+ok 131 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 132 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 133 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots actually equals ';;'
+ok 134 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is instanceof Array
+ok 135 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is typeof 'object'
+ok 136 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] lodash _.isArray
+ok 137 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] has length 3
+ok 138 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] equals [undefined, undefined, undefined]
+ok 139 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() equals ',,'
+ok 140 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 141 Chrome 131.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .map(x => 'slot') [ undefined x 3 ] equals 'slot;slot;slot'
+ok 142 Chrome 131.0 - [undefined ms] - Array <3 empty slots> Array(3) is instanceof Array
+ok 143 Chrome 131.0 - [undefined ms] - Array <3 empty slots> Array(3) is typeof 'object'
+ok 144 Chrome 131.0 - [undefined ms] - Array <3 empty slots> Array(3) lodash _.isArray
+ok 145 Chrome 131.0 - [undefined ms] - Array <3 empty slots> Array(3) has length 3
+ok 146 Chrome 131.0 - [undefined ms] - Array <3 empty slots> Array(3) equals [undefined, undefined, undefined]
+ok 147 Chrome 131.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() equals ',,'
+ok 148 Chrome 131.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 149 Chrome 131.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 150 Chrome 131.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots actually equals ';;'
+ok 151 Chrome 131.0 - [undefined ms] - Array <3 empty slots> new Array(3) is instanceof Array
+ok 152 Chrome 131.0 - [undefined ms] - Array <3 empty slots> new Array(3) is typeof 'object'
+ok 153 Chrome 131.0 - [undefined ms] - Array <3 empty slots> new Array(3) lodash _.isArray
+ok 154 Chrome 131.0 - [undefined ms] - Array <3 empty slots> new Array(3) has length 3
+ok 155 Chrome 131.0 - [undefined ms] - Array <3 empty slots> new Array(3) equals [undefined, undefined, undefined]
+ok 156 Chrome 131.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() equals ',,'
+ok 157 Chrome 131.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 158 Chrome 131.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 159 Chrome 131.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots actually equals ';;'
+ok 160 Chrome 131.0 - [undefined ms] - Object coercion [] !== [] is true
+ok 161 Chrome 131.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
+ok 162 Chrome 131.0 - [undefined ms] - Object coercion {} + [] is 0
+ok 163 Chrome 131.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
+ok 164 Chrome 131.0 - [undefined ms] - Object {} is typeof object
+ok 165 Chrome 131.0 - [undefined ms] - Object {} is instanceof Object
+ok 166 Chrome 131.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
+ok 167 Chrome 131.0 - [undefined ms] - Object {} String({}) is typeof string
+ok 168 Chrome 131.0 - [undefined ms] - Object {} lodash _.isObject is
+ok 169 Chrome 131.0 - [undefined ms] - Object {} lodash _.isArray is not
+ok 170 Chrome 131.0 - [undefined ms] - Object {} is typeof object
+ok 171 Chrome 131.0 - [undefined ms] - Object {} is instanceof Object
+ok 172 Chrome 131.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
+ok 173 Chrome 131.0 - [undefined ms] - Object {} String({}) is typeof string
+ok 174 Chrome 131.0 - [undefined ms] - Object {} lodash _.isObject is
+ok 175 Chrome 131.0 - [undefined ms] - Object {} lodash _.isArray is not
+ok 176 Chrome 131.0 - [undefined ms] - lodash it is available
+ok 177 Chrome 131.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
+ok 178 Chrome 131.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
+ok 179 Chrome 131.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
+ok 180 Chrome 131.0 - [undefined ms] - String parse nothing String(null) is typeof string
+ok 181 Chrome 131.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
+ok 182 Chrome 131.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
+ok 183 Chrome 131.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
+ok 184 Chrome 131.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
+ok 185 Chrome 131.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
+ok 186 Chrome 131.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
+ok 187 Chrome 131.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
+ok 188 Chrome 131.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
+ok 189 Chrome 131.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
+ok 190 Chrome 131.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
+ok 191 Chrome 131.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
+ok 192 Chrome 131.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
+ok 193 Chrome 131.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
+ok 194 Chrome 131.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
+ok 195 Chrome 131.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
+ok 196 Chrome 131.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
+ok 197 Chrome 131.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
+ok 198 Chrome 131.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
+ok 199 Chrome 131.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
+ok 200 Chrome 131.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
+ok 201 Chrome 131.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
+ok 202 Chrome 131.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
+ok 203 Chrome 131.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
+ok 204 Chrome 131.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
+ok 205 Chrome 131.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
+ok 206 Chrome 131.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
+ok 207 Chrome 131.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
+ok 208 Chrome 131.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
+ok 209 Chrome 131.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
+ok 210 Chrome 131.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
+ok 211 Chrome 131.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
+ok 212 Chrome 131.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
+ok 213 Chrome 131.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
+ok 214 Chrome 131.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
+ok 215 Chrome 131.0 - [undefined ms] - switch case order magicNumber 10 returns 2
+ok 216 Chrome 131.0 - [undefined ms] - switch case order magicNumber 20 returns 2
+ok 217 Chrome 131.0 - [undefined ms] - switch case order magicNumber 30 returns 4
+ok 218 Chrome 131.0 - [undefined ms] - switch case order magicNumber 42 returns 3
+ok 219 Chrome 131.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
+ok 220 Chrome 131.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
+ok 221 Chrome 131.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
+ok 222 Chrome 131.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
+ok 223 Chrome 131.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
+ok 224 Chrome 131.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
+ok 225 Chrome 131.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
+ok 226 Chrome 131.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
+ok 227 Chrome 131.0 - [undefined ms] - try { something } finally { return x } always runs last
+ok 228 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is longitude equals 180, from coordinate.longitude
+ok 229 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking as-is latitude equals 90, from coordinate.latitude
+ok 230 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename x equals 180, from coordinate.longitude
+ok 231 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 (x, y) => {longitude:x, latitude:y} unpacking rename y equals 90, from coordinate.latitude
+ok 232 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is longitude equals 180, from coordinate.longitude
+ok 233 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking as-is latitude equals 90, from coordinate.latitude
+ok 234 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename x equals 180, from coordinate.longitude
+ok 235 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 (longitude, latitude) => { longitude, latitude } unpacking rename y equals 90, from coordinate.latitude
+ok 236 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 237 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 238 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename x equals 180, from coordinate.longitude
+ok 239 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate) unpacking rename y equals 90, from coordinate.latitude
+ok 240 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 241 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 242 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename x equals 180, from coordinate.longitude
+ok 243 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({latitude:90, longitude:180}) unpacking rename y equals 90, from coordinate.latitude
+ok 244 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 245 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 246 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename x equals 180, from coordinate.longitude
+ok 247 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate(coordinate = {latitude:90, longitude:180}}) unpacking rename y equals 90, from coordinate.latitude
+ok 248 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 249 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 250 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename x equals 180, from coordinate.longitude
+ok 251 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({longitude=0, latitude=0} = {}) unpacking rename y equals 90, from coordinate.latitude
+ok 252 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is longitude equals 180, from coordinate.longitude
+ok 253 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking as-is latitude equals 90, from coordinate.latitude
+ok 254 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename x equals 180, from coordinate.longitude
+ok 255 Firefox 133.0 - [undefined ms] - function newCoordinate(...) 180,90 newCoordinate({x:180, y:90}) unpacking rename y equals 90, from coordinate.latitude
+ok 256 Firefox 133.0 - [undefined ms] - NaN Number isNaN
+ok 257 Firefox 133.0 - [undefined ms] - NaN Number is typeof 'number'
+ok 258 Firefox 133.0 - [undefined ms] - NaN lodash _.isNaN(NaN) is
+ok 259 Firefox 133.0 - [undefined ms] - NaN lodash _.isNumber(NaN) is
+ok 260 Firefox 133.0 - [undefined ms] - NaN jasmine .toBeFalsy() is
+ok 261 Firefox 133.0 - [undefined ms] - null Object is typeof 'object'
+ok 262 Firefox 133.0 - [undefined ms] - null Object is NOT instanceof Object
+ok 263 Firefox 133.0 - [undefined ms] - null Number isNaN(null) is NOT
+ok 264 Firefox 133.0 - [undefined ms] - null lodash _.isNull(null) is
+ok 265 Firefox 133.0 - [undefined ms] - null jasmine .toBeNull() is
+ok 266 Firefox 133.0 - [undefined ms] - null jasmine .toBeFalsy() is
+ok 267 Firefox 133.0 - [undefined ms] - null jasmine .toEqual(undefined) is NOT!
+ok 268 Firefox 133.0 - [undefined ms] - undefined is typeof 'undefined
+ok 269 Firefox 133.0 - [undefined ms] - undefined Number isNaN
+ok 270 Firefox 133.0 - [undefined ms] - undefined null is not identical to null
+ok 271 Firefox 133.0 - [undefined ms] - undefined null equals null
+ok 272 Firefox 133.0 - [undefined ms] - undefined lodash _.isUndefined(undefined) is
+ok 273 Firefox 133.0 - [undefined ms] - undefined jasmine .toBeFalsy() is
+ok 274 Firefox 133.0 - [undefined ms] - undefined jasmine .toEqual(null) is NOT!
+ok 275 Firefox 133.0 - [undefined ms] - Number left associativity 1 < 2 < 3 is true
+ok 276 Firefox 133.0 - [undefined ms] - Number left associativity 3 > 2 > 1 is false!
+ok 277 Firefox 133.0 - [undefined ms] - Number parse null-sy Number(null) returns 0
+ok 278 Firefox 133.0 - [undefined ms] - Number parse null-sy Number(undefined) is typeof 'number'
+ok 279 Firefox 133.0 - [undefined ms] - Number parse null-sy Number(undefined) isNaN
+ok 280 Firefox 133.0 - [undefined ms] - Number parse null-sy Number(undefined) is not 0
+ok 281 Firefox 133.0 - [undefined ms] - Number parse objects Number({}) is typeof 'number'
+ok 282 Firefox 133.0 - [undefined ms] - Number parse objects Number({}) is NaN
+ok 283 Firefox 133.0 - [undefined ms] - Number parse objects Number([]) is typeof 'number'
+ok 284 Firefox 133.0 - [undefined ms] - Number parse objects Number([]) is NOT a NaN
+ok 285 Firefox 133.0 - [undefined ms] - Number parseInt('bananas') _.isNumber is true
+ok 286 Firefox 133.0 - [undefined ms] - Number parseInt('bananas') is typeof 'number'
+ok 287 Firefox 133.0 - [undefined ms] - Number parseInt('bananas') NaN is true
+ok 288 Firefox 133.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
+ok 289 Firefox 133.0 - [undefined ms] - Number parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
+ok 290 Firefox 133.0 - [undefined ms] - Number _.parseInt('bananas') _.isNumber is true
+ok 291 Firefox 133.0 - [undefined ms] - Number _.parseInt('bananas') is typeof 'number'
+ok 292 Firefox 133.0 - [undefined ms] - Number _.parseInt('bananas') NaN is true
+ok 293 Firefox 133.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas == bananas is false
+ok 294 Firefox 133.0 - [undefined ms] - Number _.parseInt('bananas') NaN broken reflectiveness bananas === bananas is false!
+ok 295 Firefox 133.0 - [undefined ms] - Number parse from string whitespace to 0 Number('0') returns 0
+ok 296 Firefox 133.0 - [undefined ms] - Number parse from string whitespace to 0 Number('') returns 0
+ok 297 Firefox 133.0 - [undefined ms] - Number parse from string whitespace to 0 Number(' ') returns 0
+ok 298 Firefox 133.0 - [undefined ms] - Number parse from string whitespace to 0 Number('/r/n/t') returns 0
+ok 299 Firefox 133.0 - [undefined ms] - Number parse from string 0 . Number('0.') returns 0
+ok 300 Firefox 133.0 - [undefined ms] - Number parse from string 0 . Number('.0') returns 0
+ok 301 Firefox 133.0 - [undefined ms] - Number parse from string 0 . Number('.') returns NaN
+ok 302 Firefox 133.0 - [undefined ms] - Number parse from string 0 XO Number('0O0') returns 0
+ok 303 Firefox 133.0 - [undefined ms] - Number parse from string 0 XO Number('0X0') returns 0
+ok 304 Firefox 133.0 - [undefined ms] - Number parse from string -0 Number('-0') is -0
+ok 305 Firefox 133.0 - [undefined ms] - Number parse from string -0 Number('-0') does not equal 0
+ok 306 Firefox 133.0 - [undefined ms] - Number parse from string -0 JSON.parse('-0) is -0
+ok 307 Firefox 133.0 - [undefined ms] - Number parse from string -0 - 0 is -0
+ok 308 Firefox 133.0 - [undefined ms] - Number parse from string -0 - 0 Number('- 0') returns NaN
+ok 309 Firefox 133.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) variable parses
+ok 310 Firefox 133.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42 .toFixed(2) returns '42.00'
+ok 311 Firefox 133.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42.0.toFixed(2) returns '42.00'
+ok 312 Firefox 133.0 - [undefined ms] - Number .toFixed(x) 42.toFixed(2) 42..toFixed(2) returns '42.00'
+ok 313 Firefox 133.0 - [undefined ms] - Number VALUE MAX is > 0
+ok 314 Firefox 133.0 - [undefined ms] - Number VALUE MAX is the biggest possible number
+ok 315 Firefox 133.0 - [undefined ms] - Number VALUE MIN is NOT even a negative number
+ok 316 Firefox 133.0 - [undefined ms] - Number VALUE MIN is NOT even 0 itself
+ok 317 Firefox 133.0 - [undefined ms] - Number VALUE MIN it is actually a positive number
+ok 318 Firefox 133.0 - [undefined ms] - Number VALUE MIN is close to 0
+ok 319 Firefox 133.0 - [undefined ms] - Number -0 is -0
+ok 320 Firefox 133.0 - [undefined ms] - Number -0 equals -0
+ok 321 Firefox 133.0 - [undefined ms] - Number -0 does not equal 0
+ok 322 Firefox 133.0 - [undefined ms] - Number -0 to string JSON.stringify(-0) returns '0'
+ok 323 Firefox 133.0 - [undefined ms] - Number -0 to string String(-0) returns '0'
+ok 324 Firefox 133.0 - [undefined ms] - Number -0 to string -0 + '' returns '0'
+ok 325 Firefox 133.0 - [undefined ms] - Number -0 to string '' + -0 returns '0'
+ok 326 Firefox 133.0 - [undefined ms] - Number -0 to string '' - 0 does NOT return '0'
+ok 327 Firefox 133.0 - [undefined ms] - Number -0 to string '' - 0 returns 0, NOT '0'
+ok 328 Firefox 133.0 - [undefined ms] - Array [] brackets is typeof 'object', not 'array'
+ok 329 Firefox 133.0 - [undefined ms] - Array [] brackets is instanceof Array
+ok 330 Firefox 133.0 - [undefined ms] - Array [] brackets is instanceof Object
+ok 331 Firefox 133.0 - [undefined ms] - Array [] brackets String([]) returns ''
+ok 332 Firefox 133.0 - [undefined ms] - Array [] brackets String([]) is typeof string
+ok 333 Firefox 133.0 - [undefined ms] - Array [] brackets lodash _.isObject is
+ok 334 Firefox 133.0 - [undefined ms] - Array [] brackets lodash _.isArray is
+ok 335 Firefox 133.0 - [undefined ms] - Array [] instance is typeof 'object', not 'array'
+ok 336 Firefox 133.0 - [undefined ms] - Array [] instance is instanceof Array
+ok 337 Firefox 133.0 - [undefined ms] - Array [] instance is instanceof Object
+ok 338 Firefox 133.0 - [undefined ms] - Array [] instance String([]) returns ''
+ok 339 Firefox 133.0 - [undefined ms] - Array [] instance String([]) is typeof string
+ok 340 Firefox 133.0 - [undefined ms] - Array [] instance lodash _.isObject is
+ok 341 Firefox 133.0 - [undefined ms] - Array [] instance lodash _.isArray is
+ok 342 Firefox 133.0 - [undefined ms] - Array [1, 2, 3] .map(x => x * 2) returns [2, 4, 6]
+ok 343 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [].length=3 is instanceof Array
+ok 344 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [].length=3 is typeof 'object'
+ok 345 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [].length=3 lodash _.isArray
+ok 346 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [].length=3 has length 3
+ok 347 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [].length=3 equals [undefined, undefined, undefined]
+ok 348 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() equals ',,'
+ok 349 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [].length=3 .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 350 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 351 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [].length=3 .map(x => 'slot') empty slots actually equals ';;'
+ok 352 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [,,,] is instanceof Array
+ok 353 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [,,,] is typeof 'object'
+ok 354 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [,,,] lodash _.isArray
+ok 355 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [,,,] has length 3
+ok 356 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [,,,] equals [undefined, undefined, undefined]
+ok 357 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() equals ',,'
+ok 358 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [,,,] .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 359 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 360 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [,,,] .map(x => 'slot') empty slots actually equals ';;'
+ok 361 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is instanceof Array
+ok 362 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] is typeof 'object'
+ok 363 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] lodash _.isArray
+ok 364 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] has length 3
+ok 365 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] equals [undefined, undefined, undefined]
+ok 366 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() equals ',,'
+ok 367 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 368 Firefox 133.0 - [undefined ms] - Array <3 empty slots> [ undefined x 3 ] .map(x => 'slot') [ undefined x 3 ] equals 'slot;slot;slot'
+ok 369 Firefox 133.0 - [undefined ms] - Array <3 empty slots> Array(3) is instanceof Array
+ok 370 Firefox 133.0 - [undefined ms] - Array <3 empty slots> Array(3) is typeof 'object'
+ok 371 Firefox 133.0 - [undefined ms] - Array <3 empty slots> Array(3) lodash _.isArray
+ok 372 Firefox 133.0 - [undefined ms] - Array <3 empty slots> Array(3) has length 3
+ok 373 Firefox 133.0 - [undefined ms] - Array <3 empty slots> Array(3) equals [undefined, undefined, undefined]
+ok 374 Firefox 133.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() equals ',,'
+ok 375 Firefox 133.0 - [undefined ms] - Array <3 empty slots> Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 376 Firefox 133.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 377 Firefox 133.0 - [undefined ms] - Array <3 empty slots> Array(3) .map(x => 'slot') empty slots actually equals ';;'
+ok 378 Firefox 133.0 - [undefined ms] - Array <3 empty slots> new Array(3) is instanceof Array
+ok 379 Firefox 133.0 - [undefined ms] - Array <3 empty slots> new Array(3) is typeof 'object'
+ok 380 Firefox 133.0 - [undefined ms] - Array <3 empty slots> new Array(3) lodash _.isArray
+ok 381 Firefox 133.0 - [undefined ms] - Array <3 empty slots> new Array(3) has length 3
+ok 382 Firefox 133.0 - [undefined ms] - Array <3 empty slots> new Array(3) equals [undefined, undefined, undefined]
+ok 383 Firefox 133.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() equals ',,'
+ok 384 Firefox 133.0 - [undefined ms] - Array <3 empty slots> new Array(3) .toString() does NOT equal '[undefined, undefined, undefined]'
+ok 385 Firefox 133.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots does NOT equal 'slot;slot;slot'
+ok 386 Firefox 133.0 - [undefined ms] - Array <3 empty slots> new Array(3) .map(x => 'slot') empty slots actually equals ';;'
+ok 387 Firefox 133.0 - [undefined ms] - Object coercion [] !== [] is true
+ok 388 Firefox 133.0 - [undefined ms] - Object coercion [] + {} equals '[object Object]'
+ok 389 Firefox 133.0 - [undefined ms] - Object coercion {} + [] is 0
+ok 390 Firefox 133.0 - [undefined ms] - Object coercion {} + [] equals '[object Object]'
+ok 391 Firefox 133.0 - [undefined ms] - Object {} is typeof object
+ok 392 Firefox 133.0 - [undefined ms] - Object {} is instanceof Object
+ok 393 Firefox 133.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
+ok 394 Firefox 133.0 - [undefined ms] - Object {} String({}) is typeof string
+ok 395 Firefox 133.0 - [undefined ms] - Object {} lodash _.isObject is
+ok 396 Firefox 133.0 - [undefined ms] - Object {} lodash _.isArray is not
+ok 397 Firefox 133.0 - [undefined ms] - Object {} is typeof object
+ok 398 Firefox 133.0 - [undefined ms] - Object {} is instanceof Object
+ok 399 Firefox 133.0 - [undefined ms] - Object {} String({}) returns '[object Object]' string
+ok 400 Firefox 133.0 - [undefined ms] - Object {} String({}) is typeof string
+ok 401 Firefox 133.0 - [undefined ms] - Object {} lodash _.isObject is
+ok 402 Firefox 133.0 - [undefined ms] - Object {} lodash _.isArray is not
+ok 403 Firefox 133.0 - [undefined ms] - lodash it is available
+ok 404 Firefox 133.0 - [undefined ms] - String parse nothing String(undefined) returns 'undefined'
+ok 405 Firefox 133.0 - [undefined ms] - String parse nothing String(undefined) is typeof string
+ok 406 Firefox 133.0 - [undefined ms] - String parse nothing String(null) returns 'undefined'
+ok 407 Firefox 133.0 - [undefined ms] - String parse nothing String(null) is typeof string
+ok 408 Firefox 133.0 - [undefined ms] - String parse Object String({}) String({}) returns '[object Object]' string
+ok 409 Firefox 133.0 - [undefined ms] - String parse Object String({}) String({}) is typeof string
+ok 410 Firefox 133.0 - [undefined ms] - String parse Object String({}) {} + '' returns '[object Object]' string
+ok 411 Firefox 133.0 - [undefined ms] - String parse Object String({}) {} + '' is typeof string
+ok 412 Firefox 133.0 - [undefined ms] - String parse Object String({}) '' + {} returns '[object Object]' string
+ok 413 Firefox 133.0 - [undefined ms] - String parse Object String({}) '' + {} is typeof string
+ok 414 Firefox 133.0 - [undefined ms] - String parse Object Array String([]) String([]) returns ''
+ok 415 Firefox 133.0 - [undefined ms] - String parse Object Array String([]) String([]) is typeof string
+ok 416 Firefox 133.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) returns ''
+ok 417 Firefox 133.0 - [undefined ms] - String parse Object Array String([]) String([undefined]) is typeof string
+ok 418 Firefox 133.0 - [undefined ms] - String parse Object Array String([]) String([null]) returns ''
+ok 419 Firefox 133.0 - [undefined ms] - String parse Object Array String([]) String([null]) is typeof string
+ok 420 Firefox 133.0 - [undefined ms] - String parse Object Array String([]) [] + '' returns ''
+ok 421 Firefox 133.0 - [undefined ms] - String parse Object Array String([]) [] + '' is typeof string
+ok 422 Firefox 133.0 - [undefined ms] - String parse Object Array String([]) '' + [] returns ''
+ok 423 Firefox 133.0 - [undefined ms] - String parse Object Array String([]) '' + [] is typeof string
+ok 424 Firefox 133.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is typeof 'object', not 'string'
+ok 425 Firefox 133.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof String
+ok 426 Firefox 133.0 - [undefined ms] - String parse Object Array new String([]) new String([]) is instanceof Object
+ok 427 Firefox 133.0 - [undefined ms] - String parse Object Array new String([]) new String([]) .toString() returns ''
+ok 428 Firefox 133.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is typeof 'object', not 'string'
+ok 429 Firefox 133.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof String
+ok 430 Firefox 133.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) is instanceof Object
+ok 431 Firefox 133.0 - [undefined ms] - String parse Object Array new String([]) new String([undefined]) .toString() returns ''
+ok 432 Firefox 133.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is typeof 'object', not 'string'
+ok 433 Firefox 133.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof String
+ok 434 Firefox 133.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) is instanceof Object
+ok 435 Firefox 133.0 - [undefined ms] - String parse Object Array new String([]) new String([null]) .toString() returns ''
+ok 436 Firefox 133.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) returns ','
+ok 437 Firefox 133.0 - [undefined ms] - String parse Object Array String([,,]) String([,,]) is typeof string
+ok 438 Firefox 133.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) returns ','
+ok 439 Firefox 133.0 - [undefined ms] - String parse Object Array String([,,]) String([undefined,undefined,]) is typeof string
+ok 440 Firefox 133.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) returns ','
+ok 441 Firefox 133.0 - [undefined ms] - String parse Object Array String([,,]) String([null,null,]) is typeof string
+ok 442 Firefox 133.0 - [undefined ms] - switch case order magicNumber 10 returns 2
+ok 443 Firefox 133.0 - [undefined ms] - switch case order magicNumber 20 returns 2
+ok 444 Firefox 133.0 - [undefined ms] - switch case order magicNumber 30 returns 4
+ok 445 Firefox 133.0 - [undefined ms] - switch case order magicNumber 42 returns 3
+ok 446 Firefox 133.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert String(oSymbol) can be converted Symbol('that is cool')
+ok 447 Firefox 133.0 - [undefined ms] - Symbol to string Symbol('that is cool') convert oSymbol.toString() can be converted Symbol('that is cool')
+ok 448 Firefox 133.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' throws a TypeError
+ok 449 Firefox 133.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Common throws a TypeError: message
+ok 450 Firefox 133.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast oSymbol + '' error message Safari throws a TypeError: message
+ok 451 Firefox 133.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol throws a TypeError
+ok 452 Firefox 133.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Common throws a TypeError: message
+ok 453 Firefox 133.0 - [undefined ms] - Symbol to string Symbol('that is cool') cast '' + oSymbol error message Safari throws a TypeError: message
+ok 454 Firefox 133.0 - [undefined ms] - try { something } finally { return x } always runs last
 
-1..1356
-# tests 1356
-# pass  906
+1..454
+# tests 454
+# pass  454
 # skip  0
 # todo  0
-# fail  450
+# fail  0
+
+# ok
