@@ -1,8 +1,11 @@
-# JavaScript WTFs 'To-Do's
+# JavaScript WTFs
+
+## TODOs
 
 - [ ] Consolidate `unit.spec.es6.js` with `unit.spec.js` tests
+- [ ] Stop using TODO.md and use "Issues" instead.
 
-## Prettier
+### Prettier
 
 - [ ] Add `prettier`
 - [ ] Replace `standard` with `standardx`
