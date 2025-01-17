@@ -28,7 +28,7 @@ jobs:
       - uses: percebus/github-actions-npm/.github/actions/npm_install@main
 
       - name: npm run jest:ci:unit:js
-        run: npm jest:ci:unit:js
+        run: npm run jest:ci:unit:js
       - name: junit.xml
         uses: dorny/test-reporter@v1
         if: always()
@@ -38,7 +38,7 @@ jobs:
           reporter: jest-junit
 
       - name: npm run jest:ci:unit:es6
-        run: npm jest:ci:unit:es6
+        run: npm run jest:ci:unit:es6
       - name: junit.xml
         uses: dorny/test-reporter@v1
         if: always()
@@ -94,7 +94,7 @@ jobs:
       - uses: percebus/github-actions-npm/.github/actions/npm_install@main
 
       - name: npm run jest:ci:unit:js
-        run: npm jest:ci:unit:js
+        run: npm run jest:ci:unit:js
       - name: junit.xml
         uses: dorny/test-reporter@v1
         if: always()
