@@ -28,23 +28,13 @@ jobs:
       - uses: percebus/github-actions-node/.github/actions/node_setup@main
       - uses: percebus/github-actions-npm/.github/actions/npm_install@main
 
-      - name: npm run jest:ci:unit:js
-        run: npm run jest:ci:unit:js
+      - name: npm test
+        run: npm test
       - name: junit.xml
         uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: "Unit Tests: JS"
-          path: junit.xml
-          reporter: jest-junit
-
-      - name: npm run jest:ci:unit:es6
-        run: npm run jest:ci:unit:es6
-      - name: junit.xml
-        uses: dorny/test-reporter@v1
-        if: always()
-        with:
-          name: "Unit Tests: ES6"
+          name: Unit Tests
           path: junit.xml
           reporter: jest-junit
 
@@ -94,12 +84,12 @@ jobs:
 
       - uses: percebus/github-actions-npm/.github/actions/npm_install@main
 
-      - name: npm run jest:ci:unit:js
-        run: npm run jest:ci:unit:js
+      - name: npm test
+        run: npm test
       - name: junit.xml
         uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: "Unit Tests: JS @ node:${{ matrix.node }}"
+          name: Unit Tests @ node:${{ matrix.node }}
           path: junit.xml
           reporter: jest-junit
