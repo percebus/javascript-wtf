@@ -20,7 +20,22 @@ jobs:
 
   test:
     needs: id
-    uses: percebus/github-actions-npm/.github/workflows/npm_lint_and_test.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: percebus/github-actions-common/.github/actions/checkout@main
+      - uses: percebus/github-actions-node/.github/actions/node_setup@main
+      - uses: percebus/github-actions-npm/.github/actions/npm_install@main
+
+      - name: test
+        run: npm test
+
+      - name: junit.xml
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Unit Tests
+          path: junit.xml
+          reporter: jest-junit
 
   testem:
     if: false # FIXME not working
@@ -70,3 +85,11 @@ jobs:
 
       - name: test
         run: npm test
+
+      - name: junit.xml
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Unit Tests
+          path: junit.xml
+          reporter: jest-junit
