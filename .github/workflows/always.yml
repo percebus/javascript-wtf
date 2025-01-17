@@ -18,9 +18,25 @@ jobs:
     needs: id
     uses: percebus/github-actions-npm/.github/workflows/npm_audit.yml@main
 
+  # FIXME merge jest:ci steps
   test:
+    name: npm test
     needs: id
-    uses: percebus/github-actions-npm/.github/workflows/npm_lint_and_test.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: percebus/github-actions-common/.github/actions/checkout@main
+      - uses: percebus/github-actions-node/.github/actions/node_setup@main
+      - uses: percebus/github-actions-npm/.github/actions/npm_install@main
+
+      - name: npm test
+        run: npm test
+      - name: junit.xml
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Unit Tests
+          path: junit.xml
+          reporter: jest-junit
 
   testem:
     if: false # FIXME not working
@@ -68,5 +84,12 @@ jobs:
 
       - uses: percebus/github-actions-npm/.github/actions/npm_install@main
 
-      - name: test
+      - name: npm test
         run: npm test
+      - name: junit.xml
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Unit Tests @ node:${{ matrix.node }}
+          path: junit.xml
+          reporter: jest-junit
