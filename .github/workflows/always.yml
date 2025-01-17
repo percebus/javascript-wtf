@@ -20,6 +20,7 @@ jobs:
 
   # FIXME merge jest:ci steps
   test:
+    name: jest:ci
     needs: id
     runs-on: ubuntu-latest
     steps:
@@ -62,7 +63,7 @@ jobs:
 
 
   tests:
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main' # FIXME
     needs: test
     strategy:
       fail-fast: false
