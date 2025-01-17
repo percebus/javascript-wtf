@@ -18,6 +18,7 @@ jobs:
     needs: id
     uses: percebus/github-actions-npm/.github/workflows/npm_audit.yml@main
 
+  # FIXME merge jest:ci steps
   test:
     needs: id
     runs-on: ubuntu-latest
@@ -26,14 +27,23 @@ jobs:
       - uses: percebus/github-actions-node/.github/actions/node_setup@main
       - uses: percebus/github-actions-npm/.github/actions/npm_install@main
 
-      - name: test
-        run: npm test
-
+      - name: npm run jest:ci:unit:js
+        run: npm jest:ci:unit:js
       - name: junit.xml
         uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: Unit Tests
+          name: "Unit Tests: JS"
+          path: junit.xml
+          reporter: jest-junit
+
+      - name: npm run jest:ci:unit:es6
+        run: npm jest:ci:unit:es6
+      - name: junit.xml
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: "Unit Tests: ES6"
           path: junit.xml
           reporter: jest-junit
 
@@ -83,13 +93,12 @@ jobs:
 
       - uses: percebus/github-actions-npm/.github/actions/npm_install@main
 
-      - name: test
-        run: npm test
-
+      - name: npm run jest:ci:unit:js
+        run: npm jest:ci:unit:js
       - name: junit.xml
         uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: Unit Tests
+          name: "Unit Tests: JS @ node:${{ matrix.node }}"
           path: junit.xml
           reporter: jest-junit
