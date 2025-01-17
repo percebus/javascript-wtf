@@ -37,7 +37,7 @@ describe('null', () => {
 
     describe('.toBeFalsy()', () => {
       it('is', () => {
-        expect(undefined).toBeFalsy()
+        expect(null).toBeFalsy()
       })
     })
 
