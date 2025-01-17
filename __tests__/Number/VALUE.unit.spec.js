@@ -21,7 +21,7 @@ describe('Number', () => {
         expect(Number.MIN_VALUE).not.toBe(0) // "Closest to 0" (but not 0)
       })
 
-      it('it is actually a positive number', () => {
+      it('is actually a positive number', () => {
         expect(Number.MIN_VALUE > 0).toBe(true)
       })
 
