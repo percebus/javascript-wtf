@@ -2,7 +2,7 @@
 
 [![Verification](https://github.com/percebus/javascript-wtf/actions/workflows/always.yml/badge.svg)](https://github.com/percebus/javascript-wtf/actions/workflows/always.yml)
 
-[`TODO`s](./TODO.md) | [`LICENSE`](./LICENSE.md) | [3rd party `LICENSES`](./LICENSES.md)
+[`TODO`s](./TODO.md) | [`LICENSE`](./LICENSE.md)
 
 A unit-test project to track all the weird JavaScript gotchas and test'em across all current browsers
 

@@ -3,12 +3,6 @@
   "version": "0.1.0",
   "description": "JavaScript WTFs",
   "scripts": {
-    "npm:install:global": "npm install --location=global yarn",
-    "setup": "npm run npm:install:global",
-    "yarn:licenses:list:prod": "yarn licenses list --prod > LICENSES.txt",
-    "yarn:licenses:generate-disclaimer:prod": "yarn licenses generate-disclaimer --prod > LICENSES.md",
-    "yarn:licenses:prod": "npm run yarn:licenses:list:prod && npm run yarn:licenses:generate-disclaimer:prod",
-    "LICENSES": "npm run yarn:licenses:prod",
     "standard": "standard --verbose *.js __tests__/**/*.js __tests__/**/*/*.js",
     "standard:fix": "npm run standard -- --fix",
     "lint": "npm run standard",
