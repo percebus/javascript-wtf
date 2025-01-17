@@ -19,6 +19,7 @@ jobs:
     uses: percebus/github-actions-npm/.github/workflows/npm_audit.yml@main
 
   test:
+    needs: id
     uses: percebus/github-actions-testing/.github/workflows/jest-junit.yml@main
 
   testem:
