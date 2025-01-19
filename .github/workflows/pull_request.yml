@@ -1,0 +1,11 @@
+name: Pull Request
+
+# "This run was triggered by the "push" event, which is unsupported.
+#  Please ensure you are using the "pull_request" event for this workflow."
+on:
+  pull_request:
+  workflow_call: # SRC: https://docs.github.com/en/actions/using-workflows/reusing-workflows
+
+jobs:
+  audit:
+    uses: percebus/github-actions-npm/.github/workflows/dependency-review.yml@main
