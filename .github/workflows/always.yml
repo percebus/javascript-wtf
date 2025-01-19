@@ -16,7 +16,9 @@ jobs:
 
   test:
     needs: id
-    uses: percebus/github-actions-npm/.github/workflows/npm_test_jest-junit.yml@main
+    uses: percebus/github-actions-npm/.github/workflows/npm_test.yml@main
+    with:
+      files_pattern: junit.xml
 
   testem:
     if: false # FIXME not working
