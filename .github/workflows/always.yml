@@ -14,13 +14,9 @@ jobs:
       - name: echo
         run: echo ${{ env.BUILD_ID }}
 
-  audit:
-    needs: id
-    uses: percebus/github-actions-npm/.github/workflows/npm_audit.yml@main
-
   test:
     needs: id
-    uses: percebus/github-actions-testing/.github/workflows/jest-junit.yml@main
+    uses: percebus/github-actions-npm/.github/workflows/npm_test_jest-junit.yml@main
 
   testem:
     if: false # FIXME not working
