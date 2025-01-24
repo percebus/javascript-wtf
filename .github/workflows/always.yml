@@ -21,6 +21,7 @@ jobs:
     with:
       reporter: jest-junit
       files_pattern: junit.xml
+      list-tests: all
 
   testem:
     if: false # FIXME not working
