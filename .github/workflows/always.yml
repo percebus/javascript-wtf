@@ -19,6 +19,7 @@ jobs:
     needs: id
     uses: percebus/github-actions-npm/.github/workflows/npm_test.yml@main
     with:
+      reporter: jest-junit
       files_pattern: junit.xml
 
   testem:
