@@ -74,6 +74,8 @@ jobs:
         run: npm test
       - uses: percebus/github-actions-testing/.github/actions/test-reporter@main
         with:
-          name: Unit Tests @ node:${{ matrix.node }}
+          name: Unit Tests @ node:${{ matrix.node }}@${{ matrix.os }}
           reporter: jest-junit
           files_pattern: junit.xml
+          list-suites: all
+          list-tests: failed
