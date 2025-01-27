@@ -25,7 +25,7 @@ jobs:
       files_pattern: junit.xml
 
   testem:
-    # if: false # FIXME not working
+    if: false # FIXME not working
     name: "test'em"
     needs: test
     uses: percebus/github-actions-npm/.github/workflows/npm_run_script.yml@main
