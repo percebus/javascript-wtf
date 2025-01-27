@@ -28,14 +28,9 @@ jobs:
     if: false # FIXME not working
     name: "test'em"
     needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: percebus/github-actions-common/.github/actions/checkout@main
-      - uses: percebus/github-actions-node/.github/actions/node_setup@main
-      - uses: percebus/github-actions-npm/.github/actions/npm_install@main
-
-      - name: testem:ci
-        run: npm run testem:ci:dot
+    uses: percebus/github-actions-npm/.github/workflows/npm_run_script.yml@main
+    with:
+      script: testem:ci:dot
 
 
   tests:
