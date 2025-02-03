@@ -18,11 +18,16 @@ jobs:
 
   test:
     needs: id
-    uses: percebus/github-actions-npm/.github/workflows/npm_test.yml@main
-    with:
-      reporter: jest-junit
-      list-tests: all
-      files_pattern: junit.xml
+    runs-on: ubuntu-latest
+    steps:
+      - uses: percebus/github-actions-common/.github/actions/checkout@main
+      - uses: percebus/github-actions-node/.github/actions/node_setup@main
+      - uses: percebus/github-actions-npm/.github/actions/npm_install@main
+
+      - name: npm test
+        run: npm test
+      - uses: percebus/github-actions-testing/.github/actions/junit@main
+
 
   testem:
     if: false # FIXME not working
