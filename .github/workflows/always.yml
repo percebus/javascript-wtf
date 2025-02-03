@@ -59,7 +59,7 @@ jobs:
           - 23
         os:
           - ubuntu-latest
-#         - macOS-latest # FIXME
+          - macOS-latest # FIXME
           - windows-latest
 
     runs-on: ${{ matrix.os }}
