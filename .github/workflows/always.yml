@@ -13,10 +13,13 @@ jobs:
       - name: id
         id: id
         run: echo "BUILD_ID=$(date +%s)" >> $GITHUB_ENV
+
       - name: echo
         run: echo ${{ env.BUILD_ID }}
 
+
   test:
+    name: npm test
     needs: id
     runs-on: ubuntu-latest
     steps:
@@ -41,7 +44,7 @@ jobs:
 
 
   tests:
-    # if: github.ref == 'refs/heads/main' # TODO
+    if: github.ref == 'refs/heads/main'
     needs: test
     strategy:
       fail-fast: false
@@ -59,7 +62,7 @@ jobs:
           - 23
         os:
           - ubuntu-latest
-          - macOS-latest # FIXME
+          - macOS-latest
           - windows-latest
 
     runs-on: ${{ matrix.os }}
