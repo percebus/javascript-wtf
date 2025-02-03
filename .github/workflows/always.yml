@@ -27,6 +27,8 @@ jobs:
       - name: npm test
         run: npm test
       - uses: percebus/github-actions-testing/.github/actions/junit@main
+        with:
+          list-tests: all
 
 
   testem:
@@ -39,7 +41,7 @@ jobs:
 
 
   tests:
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main' # TODO
     needs: test
     strategy:
       fail-fast: false
@@ -72,10 +74,8 @@ jobs:
 
       - name: npm test
         run: npm test
-      - uses: percebus/github-actions-testing/.github/actions/test-reporter@main
+      - uses: percebus/github-actions-testing/.github/actions/junit@main
         with:
-          name: Unit Tests @ node:${{ matrix.node }}@${{ matrix.os }}
-          reporter: jest-junit
-          files_pattern: junit.xml
-          list-suites: all
-          list-tests: failed
+          tests_name: Unit Tests @ node:${{ matrix.node }}@${{ matrix.os }}
+          summary_title: ""
+          publish-test-deltas: "false"
