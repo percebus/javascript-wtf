@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: percebus/github-actions-common/.github/actions/checkout@main
       - uses: percebus/github-actions-node/.github/actions/setup@main
-      - uses: percebus/github-actions-npm/.github/actions/npm_install@main
+      - uses: percebus/github-actions-npm/.github/actions/install@main
 
       - name: npm test
         run: npm test
@@ -38,7 +38,7 @@ jobs:
     if: false # FIXME not working
     name: "test'em"
     needs: test
-    uses: percebus/github-actions-npm/.github/workflows/npm_run_script.yml@main
+    uses: percebus/github-actions-npm/.github/workflows/run_script.yml@main
     with:
       script: testem:ci:dot
 
@@ -73,7 +73,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - uses: percebus/github-actions-npm/.github/actions/npm_install@main
+      - uses: percebus/github-actions-npm/.github/actions/install@main
 
       - name: npm test
         run: npm test
