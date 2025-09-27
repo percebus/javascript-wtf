@@ -1,6 +1,7 @@
 describe('Date', () => {
   let oDate, dateString, dateValue, milliseconds
 
+  // 1 of 28
   describe('new Date("0")', () => {
     beforeEach(() => {
       oDate = new Date('0')
@@ -19,6 +20,7 @@ describe('Date', () => {
     })
   })
 
+  // 2 of 28
   describe('new Date(0)', () => {
     beforeEach(() => {
       oDate = new Date(0)
@@ -36,6 +38,7 @@ describe('Date', () => {
     })
   })
 
+  // 3 of 28
   describe('Date.parse(0) === Date.parse("0")', () => {
     // Both parse to 946684800000 milliseconds!
     // Date.parse only operates on strings,
@@ -49,6 +52,7 @@ describe('Date', () => {
     })
   })
 
+  // 4 of 28
   describe('new Date("not a date")', () => {
     beforeEach(() => {
       oDate = new Date('not a date')
@@ -71,6 +75,7 @@ describe('Date', () => {
       expect(dateValue).toBeNaN()
     })
 
+    // 5 of 28
     describe('.getTime()', () => {
       beforeEach(() => {
         milliseconds = oDate.getTime()
@@ -93,6 +98,7 @@ describe('Date', () => {
       })
     })
 
+    // 6 of 28
     describe('.toISOString()', () => {
       // toISOString() throws a RangeError on Invalid Date objects.
       it('throws an error', () => {
@@ -100,23 +106,24 @@ describe('Date', () => {
       })
     })
 
+    // 7 of 28
     describe('.toTimeString()', () => {
-        beforeEach(() => {
-          dateString = oDate.toTimeString()
-        })
+      beforeEach(() => {
+        dateString = oDate.toTimeString()
+      })
 
-        it('does NOT equal ""', () => {
-          expect(dateString).not.toEqual("")
-        })
+      it('does NOT equal ""', () => {
+        expect(dateString).not.toEqual('')
+      })
 
-        it('is NOT null', () => {
-          expect(dateString).not.toBe(null)
-        })
+      it('is NOT null', () => {
+        expect(dateString).not.toBe(null)
+      })
 
-        // toTimeString() returns the string "Invalid Date" for invalid dates. 🫠
-        it('equals "Invalid Date"', () => {
-          expect(dateString).toEqual("Invalid Date")
-        })
+      // toTimeString() returns the string "Invalid Date" for invalid dates. 🫠
+      it('equals "Invalid Date"', () => {
+        expect(dateString).toEqual('Invalid Date')
+      })
     })
   })
 })
