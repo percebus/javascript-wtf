@@ -39,3 +39,8 @@ $> npm run testem:ci
 ### Kyle Simpsons
 
 See his [What the... JavaScript?](https://www.youtube.com/watch?v=2pL28CcEijU) lecture, from [forwardJS.com](http://forwardjs.com/)
+
+## References
+
+- [`new Date("wtf")`](https://jsdate.wtf/)
+  - [*"I hate JavaScript"*, Theo - t3.gg](https://www.youtube.com/watch?v=7bvBVBy_CrM)

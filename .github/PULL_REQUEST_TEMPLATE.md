@@ -1,11 +1,13 @@
-# Summary
+# Change
+
+## Issues
+
+- #{FIXME}
+
+## Summary
 
 {FIXME}
 
-# Details
-
-{FIXME}
-
-# Changes in action
+## Changes in action
 
 {FIXME}
