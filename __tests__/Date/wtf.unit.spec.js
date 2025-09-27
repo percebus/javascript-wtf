@@ -99,5 +99,24 @@ describe('Date', () => {
         expect(() => oDate.toISOString()).toThrow()
       })
     })
+
+    describe('.toTimeString()', () => {
+        beforeEach(() => {
+          dateString = oDate.toTimeString()
+        })
+
+        it('does NOT equal ""', () => {
+          expect(dateString).not.toEqual("")
+        })
+
+        it('is NOT null', () => {
+          expect(dateString).not.toBe(null)
+        })
+
+        // toTimeString() returns the string "Invalid Date" for invalid dates. 🫠
+        it('equals "Invalid Date"', () => {
+          expect(dateString).toEqual("Invalid Date")
+        })
+    })
   })
 })
