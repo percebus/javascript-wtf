@@ -283,4 +283,89 @@ describe('Date', () => {
       })
     })
   })
+
+  // 16 of 28
+  describe('new Date("12.-1")', () => {
+    beforeEach(() => {
+      oDate = new Date('12.-1')
+      dateString = oDate.toISOString()
+    })
+
+    it('does NOT equal "2012-01-01T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2012-01-01T00:00:00.000Z')
+    })
+
+    it('does NOT equal "2001-01-01T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2001-01-01T00:00:00.000Z')
+    })
+
+    xit('ignores the "-", interpreting it like "12.1", resulting in "2001-12-01T00:00:00.000Z"', () => {
+      // The dash here is ignored, so this is interpreted the same as "12.1".
+      expect(dateString).toEqual('2001-12-01T00:00:00.000Z')
+    })
+  })
+
+  // 17 of 28
+  describe('new Date("perhaps 1")', () => {
+    beforeEach(() => {
+      oDate = new Date('perhaps 1')
+      dateString = oDate.toISOString()
+    })
+
+    it('does NOT equal "1970-01-01T00:00:01.000Z"', () => {
+      expect(dateString).not.toEqual('1970-01-01T00:00:01.000Z')
+    })
+
+    xit('ignores leading text. Finding "1" and parsing it as January. Resulting in "2001-01-01T00:00:00.000Z"', () => {
+      // Leading text is always ignored!
+      // It finds the "1" and parses it as the month January.
+      expect(dateString).toEqual('2001-01-01T00:00:00.000Z')
+    })
+  })
+
+  // 18 of 28
+  describe('new Date("perhaps")', () => {
+    beforeEach(() => {
+      // But you can't just have text!
+      // It needs a number to parse, so this is Invalid Date.
+      // It's equivalent to new Date("").
+      oDate = new Date('perhaps')
+      dateString = oDate.toTimeString()
+    })
+
+    describe('.toTimeString()', () => {
+      it('equals "Invalid Date"', () => {
+        expect(dateString).toEqual('Invalid Date')
+      })
+    })
+
+    describe('.toISOString()', () => {
+      it('throws', () => {
+        expect(() => oDate.toISOString()).toThrow()
+      })
+    })
+  })
+
+  // 19 of 28
+  describe('new Date("maybe 1")', () => {
+    beforeEach(() => {
+      oDate = new Date('maybe 1')
+      dateString = oDate.toISOString()
+    })
+
+    it('does NOT equal "2001-05-01T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2001-05-01T00:00:00.000Z')
+    })
+
+    it('does NOT equal "2001-01-01T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2001-01-01T00:00:00.000Z')
+    })
+
+    xit('parses "maybe" as "may"! resulting in "2001-05-01T00:00:00.000Z"', () => {
+      // "may" in "maybe" is parsed as the month May!
+      // And for some reason this expression cares about your local timezone,
+      // which happens to be BST for me right now.
+      expect(dateString).toEqual('2001-05-01T00:00:00.000Z')
+    })
+  })
 })
