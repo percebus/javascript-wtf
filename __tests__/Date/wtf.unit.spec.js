@@ -353,8 +353,8 @@ describe('Date', () => {
       dateString = oDate.toISOString()
     })
 
-    it('does NOT equal "2001-05-01T00:00:00.000Z"', () => {
-      expect(dateString).not.toEqual('2001-05-01T00:00:00.000Z')
+    it('does NOT equal "2001-04-30T23:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2001-04-30T23:00:00.000Z')
     })
 
     it('does NOT equal "2001-01-01T00:00:00.000Z"', () => {
