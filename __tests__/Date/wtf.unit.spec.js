@@ -448,8 +448,31 @@ describe('Date', () => {
       expect(dateString).not.toEqual('2001-05-04T00:00:00.000Z')
     })
 
-    it('parses UTC+1:59 as "2001-05-04T00:00:00.000", resulting in "2001-05-03T23:01:00.000Z"', () => {
-      expect(dateString).toEqual('2001-05-03T23:01:00.000Z')
+    it('parses UTC+1:59 as "2001-05-04T00:00:00.000", resulting in "2001-05-03T22:01:00.000Z"', () => {
+      expect(dateString).toEqual('2001-05-03T22:01:00.000Z')
+    })
+  })
+
+  // 24 of 28
+  describe('new Date("May 4 UTC+1:60")', () => {
+    beforeEach(() => {
+      // Until it doesn't!
+      // 60 is being parsed as the year here,
+      // UTC+1 is the timezone.
+      oDate = new Date('May 4 UTC+1:60')
+      dateString = oDate.toISOString()
+    })
+
+    it('does NOT equal "2001-05-04T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2001-05-04T00:00:00.000Z')
+    })
+
+    it('does NOT equal "2001-05-03T22:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2001-05-03T22:00:00.000Z')
+    })
+
+    it('parses UTC+1:60 as "UTC+1" AND "year 60"!, resulting in "1960-05-03T23:00:00.000Z"', () => {
+      expect(dateString).toEqual('1960-05-03T23:00:00.000Z')
     })
   })
 })
