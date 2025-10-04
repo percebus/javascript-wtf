@@ -1,6 +1,7 @@
 // SRC: https://jsdate.wtf/
 describe('Date', () => {
   let oDate, dateString, dateValue, milliseconds
+  const _ = require('lodash')
 
   // 1 of 28
   describe('new Date("0")', () => {
@@ -15,7 +16,7 @@ describe('Date', () => {
 
     // FIXME? it matches in CI, but not in my local.
     // Is it because I am on GMT-6?
-    xit('interprets "0" as the year 2000, not as a timestamp!', () => {
+    xit('interprets "0" as the year 2000, not as a timestamp! parsing it as "2000-01-01T06:00:00.000"', () => {
       // The string "0" is interpreted as the year 2000, not as a timestamp!
       expect(dateString).not.toEqual('2000-01-01T00:00:00.000Z') // According to https://jsdate.wtf
       expect(dateString).toEqual('2000-01-01T06:00:00.000Z')
@@ -75,6 +76,10 @@ describe('Date', () => {
       expect(Number.isNaN(dateValue)).not.toBe(false)
       expect(Number.isNaN(dateValue)).toBe(true)
       expect(dateValue).toBeNaN()
+    })
+
+    it('is still _.isDate() tho', () => {
+      expect(_.isDate(oDate)).toBe(true)
     })
 
     // 5 of 28
@@ -146,7 +151,7 @@ describe('Date', () => {
 
     // FIXME? it matches in CI, but not in my local.
     // Is it because I am on GMT-6?
-    xit('equals to "2001-01-01T00:00:00.000Z"', () => {
+    xit('equals to "2001-01-01T00:00:00.000"', () => {
       // Unlike "0", "1" is interpreted as a month,
       // and the year defaults to 2001 for some reason.
       expect(dateString).toEqual('2001-01-01T00:00:00.000Z')
@@ -168,7 +173,7 @@ describe('Date', () => {
       expect(dateString).not.toEqual('2001-01-02T00:00:00.000Z')
     })
 
-    xit('equals "2001-02-01T00:00:00.000Z"', () => {
+    xit('equals "2001-02-01T00:00:00.000"', () => {
       expect(dateString).toEqual('2001-02-01T00:00:00.000Z')
     })
   })
@@ -188,7 +193,7 @@ describe('Date', () => {
       expect(dateString).not.toEqual('2001-01-12T00:00:00.000Z')
     })
 
-    xit('equals "2001-12-01T00:00:00.000Z"', () => {
+    xit('equals "2001-12-01T00:00:00.000"', () => {
       // Also works for December.
       expect(dateString).toEqual('2001-12-01T00:00:00.000Z')
     })
@@ -257,7 +262,7 @@ describe('Date', () => {
       expect(dateString).not.toEqual('2012-01-01T00:00:00.000Z')
     })
 
-    xit('equals "2001-12-01T00:00:00.000Z"', () => {
+    xit('equals "2001-12-01T00:00:00.000"', () => {
       // "12.1" is interpreted as the date December 1st,
       // and as before for dates with no year the default is 2001 because of course.
       expect(dateString).toEqual('2001-12-01T00:00:00.000Z')
@@ -299,7 +304,7 @@ describe('Date', () => {
       expect(dateString).not.toEqual('2001-01-01T00:00:00.000Z')
     })
 
-    xit('ignores the "-", interpreting it like "12.1", resulting in "2001-12-01T00:00:00.000Z"', () => {
+    xit('ignores the "-", interpreting it like "12.1", resulting in "2001-12-01T00:00:00.000"', () => {
       // The dash here is ignored, so this is interpreted the same as "12.1".
       expect(dateString).toEqual('2001-12-01T00:00:00.000Z')
     })
@@ -316,7 +321,7 @@ describe('Date', () => {
       expect(dateString).not.toEqual('1970-01-01T00:00:01.000Z')
     })
 
-    xit('ignores leading text. Finding "1" and parsing it as January. Resulting in "2001-01-01T00:00:00.000Z"', () => {
+    xit('ignores leading text. Finding "1" and parsing it as January. Resulting in "2001-01-01T00:00:00.000"', () => {
       // Leading text is always ignored!
       // It finds the "1" and parses it as the month January.
       expect(dateString).toEqual('2001-01-01T00:00:00.000Z')
@@ -365,7 +370,7 @@ describe('Date', () => {
       expect(dateString).not.toEqual('2001-01-01T00:00:00.000Z')
     })
 
-    xit('parses "maybe" as "may"! resulting in "2001-05-01T00:00:00.000Z"', () => {
+    xit('parses "maybe" as "may"! resulting in "2001-05-01T00:00:00.000"', () => {
       expect(dateString).toEqual('2001-05-01T00:00:00.000Z')
     })
   })
@@ -513,7 +518,7 @@ describe('Date', () => {
       expect(dateString).not.toEqual('2010-01-01T00:00:00.000Z')
     })
 
-    xit('ignores text in parentheses, parsing this as "1990", resulting in "1990-01-01T00:00:00.000Z"', () => {
+    xit('ignores text in parentheses, parsing this as "1990", resulting in "1990-01-01T00:00:00.000"', () => {
       expect(dateString).toEqual('1990-01-01T00:00:00.000Z')
     })
   })
@@ -534,8 +539,26 @@ describe('Date', () => {
       expect(dateString).not.toEqual('2000-01-01T00:00:00.000Z')
     })
 
-    xit('ignores text in parentheses, parsing this as "2010", resulting in "2010-01-01T00:00:00.000Z"', () => {
+    xit('ignores text in parentheses, parsing this as "2010", resulting in "2010-01-01T00:00:00.000"', () => {
       expect(dateString).toEqual('2010-01-01T00:00:00.000Z')
+    })
+  })
+
+  // 28 of 28
+  describe('new Date(-[])', () => {
+    beforeEach(() => {
+      // -[] is coerced to 0,
+      // which is interpreted as milliseconds since the Unix epoch (Jan 1, 1970).
+      oDate = new Date(-[])
+      dateString = oDate.toISOString()
+    })
+
+    it('does NOT equal "2000-01-01T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2000-01-01T00:00:00.000Z')
+    })
+
+    it('coerces -[] as 0, parsing it to "1970-01-01T00:00:00.000Z"', () => {
+      expect(dateString).toEqual('1970-01-01T00:00:00.000Z')
     })
   })
 })
