@@ -349,6 +349,9 @@ describe('Date', () => {
   // 19 of 28
   describe('new Date("maybe 1")', () => {
     beforeEach(() => {
+      // "may" in "maybe" is parsed as the month May!
+      // And for some reason this expression cares about your local timezone,
+      // which happens to be BST for me right now.
       oDate = new Date('maybe 1')
       dateString = oDate.toISOString()
     })
@@ -363,10 +366,73 @@ describe('Date', () => {
     })
 
     xit('parses "maybe" as "may"! resulting in "2001-05-01T00:00:00.000Z"', () => {
-      // "may" in "maybe" is parsed as the month May!
-      // And for some reason this expression cares about your local timezone,
-      // which happens to be BST for me right now.
       expect(dateString).toEqual('2001-05-01T00:00:00.000Z')
+    })
+  })
+
+  // 20 of 28
+  describe('new Date("fourth of may 2010")', () => {
+    beforeEach(() => {
+      // "fourth of" is ignored,
+      // this is just parsing "may 2010"
+      // and again local timezone is important.
+      oDate = new Date('fourth of may 2010')
+      dateString = oDate.toISOString()
+    })
+
+    it('does NOT equal "2010-05-01T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2010-05-01T00:00:00.000Z')
+    })
+
+    it('does NOT equal "2010-05-04T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2010-05-04T00:00:00.000Z')
+    })
+
+    xit('parses "may 2010" as "2010-05-01T00:00:00.000Z", ignoring "fourth of"', () => {
+      expect(dateString).toEqual('2010-05-01T00:00:00.000Z')
+    })
+  })
+
+  // 21 of 28
+  describe('new Date("May 4 UTC")', () => {
+    beforeEach(() => {
+      // UTC is correctly parsed as a timezone.
+      oDate = new Date('May 4 UTC')
+      dateString = oDate.toISOString()
+    })
+
+    it('does NOT equal "2010-04-30T23:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2010-04-30T23:00:00.000Z')
+    })
+
+    it('does NOT equal "2010-05-01T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2010-05-01T00:00:00.000Z')
+    })
+
+    it('parses UTC as "2001-05-04T00:00:00.000Z"', () => {
+      expect(dateString).toEqual('2001-05-04T00:00:00.000Z')
+    })
+  })
+
+  // 22 of 28
+  describe('new Date("May 4 UTC+1")', () => {
+    beforeEach(() => {
+      // You can add modifiers to timezones and it works as you would expect.
+      oDate = new Date('May 4 UTC+1')
+      dateString = oDate.toISOString()
+    })
+
+    it('does NOT equal "2001-05-04T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2001-05-04T00:00:00.000Z')
+    })
+
+    it('does NOT equal "2010-05-01T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2010-05-01T00:00:00.000Z')
+    })
+
+    it('parses UTC+1 as "2001-05-04T00:00:00.000", resulting in "2001-05-03T23:00:00.000Z"', () => {
+      // 05-04T00 @ UTC+1 is 1 hr ahead: 05-03T23 @ UTC
+      expect(dateString).toEqual('2001-05-03T23:00:00.000Z')
     })
   })
 })
