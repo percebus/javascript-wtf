@@ -517,4 +517,25 @@ describe('Date', () => {
       expect(dateString).toEqual('1990-01-01T00:00:00.000Z')
     })
   })
+
+  // 27 of 28
+  describe('new Date("(1990) 2010")', () => {
+    beforeEach(() => {
+      // No matter where it is.
+      oDate = new Date('(1990) 2010')
+      dateString = oDate.toISOString()
+    })
+
+    it('does NOT equal "1990-01-01T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('1990-01-01T00:00:00.000Z')
+    })
+
+    it('does NOT equal "2000-01-01T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2000-01-01T00:00:00.000Z')
+    })
+
+    xit('ignores text in parentheses, parsing this as "2010", resulting in "2010-01-01T00:00:00.000Z"', () => {
+      expect(dateString).toEqual('2010-01-01T00:00:00.000Z')
+    })
+  })
 })
