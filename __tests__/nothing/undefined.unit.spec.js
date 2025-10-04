@@ -1,13 +1,15 @@
 describe('undefined', () => {
   'use strict'
 
-  it("is typeof 'undefined", () => {
+  it("is typeof 'undefined'", () => {
     expect(typeof (undefined)).toEqual('undefined')
   })
 
   describe('Number', () => {
-    it('isNaN', () => {
-      expect(isNaN(undefined)).toBe(true)
+    describe('isNaN(undefined)', () => {
+      it('is', () => {
+        expect(isNaN(undefined)).toBe(true)
+      })
     })
   })
 
