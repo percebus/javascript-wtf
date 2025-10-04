@@ -475,4 +475,27 @@ describe('Date', () => {
       expect(dateString).toEqual('1960-05-03T23:00:00.000Z')
     })
   })
+
+  // 25 of 28
+  describe('new Date("1990 2010")', () => {
+    beforeEach(() => {
+      // No tricks here, just a plain ol' Invalid Date.
+      oDate = new Date('1990 2010')
+      dateString = oDate.toISOString()
+    })
+
+    describe('.toTimeString()', () => {
+      it('equals "Invalid Date"', () => {
+        expect(dateString).toEqual('Invalid Date')
+      })
+    })
+
+    describe('.toISOString()', () => {
+      it('throws', () => {
+        expect(() => oDate.toISOString()).toThrow()
+      })
+    })
+  })
+
+  // 26 of 28
 })
