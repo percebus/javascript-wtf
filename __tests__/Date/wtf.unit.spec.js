@@ -396,7 +396,8 @@ describe('Date', () => {
       dateString = oDate.toISOString()
     })
 
-    it('does NOT equal "2010-05-01T00:00:00.000Z"', () => {
+    // Works only in non-UTC timezones.
+    xit('does NOT equal "2010-05-01T00:00:00.000Z"', () => {
       expect(dateString).not.toEqual('2010-05-01T00:00:00.000Z')
     })
 
@@ -404,7 +405,7 @@ describe('Date', () => {
       expect(dateString).not.toEqual('2010-05-04T00:00:00.000Z')
     })
 
-    it('parses "may 2010" as "2010-05-01T00:00:00.000Z", ignoring "fourth of"', () => {
+    it('ignores "fourth of", parsing "may 2010" as "2010-05-01T00:00:00.000"', () => {
       // expect(dateString).toEqual('2010-05-01T00:00:00.000Z')
       const expectedDate = new Date('2010-05-01T00:00:00.000')
       expect(oDate.getTime()).toEqual(expectedDate.getTime())
