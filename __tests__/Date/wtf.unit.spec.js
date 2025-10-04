@@ -435,4 +435,21 @@ describe('Date', () => {
       expect(dateString).toEqual('2001-05-03T23:00:00.000Z')
     })
   })
+
+  // 23 of 28
+  describe('new Date("May 4 UTC+1:59")', () => {
+    beforeEach(() => {
+      // It also supports minutes!
+      oDate = new Date('May 4 UTC+1:59')
+      dateString = oDate.toISOString()
+    })
+
+    it('does NOT equal "2001-05-04T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2001-05-04T00:00:00.000Z')
+    })
+
+    it('parses UTC+1:59 as "2001-05-04T00:00:00.000", resulting in "2001-05-03T23:01:00.000Z"', () => {
+      expect(dateString).toEqual('2001-05-03T23:01:00.000Z')
+    })
+  })
 })
