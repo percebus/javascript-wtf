@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 // SRC: https://jsdate.wtf/
 describe('Date', () => {
   'use strict'
@@ -447,24 +451,26 @@ describe('Date', () => {
       dateISOString = oDate.toISOString()
     })
 
-    describe('.toISOString()', () => {
-      beforeEach(() => {
-        // NOTE: FireFox throws here: "Invalid Date".
-        dateISOString = oDate.toISOString()
-      })
+    if (!isFireFox()) {
+      describe('.toISOString()', () => {
+        beforeEach(() => {
+          // NOTE: FireFox throws here: "Invalid Date".
+          dateISOString = oDate.toISOString()
+        })
 
-      it('does NOT equal "2010-04-30T23:00:00.000Z"', () => {
-        expect(dateISOString).not.toEqual('2010-04-30T23:00:00.000Z')
-      })
+        it('does NOT equal "2010-04-30T23:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2010-04-30T23:00:00.000Z')
+        })
 
-      it('does NOT equal "2010-05-01T00:00:00.000Z"', () => {
-        expect(dateISOString).not.toEqual('2010-05-01T00:00:00.000Z')
-      })
+        it('does NOT equal "2010-05-01T00:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2010-05-01T00:00:00.000Z')
+        })
 
-      it('parses UTC as "2001-05-04T00:00:00.000Z"', () => {
-        expect(dateISOString).toEqual('2001-05-04T00:00:00.000Z')
+        it('parses UTC as "2001-05-04T00:00:00.000Z"', () => {
+          expect(dateISOString).toEqual('2001-05-04T00:00:00.000Z')
+        })
       })
-    })
+    }
   })
 
   // 22 of 28
