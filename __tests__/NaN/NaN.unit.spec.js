@@ -8,7 +8,7 @@ describe('NaN', () => {
 
     // except
     it("is typeof 'number'", () => {
-      expect(typeof (NaN)).toBe('number') // [N]ot[a][N]umber >is< a number o.0
+      expect(typeof (NaN)).toBe('number') // [N]ot[a][N]umber >is< ALSO a number o.0
     })
   })
 

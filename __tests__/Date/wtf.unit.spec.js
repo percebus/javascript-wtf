@@ -1,7 +1,8 @@
 // SRC: https://jsdate.wtf/
 describe('Date', () => {
+  'use strict'
+
   let oDate, dateString, dateValue, milliseconds
-  const _ = require('lodash')
 
   // 1 of 28
   describe('new Date("0")', () => {
