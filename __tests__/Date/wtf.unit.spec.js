@@ -421,7 +421,8 @@ describe('Date', () => {
         dateISOString = oDate.toISOString()
       })
 
-      it('does NOT equal "2010-05-01T00:00:00.000"', () => {
+      // Only works in Non-UTC
+      xit('does NOT equal "2010-05-01T00:00:00.000"', () => {
         const expectedDate = new Date('2010-05-01T00:00:00.000')
         expect(oDate.getTime()).not.toEqual(expectedDate.getTime())
       })
