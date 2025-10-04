@@ -481,7 +481,7 @@ describe('Date', () => {
     beforeEach(() => {
       // No tricks here, just a plain ol' Invalid Date.
       oDate = new Date('1990 2010')
-      dateString = oDate.toISOString()
+      dateString = oDate.toTimeString()
     })
 
     describe('.toTimeString()', () => {
@@ -498,4 +498,23 @@ describe('Date', () => {
   })
 
   // 26 of 28
+  describe('new Date("1990 (2010)")', () => {
+    beforeEach(() => {
+      // For some reason, parenthesised text is ignored.
+      oDate = new Date('1990 (2010)')
+      dateString = oDate.toISOString()
+    })
+
+    it('does NOT equal "2000-01-01T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2000-01-01T00:00:00.000Z')
+    })
+
+    it('does NOT equal "2010-01-01T00:00:00.000Z"', () => {
+      expect(dateString).not.toEqual('2010-01-01T00:00:00.000Z')
+    })
+
+    xit('ignores text in parentheses, parsing this as "1990", resulting in "1990-01-01T00:00:00.000Z"', () => {
+      expect(dateString).toEqual('1990-01-01T00:00:00.000Z')
+    })
+  })
 })
