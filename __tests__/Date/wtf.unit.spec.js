@@ -263,9 +263,17 @@ describe('Date', () => {
     })
 
     if (isFireFox()) { // v 143.0
-      describe('.toISOString() @ FireFox', () => {
-        it('throws', () => {
-          expect(() => oDate.toISOString()).toThrow()
+      describe('@FireFox', () => {
+        describe('.toISOString()', () => {
+          it('throws', () => {
+            expect(() => oDate.toISOString()).toThrow()
+          })
+        })
+
+        describe('.toTimeString()', () => {
+          it('equals "Invalid Date"', () => {
+            expect(dateTimeString).toEqual('Invalid Date')
+          })
         })
       })
     } else {
@@ -321,9 +329,17 @@ describe('Date', () => {
     })
 
     if (isFireFox()) { // v 143.0
-      describe('.toISOString() @ FireFox', () => {
-        it('throws', () => {
-          expect(() => oDate.toISOString()).toThrow()
+      describe('@FireFox', () => {
+        describe('.toISOString()', () => {
+          it('throws', () => {
+            expect(() => oDate.toISOString()).toThrow()
+          })
+        })
+
+        describe('.toTimeString()', () => {
+          it('equals "Invalid Date"', () => {
+            expect(dateTimeString).toEqual('Invalid Date')
+          })
         })
       })
     } else {
@@ -404,9 +420,17 @@ describe('Date', () => {
     })
 
     if (isFireFox()) { // v 143.0
-      describe('.toISOString() @ FireFox', () => {
-        it('throws', () => {
-          expect(() => oDate.toISOString()).toThrow()
+      describe('@FireFox', () => {
+        describe('.toISOString()', () => {
+          it('throws', () => {
+            expect(() => oDate.toISOString()).toThrow()
+          })
+        })
+
+        describe('.toTimeString()', () => {
+          it('equals "Invalid Date"', () => {
+            expect(dateTimeString).toEqual('Invalid Date')
+          })
         })
       })
     } else {
@@ -444,9 +468,17 @@ describe('Date', () => {
     })
 
     if (isFireFox()) { // v 143.0
-      describe('.toISOString() @ FireFox', () => {
-        it('throws', () => {
-          expect(() => oDate.toISOString()).toThrow()
+      describe('@FireFox', () => {
+        describe('.toISOString()', () => {
+          it('throws', () => {
+            expect(() => oDate.toISOString()).toThrow()
+          })
+        })
+
+        describe('.toTimeString()', () => {
+          it('equals "Invalid Date"', () => {
+            expect(dateTimeString).toEqual('Invalid Date')
+          })
         })
       })
     } else {
@@ -483,9 +515,17 @@ describe('Date', () => {
     })
 
     if (isFireFox()) { // v 143.0
-      describe('.toISOString() @ FireFox', () => {
-        it('throws', () => {
-          expect(() => oDate.toISOString()).toThrow()
+      describe('@FireFox', () => {
+        describe('.toISOString()', () => {
+          it('throws', () => {
+            expect(() => oDate.toISOString()).toThrow()
+          })
+        })
+
+        describe('.toTimeString()', () => {
+          it('equals "Invalid Date"', () => {
+            expect(dateTimeString).toEqual('Invalid Date')
+          })
         })
       })
     } else {
@@ -518,9 +558,17 @@ describe('Date', () => {
     })
 
     if (isFireFox()) { // v 143.0
-      describe('.toISOString() @ FireFox', () => {
-        it('throws', () => {
-          expect(() => oDate.toISOString()).toThrow()
+      describe('@FireFox', () => {
+        describe('.toISOString()', () => {
+          it('throws', () => {
+            expect(() => oDate.toISOString()).toThrow()
+          })
+        })
+
+        describe('.toTimeString()', () => {
+          it('equals "Invalid Date"', () => {
+            expect(dateTimeString).toEqual('Invalid Date')
+          })
         })
       })
     } else {
@@ -554,9 +602,17 @@ describe('Date', () => {
     })
 
     if (isFireFox()) { // v 143.0
-      describe('.toISOString() @ FireFox', () => {
-        it('throws', () => {
-          expect(() => oDate.toISOString()).toThrow()
+      describe('@FireFox', () => {
+        describe('.toISOString()', () => {
+          it('throws', () => {
+            expect(() => oDate.toISOString()).toThrow()
+          })
+        })
+
+        describe('.toTimeString()', () => {
+          it('equals "Invalid Date"', () => {
+            expect(dateTimeString).toEqual('Invalid Date')
+          })
         })
       })
     } else {
