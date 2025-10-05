@@ -480,7 +480,6 @@ describe('Date', () => {
     beforeEach(() => {
       // UTC is correctly parsed as a timezone.
       oDate = new Date('May 4 UTC')
-      dateISOString = oDate.toISOString()
     })
 
     if (isFireFox()) {
@@ -587,32 +586,24 @@ describe('Date', () => {
       oDate = new Date('May 4 UTC+1:60')
     })
 
-    if (isFireFox()) {
-      describe('.toISOString()', () => {
-        it('throws', () => {
-          expect(() => oDate.toISOString()).toThrow()
-        })
+    describe('.toISOString()', () => {
+      beforeEach(() => {
+        // NOTE: FireFox throws here: "Invalid Date".
+        dateISOString = oDate.toISOString()
       })
-    } else {
-      describe('.toISOString()', () => {
-        beforeEach(() => {
-          // NOTE: FireFox throws here: "Invalid Date".
-          dateISOString = oDate.toISOString()
-        })
 
-        it('does NOT equal "2001-05-04T00:00:00.000Z"', () => {
-          expect(dateISOString).not.toEqual('2001-05-04T00:00:00.000Z')
-        })
-
-        it('does NOT equal "2001-05-03T22:00:00.000Z"', () => {
-          expect(dateISOString).not.toEqual('2001-05-03T22:00:00.000Z')
-        })
-
-        it('parses UTC+1:60 as "UTC+1" AND "year 60"!, resulting in "1960-05-03T23:00:00.000Z"', () => {
-          expect(dateISOString).toEqual('1960-05-03T23:00:00.000Z')
-        })
+      it('does NOT equal "2001-05-04T00:00:00.000Z"', () => {
+        expect(dateISOString).not.toEqual('2001-05-04T00:00:00.000Z')
       })
-    }
+
+      it('does NOT equal "2001-05-03T22:00:00.000Z"', () => {
+        expect(dateISOString).not.toEqual('2001-05-03T22:00:00.000Z')
+      })
+
+      it('parses UTC+1:60 as "UTC+1" AND "year 60"!, resulting in "1960-05-03T23:00:00.000Z"', () => {
+        expect(dateISOString).toEqual('1960-05-03T23:00:00.000Z')
+      })
+    })
   })
 
   // 25 of 28
