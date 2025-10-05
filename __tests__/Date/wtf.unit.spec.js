@@ -83,7 +83,7 @@ describe('Date', () => {
       expect(dateValue).toBeNaN()
     })
 
-    it('is still _.isDate() tho', () => {
+    it('_.isDate tho', () => {
       expect(_.isDate(oDate)).toBe(true)
     })
 

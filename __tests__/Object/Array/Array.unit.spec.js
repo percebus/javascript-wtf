@@ -1,6 +1,29 @@
 describe('Array', () => {
   'use strict'
 
+  let result
+  describe('[] + []', () => {
+    beforeEach(() => {
+      result = [] + []
+    })
+
+    it("equals ''", () => {
+      expect(result).toEqual('')
+    })
+
+    it("is typeof 'string'", () => {
+      expect(typeof (result)).toBe('string')
+    })
+  })
+
+  describe('[] !== []', () => {
+    it('is true', () => {
+      /* eslint-disable no-self-compare */
+      expect([] !== []).toBe(true)
+      /* eslint-enable no-self-compare */
+    })
+  })
+
   describe('[]', () => {
     /* eslint-disable no-array-constructor */
     const tests = {

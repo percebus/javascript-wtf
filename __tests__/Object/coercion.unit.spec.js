@@ -3,13 +3,6 @@ describe('Object', () => {
 
   describe('coercion', () => { // SRC: https://www.youtube.com/watch?v=2pL28CcEijU&t=383s
     let result
-    describe('[] !== []', () => {
-      it('is true', () => {
-        /* eslint-disable no-self-compare */
-        expect([] !== []).toBe(true)
-        /* eslint-enable no-self-compare */
-      })
-    })
 
     describe('[] + {}', () => {
       beforeEach(() => {
@@ -18,6 +11,9 @@ describe('Object', () => {
 
       it("equals '[object Object]'", () => {
         expect(result).toEqual('[object Object]')
+      })
+
+      it('is typeof string', () => {
         expect(typeof (result)).toBe('string')
       })
     })
