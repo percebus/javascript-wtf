@@ -262,28 +262,36 @@ describe('Date', () => {
       oDate = new Date('12.1')
     })
 
-    describe('.toISOString()', () => {
-      beforeEach(() => {
-        // NOTE: FireFox throws here: "Invalid Date".
-        dateISOString = oDate.toISOString()
+    if (isFireFox()) {
+      describe('.toISOString()', () => {
+        it('throws', () => {
+          expect(() => oDate.toISOString()).toThrow()
+        })
       })
+    } else {
+      describe('.toISOString()', () => {
+        beforeEach(() => {
+          // NOTE: FireFox throws here: "Invalid Date".
+          dateISOString = oDate.toISOString()
+        })
 
-      it('does NOT equal "2001-01-01T00:00:00.000Z"', () => {
-        expect(dateISOString).not.toEqual('2001-01-01T00:00:00.000Z')
-      })
+        it('does NOT equal "2001-01-01T00:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2001-01-01T00:00:00.000Z')
+        })
 
-      it('does NOT equal "2012-01-01T00:00:00.000Z"', () => {
-        expect(dateISOString).not.toEqual('2012-01-01T00:00:00.000Z')
-      })
+        it('does NOT equal "2012-01-01T00:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2012-01-01T00:00:00.000Z')
+        })
 
-      it('equals "2001-12-01T00:00:00.000"', () => {
-        // "12.1" is interpreted as the date December 1st,
-        // and as before for dates with no year the default is 2001 because of course.
-        // expect(dateString).toEqual('2001-12-01T00:00:00.000Z')
-        const expectedDate = new Date('2001-12-01T00:00:00.000')
-        expect(oDate.getTime()).toEqual(expectedDate.getTime())
+        it('equals "2001-12-01T00:00:00.000"', () => {
+          // "12.1" is interpreted as the date December 1st,
+          // and as before for dates with no year the default is 2001 because of course.
+          // expect(dateString).toEqual('2001-12-01T00:00:00.000Z')
+          const expectedDate = new Date('2001-12-01T00:00:00.000')
+          expect(oDate.getTime()).toEqual(expectedDate.getTime())
+        })
       })
-    })
+    }
   })
 
   // 15 of 28
@@ -312,27 +320,35 @@ describe('Date', () => {
       oDate = new Date('12.-1')
     })
 
-    describe('.toISOString()', () => {
-      beforeEach(() => {
-        // NOTE: FireFox throws here "Invalid Date".
-        dateISOString = oDate.toISOString()
+    if (isFireFox()) {
+      describe('.toISOString()', () => {
+        it('throws', () => {
+          expect(() => oDate.toISOString()).toThrow()
+        })
       })
+    } else {
+      describe('.toISOString()', () => {
+        beforeEach(() => {
+          // NOTE: FireFox throws here "Invalid Date".
+          dateISOString = oDate.toISOString()
+        })
 
-      it('does NOT equal "2012-01-01T00:00:00.000Z"', () => {
-        expect(dateISOString).not.toEqual('2012-01-01T00:00:00.000Z')
-      })
+        it('does NOT equal "2012-01-01T00:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2012-01-01T00:00:00.000Z')
+        })
 
-      it('does NOT equal "2001-01-01T00:00:00.000Z"', () => {
-        expect(dateISOString).not.toEqual('2001-01-01T00:00:00.000Z')
-      })
+        it('does NOT equal "2001-01-01T00:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2001-01-01T00:00:00.000Z')
+        })
 
-      it('ignores the "-", interpreting it like "12.1", resulting in "2001-12-01T00:00:00.000"', () => {
-        // The dash here is ignored, so this is interpreted the same as "12.1".
-        // expect(dateString).toEqual('2001-12-01T00:00:00.000Z')
-        const expectedDate = new Date('2001-12-01T00:00:00.000')
-        expect(oDate.getTime()).toEqual(expectedDate.getTime())
+        it('ignores the "-", interpreting it like "12.1", resulting in "2001-12-01T00:00:00.000"', () => {
+          // The dash here is ignored, so this is interpreted the same as "12.1".
+          // expect(dateString).toEqual('2001-12-01T00:00:00.000Z')
+          const expectedDate = new Date('2001-12-01T00:00:00.000')
+          expect(oDate.getTime()).toEqual(expectedDate.getTime())
+        })
       })
-    })
+    }
   })
 
   // 17 of 28
@@ -387,27 +403,35 @@ describe('Date', () => {
       oDate = new Date('maybe 1')
     })
 
-    describe('.toISOString()', () => {
-      beforeEach(() => {
-        // NOTE: FireFox throws here: "Invalid Date".
-        dateISOString = oDate.toISOString()
+    if (isFireFox()) {
+      describe('.toISOString()', () => {
+        it('throws', () => {
+          expect(() => oDate.toISOString()).toThrow()
+        })
       })
+    } else {
+      describe('.toISOString()', () => {
+        beforeEach(() => {
+          // NOTE: FireFox throws here: "Invalid Date".
+          dateISOString = oDate.toISOString()
+        })
 
-      // WARNING: The quiz says this is the correct answer!
-      it('does NOT equal "2001-04-30T23:00:00.000Z"', () => {
-        expect(dateISOString).not.toEqual('2001-04-30T23:00:00.000Z')
-      })
+        // WARNING: The quiz says this is the correct answer!
+        it('does NOT equal "2001-04-30T23:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2001-04-30T23:00:00.000Z')
+        })
 
-      it('does NOT equal "2001-01-01T00:00:00.000Z"', () => {
-        expect(dateISOString).not.toEqual('2001-01-01T00:00:00.000Z')
-      })
+        it('does NOT equal "2001-01-01T00:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2001-01-01T00:00:00.000Z')
+        })
 
-      it('parses "maybe" as "may"! resulting in "2001-05-01T00:00:00.000"', () => {
-        // expect(dateString).toEqual('2001-05-01T00:00:00.000Z')
-        const expectedDate = new Date('2001-05-01T00:00:00.000')
-        expect(oDate.getTime()).toEqual(expectedDate.getTime())
+        it('parses "maybe" as "may"! resulting in "2001-05-01T00:00:00.000"', () => {
+          // expect(dateString).toEqual('2001-05-01T00:00:00.000Z')
+          const expectedDate = new Date('2001-05-01T00:00:00.000')
+          expect(oDate.getTime()).toEqual(expectedDate.getTime())
+        })
       })
-    })
+    }
   })
 
   // 20 of 28
@@ -419,28 +443,36 @@ describe('Date', () => {
       oDate = new Date('fourth of may 2010')
     })
 
-    describe('.toISOString()', () => {
-      beforeEach(() => {
-        // NOTE: FireFox throws here: "Invalid Date".
-        dateISOString = oDate.toISOString()
+    if (isFireFox()) {
+      describe('.toISOString()', () => {
+        it('throws', () => {
+          expect(() => oDate.toISOString()).toThrow()
+        })
       })
+    } else {
+      describe('.toISOString()', () => {
+        beforeEach(() => {
+          // NOTE: FireFox throws here: "Invalid Date".
+          dateISOString = oDate.toISOString()
+        })
 
-      // Only works in Non-UTC
-      xit('does NOT equal "2010-05-01T00:00:00.000"', () => {
-        const expectedDate = new Date('2010-05-01T00:00:00.000')
-        expect(oDate.getTime()).not.toEqual(expectedDate.getTime())
-      })
+        // Only works in Non-UTC
+        xit('does NOT equal "2010-05-01T00:00:00.000"', () => {
+          const expectedDate = new Date('2010-05-01T00:00:00.000')
+          expect(oDate.getTime()).not.toEqual(expectedDate.getTime())
+        })
 
-      it('does NOT equal "2010-05-04T00:00:00.000Z"', () => {
-        expect(dateISOString).not.toEqual('2010-05-04T00:00:00.000Z')
-      })
+        it('does NOT equal "2010-05-04T00:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2010-05-04T00:00:00.000Z')
+        })
 
-      it('ignores "fourth of", parsing "may 2010" as "2010-05-01T00:00:00.000"', () => {
-        // expect(dateString).toEqual('2010-05-01T00:00:00.000Z')
-        const expectedDate = new Date('2010-05-01T00:00:00.000')
-        expect(oDate.getTime()).toEqual(expectedDate.getTime())
+        it('ignores "fourth of", parsing "may 2010" as "2010-05-01T00:00:00.000"', () => {
+          // expect(dateString).toEqual('2010-05-01T00:00:00.000Z')
+          const expectedDate = new Date('2010-05-01T00:00:00.000')
+          expect(oDate.getTime()).toEqual(expectedDate.getTime())
+        })
       })
-    })
+    }
   })
 
   // 21 of 28
@@ -451,7 +483,13 @@ describe('Date', () => {
       dateISOString = oDate.toISOString()
     })
 
-    if (!isFireFox()) {
+    if (isFireFox()) {
+      describe('.toISOString()', () => {
+        it('throws', () => {
+          expect(() => oDate.toISOString()).toThrow()
+        })
+      })
+    } else {
       describe('.toISOString()', () => {
         beforeEach(() => {
           // NOTE: FireFox throws here: "Invalid Date".
@@ -478,28 +516,35 @@ describe('Date', () => {
     beforeEach(() => {
       // You can add modifiers to timezones and it works as you would expect.
       oDate = new Date('May 4 UTC+1')
-      dateISOString = oDate.toISOString()
     })
 
-    describe('.toISOString()', () => {
-      beforeEach(() => {
-        // NOTE: FireFox throws here: "Invalid Date".
-        dateISOString = oDate.toISOString()
+    if (isFireFox()) {
+      describe('.toISOString()', () => {
+        it('throws', () => {
+          expect(() => oDate.toISOString()).toThrow()
+        })
       })
+    } else {
+      describe('.toISOString()', () => {
+        beforeEach(() => {
+          // NOTE: FireFox throws here: "Invalid Date".
+          dateISOString = oDate.toISOString()
+        })
 
-      it('does NOT equal "2001-05-04T00:00:00.000Z"', () => {
-        expect(dateISOString).not.toEqual('2001-05-04T00:00:00.000Z')
-      })
+        it('does NOT equal "2001-05-04T00:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2001-05-04T00:00:00.000Z')
+        })
 
-      it('does NOT equal "2010-05-01T00:00:00.000Z"', () => {
-        expect(dateISOString).not.toEqual('2010-05-01T00:00:00.000Z')
-      })
+        it('does NOT equal "2010-05-01T00:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2010-05-01T00:00:00.000Z')
+        })
 
-      it('parses UTC+1 as "2001-05-04T00:00:00.000", resulting in "2001-05-03T23:00:00.000Z"', () => {
-        // 05-04T00 @ UTC+1 is 1 hr ahead: 05-03T23 @ UTC
-        expect(dateISOString).toEqual('2001-05-03T23:00:00.000Z')
+        it('parses UTC+1 as "2001-05-04T00:00:00.000", resulting in "2001-05-03T23:00:00.000Z"', () => {
+          // 05-04T00 @ UTC+1 is 1 hr ahead: 05-03T23 @ UTC
+          expect(dateISOString).toEqual('2001-05-03T23:00:00.000Z')
+        })
       })
-    })
+    }
   })
 
   // 23 of 28
@@ -509,20 +554,28 @@ describe('Date', () => {
       oDate = new Date('May 4 UTC+1:59')
     })
 
-    describe('.toISOString()', () => {
-      beforeEach(() => {
-        // NOTE: FireFox throws here: "Invalid Date".
-        dateISOString = oDate.toISOString()
+    if (isFireFox()) {
+      describe('.toISOString()', () => {
+        it('throws', () => {
+          expect(() => oDate.toISOString()).toThrow()
+        })
       })
+    } else {
+      describe('.toISOString()', () => {
+        beforeEach(() => {
+          // NOTE: FireFox throws here: "Invalid Date".
+          dateISOString = oDate.toISOString()
+        })
 
-      it('does NOT equal "2001-05-04T00:00:00.000Z"', () => {
-        expect(dateISOString).not.toEqual('2001-05-04T00:00:00.000Z')
-      })
+        it('does NOT equal "2001-05-04T00:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2001-05-04T00:00:00.000Z')
+        })
 
-      it('parses UTC+1:59 as "2001-05-04T00:00:00.000", resulting in "2001-05-03T22:01:00.000Z"', () => {
-        expect(dateISOString).toEqual('2001-05-03T22:01:00.000Z')
+        it('parses UTC+1:59 as "2001-05-04T00:00:00.000", resulting in "2001-05-03T22:01:00.000Z"', () => {
+          expect(dateISOString).toEqual('2001-05-03T22:01:00.000Z')
+        })
       })
-    })
+    }
   })
 
   // 24 of 28
@@ -532,20 +585,34 @@ describe('Date', () => {
       // 60 is being parsed as the year here,
       // UTC+1 is the timezone.
       oDate = new Date('May 4 UTC+1:60')
-      dateISOString = oDate.toISOString()
     })
 
-    it('does NOT equal "2001-05-04T00:00:00.000Z"', () => {
-      expect(dateISOString).not.toEqual('2001-05-04T00:00:00.000Z')
-    })
+    if (isFireFox()) {
+      describe('.toISOString()', () => {
+        it('throws', () => {
+          expect(() => oDate.toISOString()).toThrow()
+        })
+      })
+    } else {
+      describe('.toISOString()', () => {
+        beforeEach(() => {
+          // NOTE: FireFox throws here: "Invalid Date".
+          dateISOString = oDate.toISOString()
+        })
 
-    it('does NOT equal "2001-05-03T22:00:00.000Z"', () => {
-      expect(dateISOString).not.toEqual('2001-05-03T22:00:00.000Z')
-    })
+        it('does NOT equal "2001-05-04T00:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2001-05-04T00:00:00.000Z')
+        })
 
-    it('parses UTC+1:60 as "UTC+1" AND "year 60"!, resulting in "1960-05-03T23:00:00.000Z"', () => {
-      expect(dateISOString).toEqual('1960-05-03T23:00:00.000Z')
-    })
+        it('does NOT equal "2001-05-03T22:00:00.000Z"', () => {
+          expect(dateISOString).not.toEqual('2001-05-03T22:00:00.000Z')
+        })
+
+        it('parses UTC+1:60 as "UTC+1" AND "year 60"!, resulting in "1960-05-03T23:00:00.000Z"', () => {
+          expect(dateISOString).toEqual('1960-05-03T23:00:00.000Z')
+        })
+      })
+    }
   })
 
   // 25 of 28
