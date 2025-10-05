@@ -3,7 +3,6 @@ parallel: 4
 ignore_missing_launchers: true
 src_files: [
   'node_modules/lodash/lodash.min.js',
-  'src/browser-detect.js',
   '__tests__/**/*.unit.spec*.js'
 ]
 
