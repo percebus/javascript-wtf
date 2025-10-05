@@ -262,8 +262,8 @@ describe('Date', () => {
       oDate = new Date('12.1')
     })
 
-    if (isFireFox()) {
-      describe('.toISOString()', () => {
+    if (isFireFox()) { // v 143.0
+      describe('.toISOString() @ FireFox', () => {
         it('throws', () => {
           expect(() => oDate.toISOString()).toThrow()
         })
@@ -320,8 +320,8 @@ describe('Date', () => {
       oDate = new Date('12.-1')
     })
 
-    if (isFireFox()) {
-      describe('.toISOString()', () => {
+    if (isFireFox()) { // v 143.0
+      describe('.toISOString() @ FireFox', () => {
         it('throws', () => {
           expect(() => oDate.toISOString()).toThrow()
         })
@@ -403,8 +403,8 @@ describe('Date', () => {
       oDate = new Date('maybe 1')
     })
 
-    if (isFireFox()) {
-      describe('.toISOString()', () => {
+    if (isFireFox()) { // v 143.0
+      describe('.toISOString() @ FireFox', () => {
         it('throws', () => {
           expect(() => oDate.toISOString()).toThrow()
         })
@@ -443,8 +443,8 @@ describe('Date', () => {
       oDate = new Date('fourth of may 2010')
     })
 
-    if (isFireFox()) {
-      describe('.toISOString()', () => {
+    if (isFireFox()) { // v 143.0
+      describe('.toISOString() @ FireFox', () => {
         it('throws', () => {
           expect(() => oDate.toISOString()).toThrow()
         })
@@ -482,8 +482,8 @@ describe('Date', () => {
       oDate = new Date('May 4 UTC')
     })
 
-    if (isFireFox()) {
-      describe('.toISOString()', () => {
+    if (isFireFox()) { // v 143.0
+      describe('.toISOString() @ FireFox', () => {
         it('throws', () => {
           expect(() => oDate.toISOString()).toThrow()
         })
@@ -517,8 +517,8 @@ describe('Date', () => {
       oDate = new Date('May 4 UTC+1')
     })
 
-    if (isFireFox()) {
-      describe('.toISOString()', () => {
+    if (isFireFox()) { // v 143.0
+      describe('.toISOString() @ FireFox', () => {
         it('throws', () => {
           expect(() => oDate.toISOString()).toThrow()
         })
@@ -553,8 +553,8 @@ describe('Date', () => {
       oDate = new Date('May 4 UTC+1:59')
     })
 
-    if (isFireFox()) {
-      describe('.toISOString()', () => {
+    if (isFireFox()) { // v 143.0
+      describe('.toISOString() @ FireFox', () => {
         it('throws', () => {
           expect(() => oDate.toISOString()).toThrow()
         })
