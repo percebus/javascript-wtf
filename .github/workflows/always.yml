@@ -48,8 +48,8 @@ jobs:
           # - 22
           # - 'lts/*' # Active LTS: 22 as of 2025-10-11
           # - 23
-          # - 24 # Current
-          - 'node' # 24
+          - 24 # Current
+          # - 'node' # 24
         os:
           - ubuntu-latest
           - macOS-latest
