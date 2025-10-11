@@ -4,23 +4,8 @@ on:
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
 jobs:
-  # TODO move me to common
-  # SRC https://medium.com/attest-product-and-technology/adding-a-unique-github-build-identifier-7aa2e83cadca
-  id:
-    name: Build Id
-    runs-on: ubuntu-latest
-    steps:
-      - name: id
-        id: id
-        run: echo "BUILD_ID=$(date +%s)" >> $GITHUB_ENV
-
-      - name: echo
-        run: echo ${{ env.BUILD_ID }}
-
-
   test:
     name: npm test
-    needs: id
     runs-on: ubuntu-latest
     steps:
       - uses: percebus/github-actions-common/.github/actions/checkout@main
@@ -44,7 +29,7 @@ jobs:
 
 
   tests:
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main'  # FIXME
     needs: test
     strategy:
       fail-fast: false
@@ -60,6 +45,7 @@ jobs:
           - 21
           - 22
           - 23
+          - 24
         os:
           - ubuntu-latest
           - macOS-latest
