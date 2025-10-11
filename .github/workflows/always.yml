@@ -35,6 +35,7 @@ jobs:
       fail-fast: false
       max-parallel: 6
       matrix:
+        # SRC: https://nodejs.org/en/about/previous-releases
         node:
           - 16
           - 17
@@ -42,13 +43,12 @@ jobs:
           # - 'lts/Hydrogen' # 18 as of 2025-10-11
           - 19
           - 20
-          - '' # default (20 as of 2025-10-11)
+          - '' # Maintenance LTS: default (20 as of 2025-10-11)
           - 21
           - 22
-          - 'lts/*' # 22 as of 2025-10-11
+          - 'lts/*' # Active LTS: 22 as of 2025-10-11
           - 23
-          - 24
-          - 'latest'  # 24 as of 2025-10-11
+          - 24 # Current
           - 'node' # 24
         os:
           - ubuntu-latest
@@ -75,8 +75,8 @@ jobs:
           publish-test-deltas: "false"
 
 
-  tests_experimental:
-    # if: github.ref == 'refs/heads/main'
+  tests_unstable:
+    if: github.ref == 'refs/heads/main'
     needs: test
     strategy:
       fail-fast: false
