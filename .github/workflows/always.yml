@@ -36,7 +36,7 @@ jobs:
       max-parallel: 6
       matrix:
         # SRC: https://nodejs.org/en/about/previous-releases
-        node:
+        node-version:
           - 16
           - 17
           - 18
@@ -55,24 +55,16 @@ jobs:
           - macOS-latest
           - windows-latest
 
-    # uses: percebus/github-actions-npm/.github/workflows/test.yml@main  # TODO when it accepts node version
-    runs-on: ${{ matrix.os }}
-    name: npm test @ node:${{ matrix.node }}@${{ matrix.os }}
-    steps:
-      - uses: percebus/github-actions-common/.github/actions/checkout@main
-      - uses: percebus/github-actions-node/.github/actions/setup@main
-        with:
-          node-version: ${{ matrix.node }}
-
-      - uses: percebus/github-actions-npm/.github/actions/install@main
-
-      - name: npm test
-        run: npm test
-      - uses: percebus/github-actions-testing/.github/actions/junit@main
-        with:
-          tests_name: Tests Results @ node:${{ matrix.node }}@${{ matrix.os }}
-          summary_title: ""
-          publish-test-deltas: "false"
+    uses: percebus/github-actions-npm/.github/workflows/test.yml@main
+    name: npm test @ node:${{ matrix.node-version }}@${{ matrix.os }}
+    with:
+      runs-on: ${{ matrix.os }}
+      node-version: ${{ matrix.node-version }}
+      reporter: jest-junit
+      files_pattern: junit.xml
+      tests_name: Tests Results @ node:${{ matrix.node-version }}@${{ matrix.os }}
+      summary_title: ""
+      publish-test-deltas: "false"
 
 
   tests_unstable:
@@ -82,7 +74,7 @@ jobs:
       fail-fast: false
       max-parallel: 6
       matrix:
-        node:
+        node-version:
           # - 24
           # SRC: https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#nightly-versions
           - '24-nightly'
@@ -95,23 +87,15 @@ jobs:
           - windows-latest
         exclude:
           - os: windows-latest
-            node: '24-v8-canary' # TODO? not found
+            node-version: '24-v8-canary' # TODO? not found
 
-    # uses: percebus/github-actions-npm/.github/workflows/test.yml@main  # TODO when it accepts node version
-    runs-on: ${{ matrix.os }}
-    name: npm test @ node:${{ matrix.node }}@${{ matrix.os }}
-    steps:
-      - uses: percebus/github-actions-common/.github/actions/checkout@main
-      - uses: percebus/github-actions-node/.github/actions/setup@main
-        with:
-          node-version: ${{ matrix.node }}
-
-      - uses: percebus/github-actions-npm/.github/actions/install@main
-
-      - name: npm test
-        run: npm test
-      - uses: percebus/github-actions-testing/.github/actions/junit@main
-        with:
-          tests_name: Tests Results @ node:${{ matrix.node }}@${{ matrix.os }}
-          summary_title: ""
-          publish-test-deltas: "false"
+    uses: percebus/github-actions-npm/.github/workflows/test.yml@main
+    name: npm test @ node:${{ matrix.node-version }}@${{ matrix.os }}
+    with:
+      runs-on: ${{ matrix.os }}
+      node-version: ${{ matrix.node-version }}
+      reporter: jest-junit
+      files_pattern: junit.xml
+      tests_name: Tests Results @ node:${{ matrix.node-version }}@${{ matrix.os }}
+      summary_title: ""
+      publish-test-deltas: "false"
