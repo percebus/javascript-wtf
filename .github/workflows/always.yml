@@ -8,6 +8,8 @@ jobs:
     name: npm test
     uses: percebus/github-actions-npm/.github/workflows/test.yml@main
     with:
+      reporter: jest-junit
+      files_pattern: junit.xml
       list-tests: all
 
     # runs-on: ubuntu-latest
@@ -69,6 +71,6 @@ jobs:
         run: npm test
       - uses: percebus/github-actions-testing/.github/actions/junit@main
         with:
-          tests_name: Unit Tests @ node:${{ matrix.node }}@${{ matrix.os }}
+          tests_name: Tests Results @ node:${{ matrix.node }}@${{ matrix.os }}
           summary_title: ""
           publish-test-deltas: "false"
