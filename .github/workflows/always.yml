@@ -6,17 +6,21 @@ on:
 jobs:
   test:
     name: npm test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: percebus/github-actions-common/.github/actions/checkout@main
-      - uses: percebus/github-actions-node/.github/actions/setup@main
-      - uses: percebus/github-actions-npm/.github/actions/install@main
+    uses: percebus/github-actions-npm/.github/workflows/test.yml@main
+    with:
+      list-tests: all
 
-      - name: npm test
-        run: npm test
-      - uses: percebus/github-actions-testing/.github/actions/junit@main
-        with:
-          list-tests: all
+    # runs-on: ubuntu-latest
+    # steps:
+    #   - uses: percebus/github-actions-common/.github/actions/checkout@main
+    #   - uses: percebus/github-actions-node/.github/actions/setup@main
+    #   - uses: percebus/github-actions-npm/.github/actions/install@main
+
+    #   - name: npm test
+    #     run: npm test
+    #   - uses: percebus/github-actions-testing/.github/actions/junit@main
+    #     with:
+    #       list-tests: all
 
 
   testem:
@@ -29,24 +33,23 @@ jobs:
 
 
   tests:
-    # if: github.ref == 'refs/heads/main'  # FIXME
+    if: github.ref == 'refs/heads/main'
     needs: test
     strategy:
       fail-fast: false
       max-parallel: 6
       matrix:
         node:
-          # - 16
-          # - 17
-          # - 18
-          # - 19
-          # - 20
-          # - 21
-          # - 22
-          # - 23
-          - 24
           - '' # default (20 as of 2025-10-11)
-          - lts # 22 as of 2025-10-11
+          - 16
+          - 17
+          - 18
+          - 19
+          - 20
+          - 21
+          - 22
+          - 23
+          - 24
         os:
           - ubuntu-latest
           - macOS-latest
