@@ -40,7 +40,7 @@ jobs:
           # - 23
           - 24
           - '24-nightly'
-          - '24-canary'
+          - '24-v8-canary'
           - '' # default (20 as of 2025-10-11)
           - 'lts/*' # 22 as of 2025-10-11
           - 'lts/Hydrogen' # 18 as of 2025-10-11
