@@ -23,27 +23,33 @@ jobs:
 
 
   tests:
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main'
     needs: test
     strategy:
       fail-fast: false
       max-parallel: 6
       matrix:
         node:
-          - '' # default (20 as of 2025-10-11)
-          - 16
-          - 17
-          - 18
-          - 19
-          - 20
-          - 21
-          - 22
-          - 23
+          # - 16
+          # - 17
+          # - 18
+          # - 19
+          # - 20
+          # - 21
+          # - 22
+          # - 23
           - 24
+          - '' # default (20 as of 2025-10-11)
+          - 'node'
+          - 'lts/*'
+          - 'lts/Hydrogen'
+          - 'latest'
+          - 'nightly'
+          - 'canary'
         os:
           - ubuntu-latest
-          - macOS-latest
-          - windows-latest
+          # - macOS-latest
+          # - windows-latest
 
     # uses: percebus/github-actions-npm/.github/workflows/test.yml@main  # TODO when it accepts node version
     runs-on: ${{ matrix.os }}
