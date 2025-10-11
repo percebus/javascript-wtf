@@ -1,7 +1,13 @@
 name: "[C]ontinuous [I]ntegration"
+
 on:
   push:
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
 
 jobs:
   test:
@@ -29,21 +35,67 @@ jobs:
       fail-fast: false
       max-parallel: 6
       matrix:
+        # SRC: https://nodejs.org/en/about/previous-releases
         node:
-          - '' # default (20 as of 2025-10-11)
           - 16
           - 17
           - 18
+          # - 'lts/Hydrogen' # 18: CodeName.- Hydrogen
           - 19
           - 20
+          - '' # Maintenance LTS: default (20 as of 2025-10-11)
           - 21
           - 22
+          - 'lts/*' # Active LTS: 22 as of 2025-10-11
           - 23
-          - 24
+          - 24 # Current
+          - 'node' # 24
         os:
           - ubuntu-latest
           - macOS-latest
           - windows-latest
+
+    # uses: percebus/github-actions-npm/.github/workflows/test.yml@main  # TODO when it accepts node version
+    runs-on: ${{ matrix.os }}
+    name: npm test @ node:${{ matrix.node }}@${{ matrix.os }}
+    steps:
+      - uses: percebus/github-actions-common/.github/actions/checkout@main
+      - uses: percebus/github-actions-node/.github/actions/setup@main
+        with:
+          node-version: ${{ matrix.node }}
+
+      - uses: percebus/github-actions-npm/.github/actions/install@main
+
+      - name: npm test
+        run: npm test
+      - uses: percebus/github-actions-testing/.github/actions/junit@main
+        with:
+          tests_name: Tests Results @ node:${{ matrix.node }}@${{ matrix.os }}
+          summary_title: ""
+          publish-test-deltas: "false"
+
+
+  tests_unstable:
+    if: github.ref == 'refs/heads/main'
+    needs: test
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        node:
+          # - 24
+          # SRC: https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#nightly-versions
+          - '24-nightly'
+          # SRC: https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#v8-canary-versions
+          - '24-v8-canary'
+          - 'latest'  # 24 as of 2025-10-11
+        os:
+          - ubuntu-latest
+          - macOS-latest
+          - windows-latest
+        exclude:
+          - os: windows-latest
+            node: '24-v8-canary' # TODO? not found
 
     # uses: percebus/github-actions-npm/.github/workflows/test.yml@main  # TODO when it accepts node version
     runs-on: ${{ matrix.os }}
