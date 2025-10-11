@@ -60,6 +60,8 @@ jobs:
     with:
       runs-on: ${{ matrix.os }}
       node-version: ${{ matrix.node-version }}
+      reporter: jest-junit
+      files_pattern: junit.xml
       tests_name: Tests Results @ node:${{ matrix.node-version }}@${{ matrix.os }}
       summary_title: ""
       publish-test-deltas: "false"
@@ -92,6 +94,8 @@ jobs:
     with:
       runs-on: ${{ matrix.os }}
       node-version: ${{ matrix.node-version }}
+      reporter: jest-junit
+      files_pattern: junit.xml
       tests_name: Tests Results @ node:${{ matrix.node-version }}@${{ matrix.os }}
       summary_title: ""
       publish-test-deltas: "false"
