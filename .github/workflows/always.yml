@@ -12,18 +12,6 @@ jobs:
       files_pattern: junit.xml
       list-tests: all
 
-    # runs-on: ubuntu-latest
-    # steps:
-    #   - uses: percebus/github-actions-common/.github/actions/checkout@main
-    #   - uses: percebus/github-actions-node/.github/actions/setup@main
-    #   - uses: percebus/github-actions-npm/.github/actions/install@main
-
-    #   - name: npm test
-    #     run: npm test
-    #   - uses: percebus/github-actions-testing/.github/actions/junit@main
-    #     with:
-    #       list-tests: all
-
 
   testem:
     if: false # FIXME not working
@@ -57,6 +45,7 @@ jobs:
           - macOS-latest
           - windows-latest
 
+    # uses: percebus/github-actions-npm/.github/workflows/test.yml@main  # TODO when it accepts node version
     runs-on: ${{ matrix.os }}
     name: npm test @ node:${{ matrix.node }}@${{ matrix.os }}
     steps:
