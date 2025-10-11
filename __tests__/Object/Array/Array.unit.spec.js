@@ -63,16 +63,12 @@ describe('Array', () => {
         })
 
         describe('lodash', () => {
-          describe('_.isObject', () => {
-            it('is', () => {
-              expect(_.isObject(emptyArray)).toBe(true)
-            })
+          it('_.isObject', () => {
+            expect(_.isObject(emptyArray)).toBe(true)
           })
 
-          describe('_.isArray', () => {
-            it('is', () => {
-              expect(_.isArray(emptyArray)).toBe(true)
-            })
+          it('_.isArray', () => {
+            expect(_.isArray(emptyArray)).toBe(true)
           })
         })
       })

@@ -6,10 +6,8 @@ describe('undefined', () => {
   })
 
   describe('Number', () => {
-    describe('isNaN(undefined)', () => {
-      it('is', () => {
-        expect(isNaN(undefined)).toBe(true)
-      })
+    it('isNaN(undefined)', () => {
+      expect(isNaN(undefined)).toBe(true)
     })
   })
 
@@ -24,10 +22,8 @@ describe('undefined', () => {
   })
 
   describe('lodash', () => {
-    describe('_.isUndefined(undefined)', () => {
-      it('is', () => {
-        expect(_.isUndefined(undefined)).toBe(true)
-      })
+    it('_.isUndefined', () => {
+      expect(_.isUndefined(undefined)).toBe(true)
     })
   })
 
