@@ -29,7 +29,7 @@ jobs:
 
 
   tests:
-    # if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     needs: test
     strategy:
       fail-fast: false
@@ -37,19 +37,19 @@ jobs:
       matrix:
         # SRC: https://nodejs.org/en/about/previous-releases
         node-version:
-          # - 16
-          # - 17
-          # - 18
-          # # - 'lts/Hydrogen' # 18: CodeName.- Hydrogen
-          # - 19
-          # - 20
-          # - '' # Maintenance LTS: default (20 as of 2025-10-11)
-          # - 21
-          # - 22
-          # - 'lts/*' # Active LTS: 22 as of 2025-10-11
-          # - 23
+          - 16
+          - 17
+          - 18
+          # - 'lts/Hydrogen' # 18: CodeName.- Hydrogen
+          - 19
+          - 20
+          - '' # Maintenance LTS: default (20 as of 2025-10-11)
+          - 21
+          - 22
+          - 'lts/*' # Active LTS: 22 as of 2025-10-11
+          - 23
           - 24 # Current
-          # - 'node' # 24
+          - 'node' # 24
         os:
           - ubuntu-latest
           - macOS-latest
