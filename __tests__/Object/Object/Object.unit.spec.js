@@ -34,10 +34,8 @@ describe('Object', () => {
       })
 
       describe('lodash', () => {
-        describe('_.isObject', () => {
-          it('is', () => {
-            expect(_.isObject(emptyObject)).toBe(true)
-          })
+        it('_.isObject', () => {
+          expect(_.isObject(emptyObject)).toBe(true)
         })
 
         describe('_.isArray', () => {

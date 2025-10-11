@@ -4,34 +4,13 @@ on:
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
 jobs:
-  # TODO move me to common
-  # SRC https://medium.com/attest-product-and-technology/adding-a-unique-github-build-identifier-7aa2e83cadca
-  id:
-    name: Build Id
-    runs-on: ubuntu-latest
-    steps:
-      - name: id
-        id: id
-        run: echo "BUILD_ID=$(date +%s)" >> $GITHUB_ENV
-
-      - name: echo
-        run: echo ${{ env.BUILD_ID }}
-
-
   test:
     name: npm test
-    needs: id
-    runs-on: ubuntu-latest
-    steps:
-      - uses: percebus/github-actions-common/.github/actions/checkout@main
-      - uses: percebus/github-actions-node/.github/actions/setup@main
-      - uses: percebus/github-actions-npm/.github/actions/install@main
-
-      - name: npm test
-        run: npm test
-      - uses: percebus/github-actions-testing/.github/actions/junit@main
-        with:
-          list-tests: all
+    uses: percebus/github-actions-npm/.github/workflows/test.yml@main
+    with:
+      reporter: jest-junit
+      files_pattern: junit.xml
+      list-tests: all
 
 
   testem:
@@ -51,7 +30,7 @@ jobs:
       max-parallel: 6
       matrix:
         node:
-          - '' # default (LTS)
+          - '' # default (20 as of 2025-10-11)
           - 16
           - 17
           - 18
@@ -60,11 +39,13 @@ jobs:
           - 21
           - 22
           - 23
+          - 24
         os:
           - ubuntu-latest
           - macOS-latest
           - windows-latest
 
+    # uses: percebus/github-actions-npm/.github/workflows/test.yml@main  # TODO when it accepts node version
     runs-on: ${{ matrix.os }}
     name: npm test @ node:${{ matrix.node }}@${{ matrix.os }}
     steps:
@@ -79,6 +60,6 @@ jobs:
         run: npm test
       - uses: percebus/github-actions-testing/.github/actions/junit@main
         with:
-          tests_name: Unit Tests @ node:${{ matrix.node }}@${{ matrix.os }}
+          tests_name: Tests Results @ node:${{ matrix.node }}@${{ matrix.os }}
           summary_title: ""
           publish-test-deltas: "false"
