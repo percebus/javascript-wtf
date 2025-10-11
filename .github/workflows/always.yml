@@ -40,7 +40,7 @@ jobs:
           - 16
           - 17
           - 18
-          # - 'lts/Hydrogen' # 18 as of 2025-10-11
+          # - 'lts/Hydrogen' # 18: CodeName.- Hydrogen
           - 19
           - 20
           - '' # Maintenance LTS: default (20 as of 2025-10-11)
