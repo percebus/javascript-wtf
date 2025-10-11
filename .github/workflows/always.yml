@@ -23,6 +23,53 @@ jobs:
 
 
   tests:
+    if: github.ref == 'refs/heads/main'
+    needs: test
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        node:
+          - 16
+          - 17
+          - 18
+          # - 'lts/Hydrogen' # 18 as of 2025-10-11
+          - 19
+          - 20
+          - '' # default (20 as of 2025-10-11)
+          - 21
+          - 22
+          - 'lts/*' # 22 as of 2025-10-11
+          - 23
+          - 24
+          - 'latest'  # 24 as of 2025-10-11
+          - 'node' # 24
+        os:
+          - ubuntu-latest
+          - macOS-latest
+          - windows-latest
+
+    # uses: percebus/github-actions-npm/.github/workflows/test.yml@main  # TODO when it accepts node version
+    runs-on: ${{ matrix.os }}
+    name: npm test @ node:${{ matrix.node }}@${{ matrix.os }}
+    steps:
+      - uses: percebus/github-actions-common/.github/actions/checkout@main
+      - uses: percebus/github-actions-node/.github/actions/setup@main
+        with:
+          node-version: ${{ matrix.node }}
+
+      - uses: percebus/github-actions-npm/.github/actions/install@main
+
+      - name: npm test
+        run: npm test
+      - uses: percebus/github-actions-testing/.github/actions/junit@main
+        with:
+          tests_name: Tests Results @ node:${{ matrix.node }}@${{ matrix.os }}
+          summary_title: ""
+          publish-test-deltas: "false"
+
+
+  tests_experimental:
     # if: github.ref == 'refs/heads/main'
     needs: test
     strategy:
@@ -30,26 +77,14 @@ jobs:
       max-parallel: 6
       matrix:
         node:
-          # - 16
-          # - 17
-          # - 18
-          # - 19
-          # - 20
-          # - 21
-          # - 22
-          # - 23
-          - 24
+          # - 24
           - '24-nightly'
           - '24-v8-canary'
-          - '' # default (20 as of 2025-10-11)
-          - 'lts/*' # 22 as of 2025-10-11
-          - 'lts/Hydrogen' # 18 as of 2025-10-11
-          - 'node' # 24
           - 'latest'  # 24 as of 2025-10-11
         os:
           - ubuntu-latest
-          # - macOS-latest
-          # - windows-latest
+          - macOS-latest
+          - windows-latest
 
     # uses: percebus/github-actions-npm/.github/workflows/test.yml@main  # TODO when it accepts node version
     runs-on: ${{ matrix.os }}
