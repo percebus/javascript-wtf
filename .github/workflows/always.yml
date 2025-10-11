@@ -1,7 +1,13 @@
 name: "[C]ontinuous [I]ntegration"
+
 on:
   push:
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
 
 jobs:
   test:
@@ -78,13 +84,18 @@ jobs:
       matrix:
         node:
           # - 24
+          # SRC: https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#nightly-versions
           - '24-nightly'
+          # SRC: https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#v8-canary-versions
           - '24-v8-canary'
           - 'latest'  # 24 as of 2025-10-11
         os:
           - ubuntu-latest
           - macOS-latest
           - windows-latest
+        exclude:
+          - os: windows-latest
+            node: '24-v8-canary' # TODO? not found
 
     # uses: percebus/github-actions-npm/.github/workflows/test.yml@main  # TODO when it accepts node version
     runs-on: ${{ matrix.os }}
